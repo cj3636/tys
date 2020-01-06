@@ -1,13 +1,10 @@
 <!doctype html>
 <html lang="en_US">
-<?php
-require 'head.php';
-?>
+<?php require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
     <div class="sixteen wide column"></div>
     <?php require 'title.php'; ?>
-
     <div class="sixteen wide column">
         <?php require 'menu.php'; ?>
     </div>
@@ -33,7 +30,7 @@ require 'head.php';
                     <h1 class="ui header" id="p">
                         To the Yellow Submarine
                     </h1>
-                    <div class="ui inverted divider"></div>
+                    <div class="ui divider"></div>
                     <div class="ui center aligned title">
                         <div><span style="color:#ff0000;">T</span><span style="color:#ff0e00;">h</span><span
                                     style="color:#ff1c00;">e</span><span style="color:#ff2a00;"> </span><span
@@ -71,53 +68,14 @@ require 'head.php';
         <div class="ui items">
             <div class="item">
                 <div class="content">
-                    <h2 class="ui title">The Yellow Submarine Current Server Line Up:</h2>
-                    <h3 class="ui blue header">
-                        <?php require 'text/latest.txt'; ?>
-                    </h3>
-                    <div class="ui divider"></div>
-                    <h1 class="ui green header" style="color: whitesmoke;">Minecraft Servers:</h1>
-                    <h3>Modded Requires 8GB+ RAM</h3>
-                    <h3>Vanilla Requires Minecraft Defaults</h3>
+                    <h2 class="ui title">Current Server Line Up:</h2>
                 </div>
             </div>
         </div>
-        <div class="centered ui cards">
-            <div class="card">
-                <div class="content">
-                    <div class="ui purple header">Modded</div>
-                    <button data-tooltip="Copy Modded IP Address" data-inverted="" class="ui button"
-                            onclick="copyMod()">theyellowsub.us:25566
-                    </button>
-                    <div class="description">
-                        <?php require 'text/modded_info.txt'; ?>
-                    </div>
-                    <div class="ui divider"></div>
-                    <div class="description">
-                        <?php require 'text/modded_desc.txt'; ?>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <div class="ui green header">Vanilla</div>
-                    <button data-tooltip="Copy Vanilla IP Address" data-inverted="" class="ui button"
-                            onclick="copyVanilla()">theyellowsub.us
-                    </button>
-                    <div class="description">
-                        <?php require 'text/vanilla_info.txt'; ?>
-                    </div>
-                    <div class="ui divider"></div>
-                    <div class="description">
-                        <?php require 'text/vanilla_desc.txt'; ?>
-                    </div>
-                </div>
-            </div>
+        <div class="ui centered stackable cards">
+            <?php require('var/servers.html'); ?>
         </div>
     </div>
-    <div class="center aligned sixteen wide column"></div>
-    <div class="center aligned sixteen wide column"></div>
-</div>
-<footer>&copy; P.o.P Industries 2019</footer>
+    <footer>&copy; P.o.P Industries 2019</footer>
 </body>
 </html>

@@ -4,12 +4,15 @@
 #element::-webkit-scrollbar {
     display: none;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
+
 html {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+
 body {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -82,6 +85,12 @@ p {
     font-size: 24px;
 }
 
+#p2 {
+    color: #ffffff;
+    max-width: 800px;
+    font-size: 1.75em;
+}
+
 .center {
     margin-right: auto;
     margin-left: auto;
@@ -95,10 +104,6 @@ p {
 
 .link:hover {
     color: gray;
-}
-
-.footer {
-    background-color: #b3ffcc;
 }
 
 .left {
@@ -244,8 +249,8 @@ p {
     transition: .4s;
 }
 
-#tut {
-    background-image: url("../img/wp.png");
+.ui.fluid.card {
+    background-color: #23272a;
 }
 
 .slider:before {
@@ -318,6 +323,7 @@ input:checked + .slider:before {
     height: 100vh;
     letter-spacing: 1px;
 }
+
 /*background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);*/
 #meap {
     background-image: url(https://i.gifer.com/28b3.gif);
@@ -328,6 +334,7 @@ input:checked + .slider:before {
     text-transform: uppercase;
     font-size: 120px;
 }
+
 #h1 {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
@@ -339,11 +346,13 @@ input:checked + .slider:before {
     text-transform: uppercase;
     font-size: 10rem;
 }
-@media (max-width:600px) {
+
+@media (max-width: 600px) {
     #h1 {
         font-size: 4.5rem;
     }
 }
+
 #h11 {
     background-image: url(https://media1.giphy.com/media/FsFyS8K0mETiE/giphy.gif);
     background-size: cover;
@@ -355,10 +364,12 @@ input:checked + .slider:before {
     margin: 10px 0;
     padding: 0;
 }
+
 #h11:hover {
     background-image: none;
     background-color: #4CAF50;
 }
+
 svg {
     display: block;
     font: 10.5em 'Montserrat';
@@ -367,7 +378,7 @@ svg {
     margin: 0 auto;
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
     svg {
         font-size: 4.5rem;
         width: auto;
@@ -384,31 +395,34 @@ svg {
     animation: stroke-offset 5.5s infinite linear;
 }
 
-.text-copy:nth-child(1){
+.text-copy:nth-child(1) {
     stroke: #1d2097;
     animation-delay: -1;
 }
 
-.text-copy:nth-child(2){
+.text-copy:nth-child(2) {
     stroke: #840037;
     animation-delay: -2s;
 }
 
-.text-copy:nth-child(3){
+.text-copy:nth-child(3) {
     stroke: #00dcdb;
     animation-delay: -3s;
 }
 
-.text-copy:nth-child(4){
+.text-copy:nth-child(4) {
     stroke: #52a2e3;
     animation-delay: -4s;
 }
 
-.text-copy:nth-child(5){
+.text-copy:nth-child(5) {
     stroke: #58008e;
     animation-delay: -5s;
 }
 
-@keyframes stroke-offset{
-    100% {stroke-dashoffset: -35%;}
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
 }
+

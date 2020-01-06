@@ -1,1 +1,0 @@
-Welcome to The Yellow Submarine (Special Edition)!<br> We are currently testing a fabric build for Minecraft 1.14 in place of the Vanilla server.<br>This is only temporary and the main modpack will be updated to 1.14 as soon as a stable build is viable.<br> Vanilla will return when this happens.        
