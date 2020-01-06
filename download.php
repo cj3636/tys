@@ -24,7 +24,7 @@
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a href="https://theyellowsub.us/tys/download/TYS_LATEST.zip"
+                            <a href="https://theyellowsub.us/tys/modpack/TYS_LATEST.zip"
                                target="_blank">
                                 <button class="ui huge purple button">
                                     <i class="white download icon"></i>Latest
@@ -40,7 +40,7 @@
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a href="https://theyellowsub.us/tys/download/TYS_LATEST_LITE.zip"
+                            <a href="https://theyellowsub.us/tys/modpack/TYS_LATEST_LITE.zip"
                                target="_blank">
                                 <button class="ui huge pink button">
                                     <i class="white download icon"></i>[WIP]
@@ -88,7 +88,7 @@
                             <a href="https://theyellowsub.us/tys/modpack/TYS_LEGACY.zip"
                                target="_blank">
                                 <button class="ui huge purple button">
-                                    <i class="white download icon"></i>Modpack
+                                    <i class="white download icon"></i>Legacy
                                 </button>
                             </a>
                         </div>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a href="https://theyellowsub.us/tys/modpack/world.zip"
+                            <a href="https://theyellowsub.us/world.zip"
                                target="_blank">
                                 <button class="ui huge green button">
                                     <i class="white download icon"></i>World File

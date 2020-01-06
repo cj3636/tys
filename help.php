@@ -70,6 +70,22 @@ require 'head.php';
                         </div>
                         <div class="title">
                             <h3 class="ui header"><i class="dropdown icon"></i>
+                                Where is the modded IP address?</h3>
+                        </div>
+                        <div class="content">
+                            <div class="ui relaxed divided list">
+                                <div class="item">
+                                    <h2>Included in the modpack.</h2>
+                                </div>
+                                <div class="item">
+                                    <h4>You can also find it on <a target="_blank"
+                                                          href="https://discordapp.com/invite/jgST5R?utm_source=Discord%20Widget&utm_medium=Connect">Discord</a>.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3 class="ui header"><i class="dropdown icon"></i>
                                 My question wasn't answered.</h3>
                         </div>
                         <div class="content">
