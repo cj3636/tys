@@ -64,7 +64,7 @@
                     </h1>
                 </div>
                 <div class="content">
-                    <div class="ui embed" data-url="img/install.mp4" data-placeholder="../img/thenewjourney.png"
+                    <div class="ui embed" data-url="img/install.mp4" data-placeholder="img/thenewjourney.png"
                          data-icon="right circle arrow">
                     </div>
                 </div>
