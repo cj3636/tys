@@ -24,7 +24,7 @@
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a href="https://theyellowsub.us/tys/modpack/TYS_LATEST.zip"
+                            <a href="https://theyellowsub.us/dist/TYS_LATEST.zip"
                                target="_blank">
                                 <button class="ui huge purple button">
                                     <i class="white download icon"></i>Latest
@@ -40,7 +40,7 @@
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a href="https://theyellowsub.us/tys/modpack/TYS_LATEST_LITE.zip"
+                            <a href="https://theyellowsub.us/dist/TYS_LATEST_LITE.zip"
                                target="_blank">
                                 <button class="ui huge pink button">
                                     <i class="white download icon"></i>[WIP]
@@ -52,15 +52,9 @@
                 <div class="ui divider"></div>
             </div>
             <div class="ui centered fluid card">
-                <div class="left aligned content header">
+                <div class="center aligned content header">
                     <h1 class="title">
                         Installation Video
-                        <a href="https://www.twitch.tv/downloads"
-                           target="_blank">
-                            <div class="ui blue button">
-                                <i class="white external alternate icon"></i>Twitch
-                            </div>
-                        </a>
                     </h1>
                 </div>
                 <div class="content">
@@ -68,9 +62,16 @@
                          data-icon="right circle arrow">
                     </div>
                 </div>
-                <div class="extra content">
+                <div class="ui center aligned extra content">
+                    <a href="https://www.twitch.tv/downloads"
+                       target="_blank">
+                        <div class="ui blue button">
+                            <i class="white external alternate icon"></i>Twitch
+                        </div>
+                    </a>
                     <div class="ui header">
-                        Remember to increase your <a href="https://www.youtube.com/watch?v=R3_sCJWZKp8" target="_blank">RAM <i class="white external icon"></i></a> in Twitch.
+                        <a href="https://www.youtube.com/watch?v=R3_sCJWZKp8" target="_blank">Increase RAM <i
+                                    class="white external icon"></i></a>
                     </div>
                 </div>
             </div>
@@ -101,7 +102,7 @@
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a href="https://theyellowsub.us/world.zip"
+                            <a href="https://theyellowsub.us/dist/world.zip"
                                target="_blank">
                                 <button class="ui huge green button">
                                     <i class="white download icon"></i>World File

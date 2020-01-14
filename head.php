@@ -11,5 +11,5 @@
             crossorigin="anonymous"></script>
     <script src="semantic/dist/semantic.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="semantic/dist/clipboard.min.js"></script>
 </head>

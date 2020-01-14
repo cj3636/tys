@@ -54,6 +54,7 @@ h3 {
 }
 
 footer {
+    display: none;
     color: #2a2d32;
     text-align: center;
     width: 100%;
@@ -426,3 +427,14 @@ svg {
     }
 }
 
+.ui.green.paragraph {
+    color: #0ea432;
+}
+
+.ui.red.paragraph {
+    color: #ff0623;
+}
+
+.ui.blue.paragraph {
+    color: #00dcdb;
+}

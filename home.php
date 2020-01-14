@@ -64,7 +64,7 @@
             </div>
         </div>
     </div>
-    <div id="tut" class="center aligned ten wide column" style="border-radius: 10px;">
+    <div id="tut" class="center aligned sixteen wide column" style="border-radius: 10px;">
         <div class="ui items">
             <div class="item">
                 <div class="content">
@@ -73,9 +73,19 @@
             </div>
         </div>
         <div class="ui centered stackable cards">
-            <?php require('var/servers.html'); ?>
+            <?php
+            $dir = 'servers';
+            $files = glob($dir . '/*.php');
+            foreach ($files as $file) {
+                require($file);
+            }
+            ?>
         </div>
     </div>
     <footer>&copy; P.o.P Industries 2019</footer>
 </body>
+<script>
+    new ClipboardJS('#copyBedrock');
+    new ClipboardJS('#copyVanilla');
+</script>
 </html>
