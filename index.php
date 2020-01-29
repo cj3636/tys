@@ -19,4 +19,4 @@ require 'head.php';
 </div>
 <footer>&copy;P.o.P Industries 2019</footer>
 </body>
-</html>a
+</html>

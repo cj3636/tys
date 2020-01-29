@@ -40,5 +40,40 @@
             }
         ],
         "description": "PHP library to check Minecraft Servers Status"
+    },
+    {
+        "name": "xpaw/php-minecraft-query",
+        "version": "3.0.0",
+        "version_normalized": "3.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/xPaw/PHP-Minecraft-Query.git",
+            "reference": "881072933d4537f334ce96ebcf687868c100fbb9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/xPaw/PHP-Minecraft-Query/zipball/881072933d4537f334ce96ebcf687868c100fbb9",
+            "reference": "881072933d4537f334ce96ebcf687868c100fbb9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "time": "2019-07-08T10:15:30+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "xPaw\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "PHP library to query Minecraft servers",
+        "keywords": [
+            "minecraft"
+        ]
     }
 ]

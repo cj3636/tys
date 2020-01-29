@@ -2,15 +2,9 @@
 <div class="card">
     <div class="content">
         <img alt="TYS ATMR+ LOGO" class="right floated small ui image" src="img/TYS_VANILLA.png">
-        <div class="header">
-            Vanilla
-        </div>
-        <div class="meta">
-            Vanilla Minecraft with Plugins
-        </div>
-        <div class="description">
-            An experience you can't miss, with an Earth map and more.
-        </div>
+        <div class="header">Vanilla</div>
+        <div class="meta">Vanilla Minecraft with Plugins</div>
+        <div class="description">An experience you can't miss, with an Earth map and more.</div>
         <div class="ui divider"></div>
         <div class="extra content">
             <button id="copyVanilla" data-clipboard-text="theyellowsub.us" data-tooltip="Copy Vanilla IP Address"

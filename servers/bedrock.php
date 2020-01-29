@@ -18,7 +18,7 @@
             </button>
         </div>
         <div class="extra content">
-            Unsupported by Bedrock.
+            Unsupported
         </div>
     </div>
 </div>

@@ -18,7 +18,7 @@
                     <h1 class="ui huge left floated yellow ribbon label">Latest Downloads</h1>
                 </div>
                 <div class="ui divider"></div>
-                <div class="image">
+                <div class="description">
                     <div class="ui small image">
                         <img src="img/TYS_ATMR.png" alt="ATMR+LOGO">
                     </div>
@@ -34,16 +34,16 @@
                     </div>
                 </div>
                 <div class="ui divider"></div>
-                <div class="image">
+                <div class="description">
                     <div class="ui small image">
                         <img src="img/TYS_ATMR.png" alt="ATMR+LOGO">
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a href="https://theyellowsub.us/dist/TYS_LATEST_LITE.zip"
+                            <a href="https://theyellowsub.us/dist/TYS_LITE.zip"
                                target="_blank">
-                                <button class="ui huge pink button">
-                                    <i class="white download icon"></i>[WIP]
+                                <button class="ui huge pink disabled button">
+                                    <i class="white download icon"></i>Lite
                                 </button>
                             </a>
                         </div>
@@ -77,41 +77,41 @@
             </div>
             <div class="ui center aligned fluid card">
                 <div class="content header">
-                    <h1 class="ui huge left floated blue ribbon label">Legacy Downloads</h1>
+                    <h1 class="ui huge left floated blue ribbon label">WIP Downloads</h1>
                 </div>
                 <div class="ui divider"></div>
-                <div class="image">
-                    <div class="ui small image">
-                        <img src="img/TYS_LEGACY.png" alt="ATMR+ LEGACY LOGO">
-                    </div>
-                    <div class="content">
-                        <div class="item">
-                            <a href="https://theyellowsub.us/tys/modpack/TYS_LEGACY.zip"
-                               target="_blank">
-                                <button class="ui huge purple button">
-                                    <i class="white download icon"></i>Legacy
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui divider"></div>
-                <div class="image">
-                    <div class="ui small image">
-                        <img src="img/TYS_LEGACY.png" alt="ATMR+ LEGACY LOGO">
-                    </div>
-                    <div class="content">
-                        <div class="item">
-                            <a href="https://theyellowsub.us/dist/world.zip"
-                               target="_blank">
-                                <button class="ui huge green button">
-                                    <i class="white download icon"></i>World File
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui divider"></div>
+<!--                <div class="description">-->
+<!--                    <div class="ui small image">-->
+<!--                        <img src="img/TYS_LEGACY.png" alt="ATMR+ LEGACY LOGO">-->
+<!--                    </div>-->
+<!--                    <div class="content">-->
+<!--                        <div class="item">-->
+<!--                            <a href=""-->
+<!--                               target="_blank">-->
+<!--                                <button class="ui huge purple disabled button">-->
+<!--                                    <i class="white download icon"></i>[WIP]-->
+<!--                                </button>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="ui divider"></div>-->
+<!--                <div class="description">-->
+<!--                    <div class="ui small image">-->
+<!--                        <img src="img/TYS_LEGACY.png" alt="ATMR+ LEGACY LOGO">-->
+<!--                    </div>-->
+<!--                    <div class="content">-->
+<!--                        <div class="item">-->
+<!--                            <a href=""-->
+<!--                               target="_blank">-->
+<!--                                <button class="ui huge green disabled button">-->
+<!--                                    <i class="white download icon"></i>[WIP]-->
+<!--                                </button>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="ui divider"></div>-->
             </div>
         </div>
     </div>

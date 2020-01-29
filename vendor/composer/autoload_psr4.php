@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'xPaw\\' => array($vendorDir . '/xpaw/php-minecraft-query/src'),
     'MCServerStatus\\Responses\\' => array($vendorDir . '/lukasss93/minecraft-server-status/src/Responses'),
     'MCServerStatus\\Exceptions\\' => array($vendorDir . '/lukasss93/minecraft-server-status/src/Exceptions'),
     'MCServerStatus\\' => array($vendorDir . '/lukasss93/minecraft-server-status/src'),

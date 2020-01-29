@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInitb822f73f7678b01ce6d41a9379b2913f
 {
     public static $prefixLengthsPsr4 = array (
+        'x' => 
+        array (
+            'xPaw\\' => 5,
+        ),
         'M' => 
         array (
             'MCServerStatus\\Responses\\' => 25,
@@ -16,6 +20,10 @@ class ComposerStaticInitb822f73f7678b01ce6d41a9379b2913f
     );
 
     public static $prefixDirsPsr4 = array (
+        'xPaw\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/xpaw/php-minecraft-query/src',
+        ),
         'MCServerStatus\\Responses\\' => 
         array (
             0 => __DIR__ . '/..' . '/lukasss93/minecraft-server-status/src/Responses',

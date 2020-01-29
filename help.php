@@ -23,7 +23,7 @@ require 'head.php';
                     <div class="ui styled fluid accordion">
                         <div class="title">
                             <h3 class="ui header"><i class="dropdown icon"></i>
-                                How much ram do I need to run the modpack?</h3>
+                                How much RAM do I need to run the modpack?</h3>
                         </div>
                         <div class="content">
                             <div class="ui relaxed divided list">
@@ -35,12 +35,31 @@ require 'head.php';
                                 <div class="item">
                                     <h4>If your PC is underpowered you can try using the <a href="download.php">LITE</a>
                                         version of the modpack.</h4>
-                                    <h4><i class="blue question icon"></i>LITE is the same modpack without any graphical
+                                    <h4><i class="blue question circle icon"></i>LITE is the same modpack without any
+                                        graphical
                                         mods and <a target="_blank" href="https://optifine.net/downloads">Optifine</a>
                                     </h4>
-                                    <h4><i class="red warning icon"></i>Optifine is known to cause graphical bugs, but
+                                    <h4><i class="yellow exclamation circle icon"></i>Optifine is known to cause
+                                        graphical bugs, but
                                         is usually not game breaking.</h4>
+                                    <h4><i class="red exclamation triangle icon"></i>We are planning a separate modpack
+                                        based off of ATM Lite.</h4>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3 class="ui header"><i class="dropdown icon"></i>
+                                How do I add more RAM?</h3>
+                        </div>
+                        <div class="content">
+                            <div class="ui relaxed divided list">
+                                <div class="item"><h2>Watch <a target="_blank" href="https://optifine.net/downloads">this</a>
+                                        video.</h2>
+                                </div>
+                                <div class="item"><h4><i class="yellow exclamation circle icon"></i>Be sure you do not
+                                        allocate more RAM than is available</h4></div>
+                                <div class="item"><h4><i class="red exclamation triangle icon"></i>Windows can use up to
+                                        4GB for system processes.</h4></div>
                             </div>
                         </div>
                         <div class="title">
@@ -52,9 +71,6 @@ require 'head.php';
                             <div class="ui relaxed divided list">
                                 <div class="item">
                                     <h2>First, make sure you have allocated enough ram.</h2>
-                                    <h2><a target="_blank" href="https://www.youtube.com/watch?v=R3_sCJWZKp8">Increasing
-                                            RAM in Twitch</a>
-                                    </h2>
                                 </div>
                                 <div class="item">
                                     <h4>If you are sure you have enough allocated, delete the pack from Twitch and
@@ -63,23 +79,55 @@ require 'head.php';
                                 </div>
                                 <div class="item">
                                     <h4>If neither of those fix your issue, hit us up with a full crash
-                                        report on the Discord.
+                                        report on the <a target="_blank" href="https://discord.gg/we6qnRg">Discord</a>.
                                     </h4>
                                 </div>
                             </div>
                         </div>
                         <div class="title">
                             <h3 class="ui header"><i class="dropdown icon"></i>
-                                Where is the modded IP address?</h3>
+                                Where is the IP address for 'X'?</h3>
                         </div>
                         <div class="content">
                             <div class="ui relaxed divided list">
                                 <div class="item">
-                                    <h2>Included in the modpack.</h2>
+                                    <h2>Modded Minecraft</h2>
                                 </div>
                                 <div class="item">
-                                    <h4>You can also find it on <a target="_blank"
-                                                          href="https://discordapp.com/invite/jgST5R?utm_source=Discord%20Widget&utm_medium=Connect">Discord</a>.
+                                    <h4>Vanilla: Use theyellowsub.us to connect.
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4>ATMR+: Launch the pack and the server will there!
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4>Other Modpacks: Check <a target="_blank" href="https://discord.gg/we6qnRg">Discord</a>.
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4>Event Servers: Use theyellowsub.us:25566 to connect.
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h2>Starbound</h2>
+                                </div>
+                                <div class="item">
+                                    <h4>Use theyellowsub.us to connect.
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h2>ARK</h2>
+                                </div>
+                                <div class="item">
+                                    <h4>Use theyellowsub.us to connect.
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h2>Rust</h2>
+                                </div>
+                                <div class="item">
+                                    <h4>Use theyellowsub.us to connect.
                                     </h4>
                                 </div>
                             </div>
@@ -91,8 +139,7 @@ require 'head.php';
                         <div class="content">
                             <div class="ui relaxed divided list">
                                 <div class="item">
-                                    <h2>Let us know on <a target="_blank"
-                                                          href="https://discordapp.com/invite/jgST5R?utm_source=Discord%20Widget&utm_medium=Connect">Discord</a>.
+                                    <h2>Let us know on <a target="_blank" href="https://discord.gg/we6qnRg">Discord</a>.
                                     </h2>
                                 </div>
                                 <div class="item">
