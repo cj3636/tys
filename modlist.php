@@ -9,7 +9,7 @@
         <?php require 'menu.php'; ?>
     </div>
 </div>
-<div class="ui centered center aligned fluid card">
+<div class="ui centered center aligned card">
     <h1 class="title">Modlist:</h1>
     <div class="content">
         <?php
