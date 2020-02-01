@@ -11,21 +11,21 @@
                     data-inverted="" class="ui huge green button"><i class="copy outline left icon"></i>Vanilla IP
             </button>
         </div>
+        <br>
         <div class="extra content">
-            <?php
-
-            use MCServerStatus\MCPing;
-
-            require_once('vendor/autoload.php');
-            $response = MCPing::check('theyellowsub.us');
-            echo $response->getMotdToHtml();
-            if ($response->online) {
-                echo '<div class="ui green paragraph">Server is UP</div>';
-                echo '<div class="ui blue paragraph">' . $response->players . ' Online</div>';
-            } else {
-                echo '<div class="ui red paragraph">Server is DOWN</div>';
-            }
-            ?>
+            <div class="ui styled fluid accordion">
+                <div class="title">
+                    <h3 class="ui header"><i class="dropdown icon"></i>Special Events?</h3>
+                </div>
+                <div class="content">
+                    <div class="ui relaxed list">
+                        <div class="item"><h4>Vanilla uses the default port for MC. Therefore we use the vanilla server
+                                IP to host events. To play on the usual Vanilla server during an event use IP
+                                25566.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

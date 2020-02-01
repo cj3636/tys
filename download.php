@@ -13,7 +13,7 @@
 <div class="ui stackable grid">
     <div class="twelve wide centered column">
         <div class="ui three stackable cards">
-            <div class="ui center aligned fluid card">
+            <div class="ui center aligned card dark">
                 <div class="content header">
                     <h1 class="ui huge left floated yellow ribbon label">Latest Downloads</h1>
                 </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="ui divider"></div>
             </div>
-            <div class="ui centered fluid card">
+            <div class="ui centered card dark">
                 <div class="center aligned content header">
                     <h1 class="title">
                         Installation Video
@@ -70,12 +70,16 @@
                         </div>
                     </a>
                     <div class="ui header">
-                        <a href="https://www.youtube.com/watch?v=R3_sCJWZKp8" target="_blank">Increase RAM <i
-                                    class="white external icon"></i></a>
+                        <a href="https://www.youtube.com/watch?v=R3_sCJWZKp8"
+                           target="_blank">
+                            <div class="ui green button">
+                                <i class="white external alternate icon"></i>Increase RAM
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="ui center aligned fluid card">
+            <div class="ui center aligned card dark">
                 <div class="content header">
                     <h1 class="ui huge left floated blue ribbon label">WIP Downloads</h1>
                 </div>

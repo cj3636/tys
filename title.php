@@ -14,8 +14,7 @@
             const help = "help.php";
             const about = "about.php";
             const download = "download.php";
-            const login = "login.php";
-            const beta = "beta.php";
+            const status = "status.php";
             getName();
 
             function getName() {
@@ -38,11 +37,8 @@
                     case download:
                         document.getElementById("desc").innerHTML = "Modpack Installation";
                         break;
-                    case login:
-                        document.getElementById("desc").innerHTML = "Admin Login";
-                        break;
-                    case beta:
-                        document.getElementById("desc").innerHTML = "Beta Information";
+                    case status:
+                        document.getElementById("desc").innerHTML = "Server Status";
                         break;
                     default:
                         return "";

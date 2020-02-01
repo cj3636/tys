@@ -94,7 +94,7 @@ require 'head.php';
                                     <h2>Modded Minecraft</h2>
                                 </div>
                                 <div class="item">
-                                    <h4>Vanilla: Use theyellowsub.us to connect.
+                                    <h4>Vanilla: Use theyellowsub.us to connect. Vanilla will use theyellowsub.us:25566 during events.
                                     </h4>
                                 </div>
                                 <div class="item">
@@ -106,7 +106,7 @@ require 'head.php';
                                     </h4>
                                 </div>
                                 <div class="item">
-                                    <h4>Event Servers: Use theyellowsub.us:25566 to connect.
+                                    <h4>Event Servers: Use theyellowsub.us to connect.
                                     </h4>
                                 </div>
                                 <div class="item">

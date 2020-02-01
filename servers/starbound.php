@@ -11,18 +11,19 @@
                     data-inverted="" class="ui huge pink button"><i class="copy outline left icon"></i>Starbound IP
             </button>
         </div>
+        <br>
         <div class="extra content">
-            <?PHP
-            $host = 'theyellowsub.us';
-            $port = '21025';
-            $status = @fsockopen($host, $port, $errno, $errstr, 1);
-
-            if ($status) {
-                echo "<font color='#00FF00'>ONLINE</font>";
-            } else {
-                echo "<font color='#FF0000'>OFFLINE</font>";
-            }
-            ?>
+            <div class="ui styled fluid accordion">
+                <div class="title">
+                    <h3 class="ui header"><i class="dropdown icon"></i>Mismatched Assets?</h3>
+                </div>
+                <div class="content">
+                    <div class="ui relaxed list">
+                        <div class="item"><h4>Go to Options -> Check Box: <a target="_blank" href="https://cdn.discordapp.com/attachments/524636562701680642/671901118913183755/unknown.png">'Allow Assets Mismatch'</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

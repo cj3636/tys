@@ -9,8 +9,8 @@
         <?php require 'menu.php'; ?>
     </div>
 </div>
-<div class="ui centered center aligned card">
-    <h1 class="title">Modlist</h1>
+<div class="ui centered center aligned fluid card">
+    <h1 class="title">Modlist:</h1>
     <div class="content">
         <?php
 
@@ -19,7 +19,7 @@
         require_once('vendor/autoload.php');
         $response = MCPing::check('theyellowsub.us', 25567);
         echo $response->getMotdToHtml();
-        echo "<br>";
+        echo '<div class="ui divider"></div>';
         $modList = $response->toArray()["mods"];
         for ($i = 0; $i < sizeof($modList["modList"]); $i++) {
             print_r($modList["modList"][$i]["modid"]);
