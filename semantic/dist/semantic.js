@@ -13525,7 +13525,7 @@ $.fn.rating.settings = {
 
   error         : {
     method    : 'The method you called is not defined',
-    noMaximum : 'No maximum rating specified. Cannot genChar HTML automatically'
+    noMaximum : 'No maximum rating specified. Cannot generate HTML automatically'
   },
 
 

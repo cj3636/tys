@@ -6,11 +6,11 @@
        Fonts
 --------------------*/
 
-@fontName          : 'Roboto';
+@fontName          : 'Lato';
 @fontSmoothing     : antialiased;
 
-@headerFont        : @fontName, 'Roboto Mono', Arial, Roboto, sans-serif;
-@pageFont          : @fontName, 'Roboto Mono', Arial, Roboto, sans-serif;
+@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
 @googleFontName    : @fontName;
 @importGoogleFonts : true;
@@ -51,11 +51,11 @@
     Brand Colors
 --------------------*/
 
-@primaryColor        : #FF1493;
-@secondaryColor      : @lightGrey;
+@primaryColor        : @blue;
+@secondaryColor      : @black;
 
 @lightPrimaryColor   : @lightBlue;
-@lightSecondaryColor : @grey;
+@lightSecondaryColor : @lightBlack;
 
 /*--------------
   Page Heading
@@ -121,7 +121,7 @@
         Page
 --------------------*/
 
-@pageBackground      : #2a2d32;
+@pageBackground      : #FFFFFF;
 @pageOverflowX       : hidden;
 
 @lineHeight          : 1.4285em;

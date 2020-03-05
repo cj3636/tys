@@ -40,14 +40,9 @@ h3 {
     width: 50%;
 }
 
-.ui.menu {
-    background-color: #4c4f52;
+.ui.stackable.tabular.menu .active.item {
+    background: none;
 }
-
-.ui.menu .item {
-    background-color: #4c4f52;
-}
-
 /* 4x3 Aspect Ratio */
 .iframe-container-4x3 {
     padding-top: 75%;
@@ -440,6 +435,10 @@ svg {
     color: #2185d0;
 }
 
+.ui.yellow.paragraph {
+    color: #ede900;
+}
+
 .ui.card.dark {
     background-color: #4c4f52;
 }
@@ -468,4 +467,12 @@ svg {
     50% {
         background-position: 100% 0;
     }
+}
+
+.ui.stackable.tabular.menu .item :hover {
+    color: linen;
+}
+
+.ui.inverted.menu {
+    background-color: black;
 }

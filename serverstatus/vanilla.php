@@ -16,6 +16,7 @@
                 echo '<div class="ui blue paragraph">' . $response->players . ' Online</div>';
             } else {
                 echo '<div class="ui red paragraph">Server is DOWN</div>';
+                echo '<div class="ui yellow paragraph">(Likely in Sleep Mode)</div>';
             }
             ?>
         </div>

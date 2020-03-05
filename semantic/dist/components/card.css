@@ -169,7 +169,7 @@
 .ui.card > .content > .header {
   display: block;
   margin: '';
-  font-family: 'Roboto', 'Roboto Mono', Arial, Roboto, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.85);
 }
 

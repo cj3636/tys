@@ -14,6 +14,9 @@
             const help = "help.php";
             const about = "about.php";
             const download = "download.php";
+            const tryptor = "tryptor.php";
+            const game = "game.php";
+            const render = "render.php";
             const status = "status.php";
             getName();
 
@@ -36,6 +39,15 @@
                         break;
                     case download:
                         document.getElementById("desc").innerHTML = "Modpack Installation";
+                        break;
+                    case tryptor:
+                        document.getElementById("desc").innerHTML = "Advanced Keyed Encryption";
+                        break;
+                    case game:
+                        document.getElementById("desc").innerHTML = "Box2dWeb + Easel JS Basic Physics Engine";
+                        break;
+                    case render:
+                        document.getElementById("desc").innerHTML = "JavaScript Render Engine";
                         break;
                     case status:
                         document.getElementById("desc").innerHTML = "Server Status";
