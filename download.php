@@ -15,7 +15,7 @@
         <div class="ui three stackable cards">
             <div class="ui center aligned card dark">
                 <div class="content header">
-                    <h1 class="ui huge left floated yellow ribbon label">Latest Downloads</h1>
+                    <h1 class="ui huge left floated purple ribbon label">Modpacks</h1>
                 </div>
                 <div class="ui divider"></div>
                 <div class="description">
@@ -97,41 +97,60 @@
             </div>
             <div class="ui center aligned card dark">
                 <div class="content header">
-                    <h1 class="ui huge left floated blue ribbon label">WIP Downloads</h1>
+                    <h1 class="ui huge left floated blue ribbon label">World Files</h1>
                 </div>
                 <div class="ui divider"></div>
-                <!--                <div class="description">-->
-                <!--                    <div class="ui small image">-->
-                <!--                        <img src="img/TYS_LEGACY.png" alt="ATMR+ LEGACY LOGO">-->
-                <!--                    </div>-->
-                <!--                    <div class="content">-->
-                <!--                        <div class="item">-->
-                <!--                            <a href=""-->
-                <!--                               target="_blank">-->
-                <!--                                <button class="ui huge purple disabled button">-->
-                <!--                                    <i class="white download icon"></i>[WIP]-->
-                <!--                                </button>-->
-                <!--                            </a>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="ui divider"></div>-->
-                <!--                <div class="description">-->
-                <!--                    <div class="ui small image">-->
-                <!--                        <img src="img/TYS_LEGACY.png" alt="ATMR+ LEGACY LOGO">-->
-                <!--                    </div>-->
-                <!--                    <div class="content">-->
-                <!--                        <div class="item">-->
-                <!--                            <a href=""-->
-                <!--                               target="_blank">-->
-                <!--                                <button class="ui huge green disabled button">-->
-                <!--                                    <i class="white download icon"></i>[WIP]-->
-                <!--                                </button>-->
-                <!--                            </a>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="ui divider"></div>-->
+                <div class="description">
+                    <div class="ui small image">
+                        <img src="img/TYS_AETHER.png" alt="SECOND AETHER TYS LOGO">
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <a href="https://theyellowsub.us/dist/worldSP.zip"
+                               target="_blank">
+                                <button class="ui huge blue button">
+                                    <i class="white download icon"></i>Singleplayer
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui divider"></div>
+                <div class="description">
+                    <div class="ui small image">
+                        <img src="img/TYS_AETHER.png" alt="SECOND AETHER TYS LOGO">
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <a href="https://theyellowsub.us/dist/worldMP.zip"
+                               target="_blank">
+                                <button class="ui huge red button" data-tooltip="Requires Custom Server"
+                                        data-inverted="">
+                                    <i class="white download icon"></i>Multiplayer
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui divider"></div>
+                <div class="ui divider"></div>
+                <div class="description">
+                    <div class="ui small image">
+                        <img src="img/TYS_AETHER.png" alt="SECOND AETHER TYS LOGO">
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <a data-tooltip="Available Soon"
+                               data-inverted="" href=""
+                               target="_blank">
+                                <button class="ui huge red disabled button">
+                                    <i class="white download icon"></i>Server
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui divider"></div>
             </div>
         </div>
     </div>
