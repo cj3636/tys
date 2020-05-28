@@ -53,7 +53,7 @@ require 'head.php';
                         </div>
                         <div class="content">
                             <div class="ui relaxed divided list">
-                                <div class="item"><h2>Watch <a target="_blank" href="https://optifine.net/downloads">this</a>
+                                <div class="item"><h2>Watch <a target="_blank" href="https://www.youtube.com/watch?v=R3_sCJWZKp8">this</a>
                                         video.</h2>
                                 </div>
                                 <div class="item"><h4><i class="yellow exclamation circle icon"></i>Be sure you do not

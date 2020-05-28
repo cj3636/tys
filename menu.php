@@ -29,14 +29,10 @@
                 <a id="tryptor" href="tryptor.php" class="item">Tryptor</a>
                 <a id="game" href="game.php" class="item">Game</a>
                 <a id="render" href="render.php" class="item">Render</a>
+                <a class="item" href="https://secondaether.us/"><i class="large purple info icon"></i>Second Aether</a>
+                <a class="item" href="https://quantumaether.us/"><i class="large pink info icon"></i>Quantum Aether</a>
             </div>
         </div>
-        <a id="about" class="item" href="https://secondaether.us/"><i class="large purple info icon"></i>
-            <div class="ui title">Second Aether</div>
-        </a>
-        <a id="about" class="item" href="https://quantumaether.us/"><i class="large pink info icon"></i>
-            <div class="ui title">Quantum Aether</div>
-        </a>
         <a id="download" class="ui right floated item" href="download.php"><i
                     class="large inverted purple download icon"></i>
             <div class="ui title">Downloads</div>

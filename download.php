@@ -106,7 +106,8 @@
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a href="https://theyellowsub.us/dist/worldSP.zip"
+                            <a data-tooltip="Minecraft 1.15.2"
+                               data-inverted="" href="https://theyellowsub.us/dist/worldSP.zip"
                                target="_blank">
                                 <button class="ui huge blue button">
                                     <i class="white download icon"></i>Singleplayer
@@ -122,11 +123,11 @@
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a href="https://theyellowsub.us/dist/worldMP.zip"
+                            <a data-tooltip="Placeholder"
+                               data-inverted="" href=""
                                target="_blank">
-                                <button class="ui huge red button" data-tooltip="Requires Custom Server"
-                                        data-inverted="">
-                                    <i class="white download icon"></i>Multiplayer
+                                <button class="ui huge red disabled button">
+                                    <i class="white download icon"></i>Placeholder
                                 </button>
                             </a>
                         </div>
@@ -140,11 +141,11 @@
                     </div>
                     <div class="content">
                         <div class="item">
-                            <a data-tooltip="Available Soon"
+                            <a data-tooltip="Placeholder"
                                data-inverted="" href=""
                                target="_blank">
                                 <button class="ui huge red disabled button">
-                                    <i class="white download icon"></i>Server
+                                    <i class="white download icon"></i>Placeholder
                                 </button>
                             </a>
                         </div>
