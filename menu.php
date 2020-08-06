@@ -15,10 +15,7 @@
         <a id="about" class="item" href="about.php"><i class="large blue users icon"></i>
             <div class="ui title">About Us</div>
         </a>
-        <!--        <a id="status" class="item" href="status.php" data-tooltip="Can Take a Moment to Load"-->
-        <!--           data-inverted=""><i class="large orange info circle icon"></i>-->
-        <!--            <div class="ui title">Server Status</div></a>-->
-        <a id="status" class="item" href="" data-tooltip="Temporarily Disabled"
+        <a id="status" class="item" href="status.php" data-tooltip="May Take A Moment to Load - Do NOT Double Click"
            data-inverted=""><i class="large orange info circle icon"></i>
             <div class="ui title">Server Status</div>
         </a>
@@ -28,13 +25,14 @@
             <div class="ui inverted menu">
                 <a id="tryptor" href="tryptor.php" class="item">Tryptor</a>
                 <a id="game" href="game.php" class="item">Game</a>
-                <a id="render" href="render.php" class="item">Render</a>
-                <a class="item" href="https://secondaether.us/"><i class="large purple info icon"></i>Second Aether</a>
-                <a class="item" href="https://quantumaether.us/"><i class="large pink info icon"></i>Quantum Aether</a>
+                <a id="render" href="render.php" class="item">Render 1</a>
+                <a id="render2" href="render2.php" class="item">Render 2</a>
+                <a class="item" href="qa/index.php"><i class="large purple info icon"></i>Second Aether</a>
+                <a class="item" href="sa/index.php"><i class="large pink info icon"></i>Quantum Aether</a>
             </div>
         </div>
         <a id="download" class="ui right floated item" href="download.php"><i
-                    class="large inverted purple download icon"></i>
+                class="large inverted purple download icon"></i>
             <div class="ui title">Downloads</div>
         </a>
     </div>
@@ -73,6 +71,9 @@
                 break;
             case render:
                 document.getElementById("render").className = "active item";
+                break;
+            case render2:
+                document.getElementById("render2").className = "active item";
                 break;
             default:
                 return "";

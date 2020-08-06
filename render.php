@@ -10,8 +10,8 @@ require 'head.php';
     <div class="sixteen wide column">
         <?php require 'menu.php'; ?>
     </div>
-    <div class="ui ten wide center aligned column">
-        <div class="ui title">Coming Soon</div>
+    <div class="ui sixteen wide center aligned column">
+        <?php require 'render1.html'; ?>
     </div>
 </div>
 <footer>&copy; P.o.P Industries 2019</footer>

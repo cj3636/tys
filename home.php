@@ -56,7 +56,6 @@
     <footer>&copy; P.o.P Industries 2019</footer>
 </body>
 <script>
-    new ClipboardJS('#copyBedrock');
     new ClipboardJS('#copyVanilla');
 </script>
 <script>

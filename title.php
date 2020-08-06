@@ -17,6 +17,7 @@
             const tryptor = "tryptor.php";
             const game = "game.php";
             const render = "render.php";
+            const render2 = "render2.php";
             const status = "status.php";
             getName();
 
@@ -47,6 +48,9 @@
                         document.getElementById("desc").innerHTML = "Box2dWeb + Easel JS Basic Physics Engine";
                         break;
                     case render:
+                        document.getElementById("desc").innerHTML = "JavaScript Render Engine";
+                        break;
+                    case render2:
                         document.getElementById("desc").innerHTML = "JavaScript Render Engine";
                         break;
                     case status:

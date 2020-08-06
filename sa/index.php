@@ -19,20 +19,21 @@ require 'head.php';
             </div>
             <button data-tooltip="Click to Enlarge"
                     data-inverted="" class="ui button image" onclick="openModal()"><img
-                        class="ui big centered image"
-                        src="img/timetable.png"
-                        alt="SHOW LINEUP">
+                    class="ui big centered image"
+                    src="img/timetable.png"
+                    alt="SHOW LINEUP">
             </button>
             <div><a href="warning.php" target="_blank">Seizure Warning</a></div>
             <div class="ui inverted divider"></div>
+            <button class="ui primary button"><a href="../home.php">Home</a></button>
             <button class="ui black button"><a href="https://discord.gg/DvBk6fG" target="_blank">Discord</a></button>
         </div>
         <div class="content" id="test1">
             <button data-tooltip="Click to Enlarge"
                     data-inverted="" class="ui button image" onclick="openModal2()"><img
-                        class="ui big centered image"
-                        src="img/afterparty.png"
-                        alt="SHOW LINEUP">
+                    class="ui big centered image"
+                    src="img/afterparty.png"
+                    alt="SHOW LINEUP">
             </button>
         </div>
     </div>

@@ -13,13 +13,13 @@ require 'head.php';
             </div>
             <button data-tooltip="Click to Enlarge"
                     data-inverted="" class="ui button image" onclick="openModal()"><img
-                        class="ui big centered image"
-                        src="img/qa.png"
-                        alt="SHOW LINEUP">
+                    class="ui big centered image"
+                    src="img/qa.png"
+                    alt="SHOW LINEUP">
             </button>
             <div><a href="warning.php" target="_blank">Seizure Warning</a></div>
             <div class="ui inverted divider"></div>
-            <button class="ui pink button"><a href="https://quantum-aether.tebex.io/" target="_blank">VIP Shop</a></button>
+            <button class="ui primary button"><a href="../home.php">Home</a></button>
             <button class="ui black button"><a href="https://discord.gg/DvBk6fG" target="_blank">Discord</a></button>
         </div>
     </div>
