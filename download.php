@@ -62,14 +62,18 @@
                     </div>
                 </div>
                 <div class="header">Install Using <a target="_blank" href="https://gdevs.io/#downloadContainer">GDLauncher</a>
-                    (Recommended)
+                    (Recommended).
+                </div>
+                <div class="header">
+                    See <a target="_blank" href="videos.php">Videos</a> to increase your RAM.
                 </div>
                 <div class="content">
                     <div class="ui embed" data-url="img/installTwitch.mp4" data-placeholder="img/thenewjourney.png"
                          data-icon="play">
                     </div>
                 </div>
-                <div class="header">Install Using <a target="_blank" href="https://www.twitch.tv/downloads/videos/all">Twitch</a>
+                <div class="header">Install Using <a target="_blank" href="https://www.twitch.tv/downloads/videos/all">Twitch</a>.
+                    See <a target="_blank" href="videos.php">Videos</a> to increase your RAM.
                 </div>
             </div>
             <div class="ui center aligned card dark">
