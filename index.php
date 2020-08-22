@@ -16,11 +16,20 @@ require 'head.php';
         </div>
     </div>
     <div class="sixteen wide center aligned column">
-        <div data-inverted="" data-tooltip="TYS ATM5+ Modpack" data-position="bottom center">
+        <div data-inverted="" data-tooltip="TYS_ATM5+ Modpack ZIP for Twitch/MultiMC/GDLauncher" data-position="bottom center">
             <a href="dist/TYS_ATM5.zip"
-               target="_blank">
+                   target="_blank">
                 <button class="ui huge purple button">
-                    <i class="white download icon"></i>Modpack
+                    <i class="white download icon"></i>Modpack ZIP Download
+                </button>
+            </a>
+        </div>
+        <br>
+        <div data-inverted="" data-tooltip="Automatic .bat Installer for Windows" data-position="bottom center">
+            <a href="dist/tys.bat"
+               target="_blank">
+                <button class="ui huge blue button">
+                    <i class="white windows icon"></i>Modpack Windows Installer
                 </button>
             </a>
         </div>

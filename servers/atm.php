@@ -27,31 +27,16 @@
                 </div>
                 <div class="content">
                     <div class="ui relaxed list">
-                        <div class="item"><h4>Click the 'Download' link above and watch the video.</h4></div>
+                        <div class="item"><h4>Click the 'Download' link above and follow the instructions</h4></div>
                     </div>
                 </div>
                 <div class="title">
                     <h3 class="ui header"><i class="dropdown icon"></i>Modlist?</h3>
                 </div>
                 <div class="content">
-                    <div class="ui relaxed list">
-                        <div class="left floated item" style="text-decoration: underline;">Additional Mods:</div>
-                        <div class="left floated item"><h4>
-                                ProjectE
-                                <br>Project Extended
-                                <br>Overloaded Armor Bar
-                                <br>Alib
-                                <br>Chemlib
-                                <br>Cyclic
-                                <br>BetterThanMending
-                                <br>Bountiful Baubles
-                                <br>BotanyPots
-                                <br>Create
-                        </div>
-                        <a href="modlist.php">
-                            <button class="ui purple button">Full Modlist</button>
-                        </a>
-                    </div>
+                    <a href="modlist.php">
+                        <button class="ui purple button">Full Modlist</button>
+                    </a>
                 </div>
             </div>
         </div>
