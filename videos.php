@@ -10,8 +10,8 @@
     </div>
     <div class="six wide centered column">
         <div class="row">
-            <div class="ui embed" data-url="img/install.webm" data-placeholder="img/TYS_ATM5.png"
-                 data-icon="right circle arrow">
+            <div id='ui-embed' class="ui embed" data-source="youtube" data-id="XHW5Y4eY-yA"
+                 data-placeholder="https://img.youtube.com/vi/XHW5Y4eY-yA/maxresdefault.jpg">
             </div>
         </div>
         <br>
@@ -23,7 +23,7 @@
     <div class="six wide centered column">
         <div class="row">
             <div id='ui-embed' class="ui embed" data-source="youtube" data-id="R3_sCJWZKp8"
-                 data-placeholder="img/TYS_ATM5.png" data-icon="right circle arrow">
+                 data-placeholder="https://img.youtube.com/vi/R3_sCJWZKp8/maxresdefault.jpg">
             </div>
         </div>
         <br>

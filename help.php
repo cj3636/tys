@@ -109,6 +109,17 @@ require 'head.php';
                         </div>
                         <div class="title">
                             <h3 class="ui header"><i class="dropdown icon"></i>
+                                Why is the modpack not on Curseforge/Twitch?</h3>
+                        </div>
+                        <div class="content">
+                            <div class="ui relaxed divided list">
+                                <div class="item">
+                                    <h2>It is a terrible platform that takes up to 48 hours to upload new files to.</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3 class="ui header"><i class="dropdown icon"></i>
                                 My question wasn't answered.</h3>
                         </div>
                         <div class="content">

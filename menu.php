@@ -19,16 +19,17 @@
            data-inverted=""><i class="large orange info circle icon"></i>
             <div class="ui title">Server Status</div>
         </a>
-        <div id="dropdown" class="ui floating dropdown item">
+        <div id="dropdown" class="ui floating dropdown item" data-tooltip="Legacy Server's & Interesting Developer API's"
+             data-inverted="">
             <i class="large purple plus circle icon"></i>
-            <div class="ui title">Misc</div>
+            <div class="ui title">Legacy/Dev</div>
             <div class="ui inverted menu">
                 <a id="tryptor" href="tryptor.php" class="item">Tryptor</a>
                 <a id="game" href="game.php" class="item">Game</a>
                 <a id="render" href="render.php" class="item">Render 1</a>
                 <a id="render2" href="render2.php" class="item">Render 2</a>
-                <a class="item" href="qa/index.php"><i class="large purple info icon"></i>Second Aether</a>
-                <a class="item" href="sa/index.php"><i class="large pink info icon"></i>Quantum Aether</a>
+                <a class="item" href="sa/index.php"><i class="large purple info icon"></i>Second Aether</a>
+                <a class="item" href="qa/index.php"><i class="large pink info icon"></i>Quantum Aether</a>
             </div>
         </div>
         <a id="download" class="ui right floated item" href="download.php"><i
