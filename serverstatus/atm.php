@@ -1,7 +1,7 @@
 <!--ATMR+ Card-->
 <div class="ui card dark">
 <div class="content">
-    <img alt="TYS ATMR+ LOGO" class="small ui image" src="img/TYS_ATMR.png">
+    <img alt="TYS ATMR+ LOGO" class="small ui image" src="/img/TYS_ATMR.png">
     <div class="ui divider"></div>
     <div class="extra content">
         <?php
@@ -21,7 +21,7 @@
     </div>
     <div class="ui divider"></div>
     <div class="ui centered extra content">
-        <a href="modlist.php">
+        <a href="/modlist.php">
             <button class="ui huge orange button">Modlist</button>
         </a>
     </div>

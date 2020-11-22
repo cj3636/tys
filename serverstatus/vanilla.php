@@ -1,7 +1,7 @@
 <!--Vanilla Card-->
 <div class="ui card dark">
     <div class="content">
-        <img alt="TYS ATMR+ LOGO" class="small ui image" src="img/TYS_VANILLA.png">
+        <img alt="TYS ATMR+ LOGO" class="small ui image" src="/img/TYS_VANILLA.png">
         <div class="ui divider"></div>
         <div class="extra content">
             <?php

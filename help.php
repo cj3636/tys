@@ -35,7 +35,7 @@ require 'head.php';
                                 </div>
                                 <div class="item">
                                     <h4><i class="blue question circle icon"></i>You can try installing <a
-                                            target="_blank" href="https://optifine.net/downloads">Optifine</a> for
+                                                target="_blank" href="https://optifine.net/downloads">Optifine</a> for
                                         improved performance.
                                     </h4>
                                     <h4><i class="yellow exclamation circle icon"></i>Optifine is known to cause
@@ -96,7 +96,7 @@ require 'head.php';
                                     <button id="copyVanilla" data-clipboard-text="theyellowsub.us"
                                             data-tooltip="Copy Vanilla IP Address"
                                             data-inverted="" class="ui green button"><i
-                                            class="copy outline left icon"></i>Vanilla IP
+                                                class="copy outline left icon"></i>Vanilla IP
                                     </button>
                                 </div>
                                 <div class="item">
@@ -115,6 +115,9 @@ require 'head.php';
                             <div class="ui relaxed divided list">
                                 <div class="item">
                                     <h2>It is a terrible platform that takes up to 48 hours to upload new files to.</h2>
+                                    <h3><i class="yellow exclamation circle icon"></i>We may recommend using <a
+                                                href="https://curseforge.overwolf.com/" target="_blank">Overwolf</a> in the near future.
+                                    </h3>
                                 </div>
                             </div>
                         </div>

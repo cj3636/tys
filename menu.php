@@ -15,11 +15,18 @@
         <a id="about" class="item" href="about.php"><i class="large blue users icon"></i>
             <div class="ui title">About Us</div>
         </a>
-        <a id="status" class="item" href="status.php" data-tooltip="May Take A Moment to Load - Do NOT Double Click"
-           data-inverted=""><i class="large orange info circle icon"></i>
+        <a id="status" class="item" href="status.php" onclick="disableStatus()"><i
+                    class="large orange info circle icon"></i>
             <div class="ui title">Server Status</div>
         </a>
-        <div id="dropdown" class="ui floating dropdown item" data-tooltip="Legacy Server's & Interesting Developer API's"
+        <nav id="statusLoading" hidden="hidden">
+            <a class="item">
+                <div class="ui active inline loader"></div>
+                <div class="ui title">Server Status</div>
+            </a>
+        </nav>
+        <div id="dropdown" class="ui floating dropdown item"
+             data-tooltip="Legacy Server's & Interesting Developer API's"
              data-inverted="">
             <i class="large purple plus circle icon"></i>
             <div class="ui title">Legacy/Dev</div>
@@ -33,12 +40,17 @@
             </div>
         </div>
         <a id="download" class="ui right floated item" href="download.php"><i
-                class="large inverted purple download icon"></i>
+                    class="large inverted purple download icon"></i>
             <div class="ui title">Downloads</div>
         </a>
     </div>
 </div>
 <script>
+    function disableStatus() {
+        $('#status').hide();
+        $('#statusLoading').show();
+    }
+
     setMenuActive();
 
     function setMenuActive() {
@@ -81,7 +93,5 @@
         }
     }
 
-    $('.ui.dropdown')
-        .dropdown()
-    ;
+    $('.ui.dropdown').dropdown();
 </script>

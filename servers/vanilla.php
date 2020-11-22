@@ -1,7 +1,7 @@
 <!--Vanilla Card-->
 <div class="card">
     <div class="content">
-        <img alt="TYS ATMR+ LOGO" class="right floated small ui image" src="img/TYS_VANILLA.png">
+        <img alt="TYS ATMR+ LOGO" class="right floated small ui image" src="/img/TYS_VANILLA.png">
         <div class="header">Vanilla</div>
         <div class="meta">Vanilla Minecraft with Plugins</div>
         <div class="description">An experience you can't miss! Factions, Minigames, Creative plots. You name it, we've

@@ -67,11 +67,11 @@
     <div class="ten wide centered column">
         <form class="ui form">
             <label for="key"></label>
-            <input type="text" id="key" name="key" class="key" placeholder="Key">
+            <input type="password" id="key" name="key" class="key" placeholder="Key">
             <label for="crypt"></label>
             <textarea id="crypt" name="crypt" class="crypt" placeholder="Input"></textarea>
         </form>
-        <form class="ui form" action="mailto:" method="post">
+        <form class="ui form">
             <label for="output"></label>
             <textarea readonly id="output" name="output" class="output" placeholder="Output"></textarea>
         </form>

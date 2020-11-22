@@ -6,8 +6,9 @@
     <h3 class="ui description">Minecraft | Vanilla + Modded</h3>
     <h3 id="desc" class="ui description">
         <script>
-            var path = window.location.pathname;
-            var page = path.split("/").pop();
+            let path = window.location.pathname;
+            console.log(path);
+            let page = path.split("/").pop();
             const index = "home.php";
             const discord = "discord.php";
             const videos = "videos.php";
