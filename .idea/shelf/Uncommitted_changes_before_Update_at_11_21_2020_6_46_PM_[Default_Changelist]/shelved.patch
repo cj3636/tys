@@ -1,0 +1,91 @@
+Index: dist/tys.bat
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>curl https://files.multimc.org/downloads/mmc-stable-win32.zip --output mm.zip\r\ntar -xf mm.zip\r\nmove MultiMC C:/\r\nmshta vbscript:Execute(\"msgbox \"\"MultiMC and TYS ATM5+ will now be installed. Remember to increase allocated memory!\"\":close\")\r\nC:/MultiMC/MultiMC.exe -I https://theyellowsub.us/dist/TYS_ATM5.zip\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dist/tys.bat	(revision 6296f7f8b7a52fade513f70a2b38195f0b907d58)
++++ dist/tys.bat	(date 1606013185926)
+@@ -2,5 +2,5 @@
+ tar -xf mm.zip
+ move MultiMC C:/
+ mshta vbscript:Execute("msgbox ""MultiMC and TYS ATM5+ will now be installed. Remember to increase allocated memory!"":close")
+-C:/MultiMC/MultiMC.exe -I https://theyellowsub.us/dist/TYS_ATM5.zip
++C:/MultiMC/MultiMC.exe -I https://theyellowsub.us/dist/TYS_LATEST.zip
+ 
+Index: menu.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><div class=\"sixteen wide column\">\r\n    <div class=\"ui stackable tabular menu\">\r\n        <a id=\"home\" class=\"item\" href=\"home.php\"><i class=\"large green home icon\"></i>\r\n            <div class=\"ui title\">Home</div>\r\n        </a>\r\n        <a id=\"discord\" class=\"item\" href=\"discord.php\"><i class=\"large blue discord icon\"></i>\r\n            <div class=\"ui title\">Discord</div>\r\n        </a>\r\n        <a id=\"videos\" class=\"ui item inverted\" href=\"videos.php\"><i class=\"large red youtube icon\"></i>\r\n            <div class=\"ui title\">Videos</div>\r\n        </a>\r\n        <a id=\"help\" class=\"item\" href=\"help.php\"><i class=\"large yellow question icon\"></i>\r\n            <div class=\"ui title\">Help</div>\r\n        </a>\r\n        <a id=\"about\" class=\"item\" href=\"about.php\"><i class=\"large blue users icon\"></i>\r\n            <div class=\"ui title\">About Us</div>\r\n        </a>\r\n        <a id=\"status\" class=\"item\" href=\"status.php\" data-tooltip=\"May Take A Moment to Load - Do NOT Double Click\"\r\n           data-inverted=\"\"><i class=\"large orange info circle icon\"></i>\r\n            <div class=\"ui title\">Server Status</div>\r\n        </a>\r\n        <div id=\"dropdown\" class=\"ui floating dropdown item\">\r\n            <i class=\"large purple plus circle icon\"></i>\r\n            <div class=\"ui title\">Misc</div>\r\n            <div class=\"ui inverted menu\">\r\n                <a id=\"tryptor\" href=\"tryptor.php\" class=\"item\">Tryptor</a>\r\n                <a id=\"game\" href=\"game.php\" class=\"item\">Game</a>\r\n                <a id=\"render\" href=\"render.php\" class=\"item\">Render 1</a>\r\n                <a id=\"render2\" href=\"render2.php\" class=\"item\">Render 2</a>\r\n                <a class=\"item\" href=\"qa/index.php\"><i class=\"large purple info icon\"></i>Second Aether</a>\r\n                <a class=\"item\" href=\"sa/index.php\"><i class=\"large pink info icon\"></i>Quantum Aether</a>\r\n            </div>\r\n        </div>\r\n        <a id=\"download\" class=\"ui right floated item\" href=\"download.php\"><i\r\n                class=\"large inverted purple download icon\"></i>\r\n            <div class=\"ui title\">Downloads</div>\r\n        </a>\r\n    </div>\r\n</div>\r\n<script>\r\n    setMenuActive();\r\n\r\n    function setMenuActive() {\r\n        switch (page) {\r\n            case index:\r\n                document.getElementById(\"home\").className = \"active item\";\r\n                break;\r\n            case discord:\r\n                document.getElementById(\"discord\").className = \"active item\";\r\n                break;\r\n            case videos:\r\n                document.getElementById(\"videos\").className = \"active item\";\r\n                break;\r\n            case help:\r\n                document.getElementById(\"help\").className = \"active item\";\r\n                break;\r\n            case about:\r\n                document.getElementById(\"about\").className = \"active item\";\r\n                break;\r\n            case status:\r\n                document.getElementById(\"status\").className = \"active item\";\r\n                break;\r\n            case download:\r\n                document.getElementById(\"download\").className = \"active ui right floated active item\";\r\n                break;\r\n            case tryptor:\r\n                document.getElementById(\"tryptor\").className = \"active item\";\r\n                break;\r\n            case game:\r\n                document.getElementById(\"game\").className = \"active item\";\r\n                break;\r\n            case render:\r\n                document.getElementById(\"render\").className = \"active item\";\r\n                break;\r\n            case render2:\r\n                document.getElementById(\"render2\").className = \"active item\";\r\n                break;\r\n            default:\r\n                return \"\";\r\n        }\r\n    }\r\n\r\n    $('.ui.dropdown')\r\n        .dropdown()\r\n    ;\r\n</script>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- menu.php	(revision 6296f7f8b7a52fade513f70a2b38195f0b907d58)
++++ menu.php	(date 1606012539583)
+@@ -15,8 +15,8 @@
+         <a id="about" class="item" href="about.php"><i class="large blue users icon"></i>
+             <div class="ui title">About Us</div>
+         </a>
+-        <a id="status" class="item" href="status.php" data-tooltip="May Take A Moment to Load - Do NOT Double Click"
+-           data-inverted=""><i class="large orange info circle icon"></i>
++        <a id="status" class="item" href="status.php" onclick="disableStatus()"><i
++                    class="large orange info circle icon"></i>
+             <div class="ui title">Server Status</div>
+         </a>
+         <div id="dropdown" class="ui floating dropdown item">
+@@ -32,12 +32,16 @@
+             </div>
+         </div>
+         <a id="download" class="ui right floated item" href="download.php"><i
+-                class="large inverted purple download icon"></i>
++                    class="large inverted purple download icon"></i>
+             <div class="ui title">Downloads</div>
+         </a>
+     </div>
+ </div>
+ <script>
++    function disableStatus() {
++        $('#status').hide();
++    }
++
+     setMenuActive();
+ 
+     function setMenuActive() {
+Index: title.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><div class=\"ui two wide column\">\r\n    <img class=\"ui medium centered image\" src=\"img/thenewjourney.png\" alt=\"logo\">\r\n</div>\r\n<div class=\"ui fourteen wide column\">\r\n    <a id=\"link1\"><h1 class=\"ui title\">The Yellow Submarine Servers</h1></a>\r\n    <h3 class=\"ui description\">Minecraft | Vanilla + Modded</h3>\r\n    <h3 id=\"desc\" class=\"ui description\">\r\n        <script>\r\n            var path = window.location.pathname;\r\n            var page = path.split(\"/\").pop();\r\n            const index = \"home.php\";\r\n            const discord = \"discord.php\";\r\n            const videos = \"videos.php\";\r\n            const help = \"help.php\";\r\n            const about = \"about.php\";\r\n            const download = \"download.php\";\r\n            const tryptor = \"tryptor.php\";\r\n            const game = \"game.php\";\r\n            const render = \"render.php\";\r\n            const render2 = \"render2.php\";\r\n            const status = \"status.php\";\r\n            getName();\r\n\r\n            function getName() {\r\n                switch (page) {\r\n                    case index:\r\n                        document.getElementById(\"desc\").innerHTML = \"Home\";\r\n                        break;\r\n                    case discord:\r\n                        document.getElementById(\"desc\").innerHTML = \"Discord\";\r\n                        break;\r\n                    case videos:\r\n                        document.getElementById(\"desc\").innerHTML = \"Videos\";\r\n                        break;\r\n                    case help:\r\n                        document.getElementById(\"desc\").innerHTML = \"Help | F.A.Q\";\r\n                        break;\r\n                    case about:\r\n                        document.getElementById(\"desc\").innerHTML = \"The Development and Discord Team\";\r\n                        break;\r\n                    case download:\r\n                        document.getElementById(\"desc\").innerHTML = \"Modpack Installation\";\r\n                        break;\r\n                    case tryptor:\r\n                        document.getElementById(\"desc\").innerHTML = \"Advanced Keyed Encryption\";\r\n                        break;\r\n                    case game:\r\n                        document.getElementById(\"desc\").innerHTML = \"Box2dWeb + Easel JS Basic Physics Engine\";\r\n                        break;\r\n                    case render:\r\n                        document.getElementById(\"desc\").innerHTML = \"JavaScript Render Engine\";\r\n                        break;\r\n                    case render2:\r\n                        document.getElementById(\"desc\").innerHTML = \"JavaScript Render Engine\";\r\n                        break;\r\n                    case status:\r\n                        document.getElementById(\"desc\").innerHTML = \"Server Status\";\r\n                        break;\r\n                    default:\r\n                        return \"\";\r\n                }\r\n            }\r\n\r\n            $('html').css('overflow', 'hidden');\r\n        </script>\r\n    </h3>\r\n</div>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- title.php	(revision 6296f7f8b7a52fade513f70a2b38195f0b907d58)
++++ title.php	(date 1606012175976)
+@@ -6,8 +6,9 @@
+     <h3 class="ui description">Minecraft | Vanilla + Modded</h3>
+     <h3 id="desc" class="ui description">
+         <script>
+-            var path = window.location.pathname;
+-            var page = path.split("/").pop();
++            let path = window.location.pathname;
++            console.log(path);
++            let page = path.split("/").pop();
+             const index = "home.php";
+             const discord = "discord.php";
+             const videos = "videos.php";
+Index: .idea/php.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"PhpIncludePathManager\">\r\n    <include_path>\r\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/lukasss93/minecraft-server-status\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/xpaw/php-minecraft-query\" />\r\n    </include_path>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/php.xml	(revision 6296f7f8b7a52fade513f70a2b38195f0b907d58)
++++ .idea/php.xml	(date 1606011378269)
+@@ -7,4 +7,5 @@
+       <path value="$PROJECT_DIR$/vendor/xpaw/php-minecraft-query" />
+     </include_path>
+   </component>
++  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+ </project>
+\ No newline at end of file
