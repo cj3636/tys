@@ -23,6 +23,27 @@ require 'head.php';
                     <div class="ui styled fluid accordion">
                         <div class="title">
                             <h3 class="ui header"><i class="dropdown icon"></i>
+                                What is "The Yellow Submarine?</h3>
+                        </div>
+                        <div class="content">
+                            <div class="ui relaxed divided list">
+                                <div class="item">
+                                    <h2>A movie made by <a href="https://en.wikipedia.org/wiki/The_Beatles"
+                                                           target="_blank">The Beatles</a></h2>
+                                    <h3><a href="https://en.wikipedia.org/wiki/Yellow_Submarine_(film)" target="_blank"><i>Yellow
+                                                Submarine</i></<a></a>. Directed by George Dunning, performances by John
+                                        Lennon, Paul McCartney, George Harrison and Ringo Starr, United Artists,
+                                        1968
+                                    </h3>
+                                    <h3>Watch the movie <a href="https://theyellowsub.us/movie.mp4">here</a>. Buy the
+                                        movie <a
+                                                href="https://itunes.apple.com/us/movie/yellow-submarine/id518267514"
+                                                target="_blank">here.</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3 class="ui header"><i class="dropdown icon"></i>
                                 How much RAM do I need to run the modpack?</h3>
                         </div>
                         <div class="content">
@@ -116,7 +137,8 @@ require 'head.php';
                                 <div class="item">
                                     <h2>It is a terrible platform that takes up to 48 hours to upload new files to.</h2>
                                     <h3><i class="yellow exclamation circle icon"></i>We may recommend using <a
-                                                href="https://curseforge.overwolf.com/" target="_blank">Overwolf</a> in the near future.
+                                                href="https://curseforge.overwolf.com/" target="_blank">Overwolf</a> in
+                                        the near future.
                                     </h3>
                                 </div>
                             </div>

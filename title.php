@@ -7,7 +7,6 @@
     <h3 id="desc" class="ui description">
         <script>
             let path = window.location.pathname;
-            console.log(path);
             let page = path.split("/").pop();
             const index = "home.php";
             const discord = "discord.php";
