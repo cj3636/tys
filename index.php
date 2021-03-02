@@ -26,7 +26,7 @@ require 'head.php';
         <br>
         <div data-inverted="" data-tooltip="TYS_ATM3+ Modpack ZIP for Twitch/Overwolf/MultiMC/GDLauncher"
              data-position="bottom center">
-            <a href="/dist/TYS_OLD.zip"
+            <a href="/dist/TYS_LATEST.zip"
                target="_blank">
                 <button class="ui huge purple button">
                     <i class="white download icon"></i>Modpack ZIP Download
