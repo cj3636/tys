@@ -9,6 +9,6 @@
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
     <script src="semantic/dist/semantic.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
     <script src="semantic/dist/clipboard.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
