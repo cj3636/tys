@@ -1,6 +1,7 @@
 {
     "require": {
         "lukasss93/minecraft-server-status": "^2.0",
-        "xpaw/php-minecraft-query": "^3.0"
+        "xpaw/php-minecraft-query": "^3.0",
+      "ext-dom": "*"
     }
 }
