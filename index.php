@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en_US">
-<?php
-require 'head.php';
-?>
+<?php require_once 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
     <div class="sixteen wide center aligned column">
@@ -18,6 +16,13 @@ require 'head.php';
         <a href="download.php">
             <button class="ui huge purple button">
                 <i class="white download icon"></i>Downloads
+            </button>
+        </a>
+    </div>
+    <div class="sixteen wide center aligned column">
+        <a href="download.php">
+            <button class="ui huge blue button">
+                <i class="white paypal icon"></i>Donate
             </button>
         </a>
     </div>

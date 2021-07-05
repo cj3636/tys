@@ -1,0 +1,17 @@
+CREATE DATABASE accounts;
+
+CREATE TABLE `webserver`.`users`
+(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(50) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `password` VARCHAR(100) NOT NULL,
+    `hash` VARCHAR(32) NOT NULL,
+    `active` BOOL NOT NULL DEFAULT 0,
+    `token` varchar(16) NOT NULL,
+    `admin` BOOL NOT NULL DEFAULT 0,
+PRIMARY KEY (`id`)
+);
+
+$cfg = parse_ini_file('database/database.ini');
+$mysqli = new mysqli($cfg['host'], $cfg['username'], $cfg['passwd'], $cfg['dbname']) or die($mysqli->error);

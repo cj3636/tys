@@ -1,7 +1,7 @@
 <div class="ui two wide column">
     <img class="ui medium centered image" src="img/thenewjourney.png" alt="logo">
 </div>
-<div class="ui fourteen wide column">
+<div class="ui twelve wide column">
     <a id="link1"><h1 class="ui title">The Yellow Submarine Servers</h1></a>
     <h3 class="ui description">Minecraft | Vanilla + Modded</h3>
     <h3 id="desc" class="ui description">
@@ -51,7 +51,7 @@
                         document.getElementById("desc").innerHTML = "JavaScript Render Engine";
                         break;
                     case render2:
-                        document.getElementById("desc").innerHTML = "JavaScript Render Engine";
+                        document.getElementById("desc").innerHTML = "JavaScript Render Engine 2";
                         break;
                     case status:
                         document.getElementById("desc").innerHTML = "Server Status";
@@ -60,8 +60,12 @@
                         return "";
                 }
             }
-
             $('html').css('overflow', 'hidden');
         </script>
     </h3>
+</div>
+<div class="ui one wide right floated column">
+    <a href="admin/index.php">
+        <button class="ui button icon"><i class="ui green sign-in icon"></i>Login</button>
+    </a>
 </div>

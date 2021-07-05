@@ -1,0 +1,93 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #23272A;
+    overflow: hidden;
+}
+
+select.ui.dropdown {
+    min-height: auto !important;
+    height: 1.25em;
+    padding: 0;
+}
+
+#element::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.ui.form textarea {
+    background-color: #99AAB5;
+}
+
+.ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
+    background-color: #99AAB5;
+}
+
+#title-bar {
+    -webkit-app-region: drag;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    background-image: url('../img/bar.png');
+    margin: 0;
+}
+
+#title {
+    position: fixed;
+    top: 0;
+    left: 6px;
+    color: cyan;
+}
+
+#title-bar-btns {
+    -webkit-app-region: no-drag;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: inherit;
+}
+
+#min-btn {
+    height: 100%;
+    margin: 0;
+}
+#max-btn {
+    height: 100%;
+    margin: 0;
+}
+#close-btn {
+    height: 100%;
+    margin: 0;
+}
+
+#menu {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.ui.menu {
+    background-color: #99AAB5;
+}
+
+.ui.vertical.menu {
+    background-color: #c7d5ed;
+}
+
+.ui.menu .item {
+    background-color: #2C2F33;
+    color: white;
+}
+
+.ui.icon.grey.item.button {
+    height: 100%;
+}
+
+.ui.dropdown {
+    background-color: #2C2F33;
+    color: white;
+}

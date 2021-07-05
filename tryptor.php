@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en_US">
-<?php require 'head.php';
-?>
+<?php require 'head.php'; ?>
 <head>
     <title>Tryptor</title>
     <script src="js/cypher.js"></script>

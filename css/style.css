@@ -11,14 +11,15 @@ body::-webkit-scrollbar {
 
 html {
     -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-
-body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    background-image: url("../img/home.png");
+}
 
+body {
+    background-image: url("../img/wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h3 {
@@ -43,6 +44,7 @@ h3 {
 .ui.stackable.tabular.menu .active.item {
     background: none;
 }
+
 /* 4x3 Aspect Ratio */
 .iframe-container-4x3 {
     padding-top: 75%;
@@ -361,12 +363,14 @@ input:checked + .slider:before {
         height: auto;
     }
 }
+
 svg {
     width: 100%;
     display: block;
     margin: auto;
     font: 10.5em 'Montserrat';
 }
+
 .text-copy {
     fill: none;
     stroke: white;
@@ -438,8 +442,9 @@ svg {
     font-family: monospace;
     letter-spacing: 5px;
 }
+
 .rainbow_text_animated {
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -448,7 +453,7 @@ svg {
 }
 
 @keyframes rainbow_animation {
-    0%,100% {
+    0%, 100% {
         background-position: 0 0;
     }
 
