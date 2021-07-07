@@ -60,12 +60,15 @@
                         return "";
                 }
             }
+
             $('html').css('overflow', 'hidden');
         </script>
     </h3>
 </div>
-<div class="ui one wide right floated column">
-    <a href="admin/index.php">
-        <button class="ui button icon"><i class="ui green sign-in icon"></i>Login</button>
+<div class="ui two wide column">
+    <a class="ui huge yellow ribbon label" href="https://www.paypal.com/donate?hosted_button_id=REUAFVC9PPVBC" target="_blank">
+        <div class="ui huge blue button">
+            <i class="white paypal icon"></i>Donate
+        </div>
     </a>
 </div>

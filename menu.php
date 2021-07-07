@@ -1,5 +1,7 @@
+<?php require_once 'loginModal.php' ?>
+<?php require_once 'signupModal.php' ?>
 <div class="sixteen wide column">
-    <div class="ui stackable tabular menu">
+    <div class="ui secondary pointing inverted stackable fluid menu">
         <a id="home" class="item" href="home.php"><i class="large green home icon"></i>
             <div class="ui title">Home</div>
         </a>
@@ -22,21 +24,32 @@
         <a id="about" class="item" href="about.php"><i class="large blue users icon"></i>
             <div class="ui title">About Us</div>
         </a>
-        <div id="dropdown" class="ui floating dropdown item"
+<!--        TODO re implement tryptor and old sites-->
+<!--                        <div id="dropdown" class="ui pointing dropdown item"-->
+<!--                             data-tooltip="Legacy Server's & Interesting Developer API's"-->
+<!--                             data-inverted="">-->
+<!--                            <i class="large purple plus circle icon"></i>-->
+<!--                            <div class="ui title">Legacy</div>-->
+<!--                            <div class="ui inverted menu">-->
+<!--                                <a id="tryptor" href="tryptor.php" class="item">Tryptor</a>-->
+<!--                                <a id="game" href="game.php" class="item">Game</a>-->
+<!--                                <a id="render" href="render.php" class="item">Render 1</a>-->
+<!--                                <a id="render2" href="render2.php" class="item">Render 2</a>-->
+<!--                                <a class="item" href="sa/index.php"><i class="large purple info icon"></i>Second Aether</a>-->
+<!--                                <a class="item" href="qa/index.php"><i class="large pink info icon"></i>Quantum Aether</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+        <div id="account" class="ui pointing dropdown item"
              data-tooltip="Legacy Server's & Interesting Developer API's"
              data-inverted="">
-            <i class="large purple plus circle icon"></i>
-            <div class="ui title">Legacy</div>
-            <div class="ui inverted menu">
-                <!--TODO                -->
-                <!--                <a id="tryptor" href="tryptor.php" class="item">Tryptor</a>-->
-                <!--                <a id="game" href="game.php" class="item">Game</a>-->
-                <!--                <a id="render" href="render.php" class="item">Render 1</a>-->
-                <!--                <a id="render2" href="render2.php" class="item">Render 2</a>-->
-                <a class="item" href="sa/index.php"><i class="large purple info icon"></i>Second Aether</a>
-                <a class="item" href="qa/index.php"><i class="large pink info icon"></i>Quantum Aether</a>
+            <i class="large green user circle icon"></i>
+            <div class="ui title">Account</div>
+            <div class="menu">
+                <a class="item" onclick="showLogin()"><i class="large green sign-in icon"></i>Login</a>
+                <a class="item" onclick="showSignup()"><i class="large blue signup icon"></i>Sign Up</a>
             </div>
         </div>
+
         <a id="download" class="ui right floated item" href="download.php"><i
                     class="large inverted purple download icon"></i>
             <div class="ui title">Downloads</div>
@@ -92,4 +105,12 @@
     }
 
     $('.ui.dropdown').dropdown();
+
+    function showLogin() {
+        $('.ui.basic.modal.login').modal('show');
+    }
+
+    function showSignup() {
+        $('.ui.basic.modal.signup').modal('show');
+    }
 </script>

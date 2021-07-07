@@ -7,7 +7,7 @@
     <?php require_once 'title.php'; ?>
     <?php require_once 'menu.php'; ?>
 </div>
-<div id="page" class="ui stackable grid">
+<div id="page" class="ui stackable fluid grid">
     <div class="center aligned sixteen wide column">
         <div class="ui items">
             <div class="item">

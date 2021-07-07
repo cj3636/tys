@@ -1,0 +1,25 @@
+<div class="ui basic mini modal signup">
+    <h1>Sign Up</h1>
+    <form class="ui inverted form" action="/registerAction.php" method="post" autocomplete="off">
+        <div class="required field">
+            <input maxlength="100" type="text" required autocomplete="off" name="username" placeholder="Username"/>
+        </div>
+        <div class="required field">
+            <input maxlength="100" type="email" required autocomplete="off" name="email" placeholder="Email"/>
+        </div>
+        <div class="required field">
+            <input maxlength="100" type="password" required autocomplete="off" name="password" placeholder="Password"/>
+        </div>
+        <div class="field">
+            <input maxlength="16" type="text" required autocomplete="off" name="token" placeholder="Token"/>
+        </div>
+        <div class="ui radio checkbox">
+            <input required type="radio" name="terms">
+            <label>I accept the <a href="/terms.html" target="_blank">Terms and Conditions</a></label>
+        </div>
+        <button class="ui blue basic ok inverted right floated button item" name="register">
+            <i class="sign-in icon"></i>
+            Sign Up
+        </button>
+    </form>
+</div>
