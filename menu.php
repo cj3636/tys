@@ -24,32 +24,34 @@
         <a id="about" class="item" href="about.php"><i class="large blue users icon"></i>
             <div class="ui title">About Us</div>
         </a>
-<!--        TODO re implement tryptor and old sites-->
-<!--                        <div id="dropdown" class="ui pointing dropdown item"-->
-<!--                             data-tooltip="Legacy Server's & Interesting Developer API's"-->
-<!--                             data-inverted="">-->
-<!--                            <i class="large purple plus circle icon"></i>-->
-<!--                            <div class="ui title">Legacy</div>-->
-<!--                            <div class="ui inverted menu">-->
-<!--                                <a id="tryptor" href="tryptor.php" class="item">Tryptor</a>-->
-<!--                                <a id="game" href="game.php" class="item">Game</a>-->
-<!--                                <a id="render" href="render.php" class="item">Render 1</a>-->
-<!--                                <a id="render2" href="render2.php" class="item">Render 2</a>-->
-<!--                                <a class="item" href="sa/index.php"><i class="large purple info icon"></i>Second Aether</a>-->
-<!--                                <a class="item" href="qa/index.php"><i class="large pink info icon"></i>Quantum Aether</a>-->
-<!--                            </div>-->
-<!--                        </div>-->
+        <!--        TODO re implement tryptor and old sites-->
+        <!--                        <div id="dropdown" class="ui pointing dropdown item"-->
+        <!--                             data-tooltip="Legacy Server's & Interesting Developer API's"-->
+        <!--                             data-inverted="">-->
+        <!--                            <i class="large purple plus circle icon"></i>-->
+        <!--                            <div class="ui title">Legacy</div>-->
+        <!--                            <div class="ui inverted menu">-->
+        <!--                                <a id="tryptor" href="tryptor.php" class="item">Tryptor</a>-->
+        <!--                                <a id="game" href="game.php" class="item">Game</a>-->
+        <!--                                <a id="render" href="render.php" class="item">Render 1</a>-->
+        <!--                                <a id="render2" href="render2.php" class="item">Render 2</a>-->
+        <!--                                <a class="item" href="sa/index.php"><i class="large purple info icon"></i>Second Aether</a>-->
+        <!--                                <a class="item" href="qa/index.php"><i class="large pink info icon"></i>Quantum Aether</a>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
         <div id="account" class="ui pointing dropdown item"
              data-tooltip="Legacy Server's & Interesting Developer API's"
              data-inverted="">
             <i class="large green user circle icon"></i>
             <div class="ui title">Account</div>
             <div class="menu">
-                <a class="item" onclick="showLogin()"><i class="large green sign-in icon"></i>Login</a>
+                <a class="item" onclick="showLogin()"><i class="large blue sign-in icon"></i>Login</a>
                 <a class="item" onclick="showSignup()"><i class="large blue signup icon"></i>Sign Up</a>
             </div>
         </div>
-
+        <a id="tryptor" class="item" href="tryptor.php"><i class="large teal key icon"></i>
+            <div class="ui title">Tryptor</div>
+        </a>
         <a id="download" class="ui right floated item" href="download.php"><i
                     class="large inverted purple download icon"></i>
             <div class="ui title">Downloads</div>
@@ -67,37 +69,37 @@
     function setMenuActive() {
         switch (page) {
             case index:
-                document.getElementById("home").className = "active item";
+                document.getElementById("home").className += " active";
                 break;
             case discord:
-                document.getElementById("discord").className = "active item";
+                document.getElementById("discord").className += " active";
                 break;
             case videos:
-                document.getElementById("videos").className = "active item";
+                document.getElementById("videos").className += " active";
                 break;
             case help:
-                document.getElementById("help").className = "active item";
+                document.getElementById("help").className += " active";
                 break;
             case about:
-                document.getElementById("about").className = "active item";
+                document.getElementById("about").className += " active";
                 break;
             case status:
-                document.getElementById("status").className = "active item";
+                document.getElementById("status").className += " active";
                 break;
             case download:
-                document.getElementById("download").className = "active ui right floated active item";
+                document.getElementById("download").className += " active";
                 break;
             case tryptor:
-                document.getElementById("tryptor").className = "active item";
+                document.getElementById("tryptor").className += " active";
                 break;
             case game:
-                document.getElementById("game").className = "active item";
+                document.getElementById("game").className += " active";
                 break;
             case render:
-                document.getElementById("render").className = "active item";
+                document.getElementById("render").className += " active";
                 break;
             case render2:
-                document.getElementById("render2").className = "active item";
+                document.getElementById("render2").className += " active";
                 break;
             default:
                 return "";

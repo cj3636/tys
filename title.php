@@ -6,8 +6,7 @@
     <h3 class="ui description">Minecraft | Vanilla + Modded</h3>
     <h3 id="desc" class="ui description">
         <script>
-            let path = window.location.pathname;
-            let page = path.split("/").pop();
+            const page = window.location.pathname.split("/").pop();
             const index = "home.php";
             const discord = "discord.php";
             const videos = "videos.php";
@@ -19,7 +18,6 @@
             const render = "render.php";
             const render2 = "render2.php";
             const status = "status.php";
-            getName();
 
             function getName() {
                 switch (page) {
@@ -61,12 +59,15 @@
                 }
             }
 
+            getName();
+
             $('html').css('overflow', 'hidden');
         </script>
     </h3>
 </div>
 <div class="ui two wide column">
-    <a class="ui huge yellow ribbon label" href="https://www.paypal.com/donate?hosted_button_id=REUAFVC9PPVBC" target="_blank">
+    <a class="ui huge yellow ribbon label" href="https://www.paypal.com/donate?hosted_button_id=REUAFVC9PPVBC"
+       target="_blank">
         <div class="ui huge blue button">
             <i class="white paypal icon"></i>Donate
         </div>

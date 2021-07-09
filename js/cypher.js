@@ -127,23 +127,46 @@ function reset() {
     document.getElementById('key').value = "";
     document.getElementById('crypt').value = "";
     document.getElementById('output').value = "";
+    document.getElementById('passwordToggleIcon').classList.replace("on", "off")
 }
 
-function saveKey() {
+function saveKeyAsFile() {
     let textToWrite = document.getElementById('key').value;
     let textFileAsBlob = new Blob([textToWrite], {type: 'text/plain'});
-    let fileNameToSaveAs = "key.txt";
+
+    let fileName = prompt("Key File Name?")
+    let fileExtension = ".txt";
+    const fileNameToSaveAs = fileName + fileExtension;
+
     let downloadLink = document.createElement("a");
+
     downloadLink.download = fileNameToSaveAs;
     downloadLink.innerHTML = "Download File";
-    if (window.webkitURL != null) {
-        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-    } else {
-        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-        downloadLink.onclick = destroyClickedElement;
-        downloadLink.style.display = "none";
-        document.body.appendChild(downloadLink);
-    }
-
+    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    // if (window.webkitURL != null) {
+    //     downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    // } else {
+    //     downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+    //     //downloadLink.onclick = downloadLink.
+    //     downloadLink.remove();
+    //     document.body.appendChild(downloadLink);
+    // }
     downloadLink.click();
+}
+
+function togglePassword() {
+    let icon = document.getElementById('passwordToggleIcon').classList;
+    let keyInput = document.getElementById('key').type;
+
+    if (icon.contains("off")) {
+        icon.replace("off", "on")
+    } else {
+        icon.replace("on", "off")
+    }
+//TODO YO WTF GLOBAL VARIABLES?
+    if (keyInput === "password") {
+        document.getElementById('key').type = "text"
+    } else {
+        document.getElementById('key').type = "password"
+    }
 }
