@@ -11,5 +11,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jquery-3.1.1" level="application" />
     <orderEntry type="library" name="clipboard" level="application" />
+    <orderEntry type="library" name="filesaver" level="application" />
+    <orderEntry type="library" name="sanitize-filename" level="application" />
   </component>
 </module>

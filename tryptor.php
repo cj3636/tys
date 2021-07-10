@@ -3,7 +3,6 @@
 <?php require 'head.php'; ?>
 <head>
     <title>Tryptor</title>
-    <script src="js/cypher.js"></script>
     <link rel="stylesheet" type="text/css" href="css/tryptor.css">
 </head>
 <body>
@@ -23,7 +22,7 @@
                     <div class="ui stackable fluid secondary menu">
                         <button data-inverted="" data-tooltip="Create New Key"
                                 class="ui center aligned teal icon button"
-                                onclick="genKey()"
+                                onclick="createKey()"
                                 id="genKey" name="genKey"><i class="yellow key icon"></i>
                         </button>
                         <button data-inverted="" data-tooltip="Encode Text"
@@ -41,9 +40,9 @@
                                 onclick="reset()"
                                 id="reset" name="reset"><i class="undo alternate icon"></i>
                         </button>
-                        <button data-inverted="" data-tooltip="Save Output to File"
+                        <button data-inverted="" data-tooltip="Save Output"
                                 class="ui center aligned green button icon"
-                                onclick="saveTextAsFile()" value="save" id="save"><i class="download icon"></i>
+                                onclick="saveFile()" value="save" id="save"><i class="download icon"></i>
                         </button>
                         <div data-inverted="" data-tooltip="Upload Input">
                             <label for="fileUpload" class="ui icon grey item button">
@@ -65,24 +64,31 @@
                                     onclick="saveKeyAsFile()" value="save" id="keyDownload" style="display: none">
                             </button>
                         </div>
+                        <div onclick="showSettings()" class="ui icon top left pointing dropdown button">
+                            <i class="wrench icon"></i>
+                        </div>
+                        <div class="ui input" data-inverted="" data-tooltip="Key Length 1-256">
+                            <label for="keyLength"></label>
+                            <input id="keyLength" type="number" min="1" max="256" value="16">
+                        </div>
                     </div>
                 </div>
                 <div class="description">
                     <form class="ui form">
-                        <!--                        <div class="item">-->
-                        <!--                            <div class="ui inline toggle checkbox" data-inverted="" data-tooltip="Show Password"-->
-                        <!--                                 data-position="left center">-->
-                        <!--                                <input id="passwordToggle" type="checkbox">-->
-                        <!--                                <label id="passwordToggleIcon" class="ui title" for="passwordToggle"></label>-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
-                        <div class="ui fluid left icon input" data-inverted="" data-tooltip="Show Password" data-position="left center">
+                        <div class="ui right floated inverted input" id="projectName" data-inverted=""
+                             data-tooltip="Name for Saved Files" data-position="right center">
+                            <label for="fileDownloadName"></label>
+                            <input id="fileDownloadName" type="text" placeholder="Project Name" maxlength="32"
+                                   value="Tryptor">
+                        </div>
+                        <div class="ui fluid left icon input" data-inverted="" data-tooltip="Show Password"
+                             data-position="left center">
                             <label for="key"></label>
                             <i id="passwordToggleIcon" class="toggle link icon off" onclick="togglePassword()"></i>
                             <input id="key" name="key" class="key" type="password" placeholder="Key">
                         </div>
-                        <label for="crypt"></label>
-                        <textarea id="crypt" name="crypt" class="crypt" placeholder="Input"></textarea>
+                        <label for="input"></label>
+                        <textarea id="input" name="input" class="input" placeholder="Input"></textarea>
                     </form>
                     <form class="ui form">
                         <label for="output"></label>
@@ -113,4 +119,9 @@
         </form>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
+<script src="js/cypher.js"></script>
+<script>
+    $('.ui.dropdown').dropdown();
+</script>
 </html>
