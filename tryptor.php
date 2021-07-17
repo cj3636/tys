@@ -13,12 +13,18 @@
         <?php require 'menu.php'; ?>
     </div>
     <div class="ten wide centered column">
-        <div class="ui fluid card">
-            <div class="header" id="title-bar">
-                <div class="title"><img alt="tryptor" class="ui small left floated image" src="img/tryptor.png"></div>
+        <div class="ui fluid stackable card">
+            <div class="ui fluid header" id="title-bar">
+                <div class="title">
+                    <img alt="tryptor" class="ui small left floated image" src="img/tryptor.png">
+                    <div class="ui right floated icon" data-inverted=""
+                         data-tooltip="Text Encyrption/Decryption Program" data-position="top right">
+                        <i class="right floated info circle inverted icon"></i>
+                    </div>
+                </div>
             </div>
             <div class="content">
-                <div class="header">
+                <div class="ui fluid header">
                     <div class="ui stackable fluid secondary menu">
                         <button data-inverted="" data-tooltip="Create New Key"
                                 class="ui center aligned teal icon button"
@@ -73,14 +79,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="description">
+                <div class="ui fluid description" style="display: none">
+                    <div class="ui right floated inverted input" id="projectName" data-inverted=""
+                         data-tooltip="Name for Saved Files" data-position="right center">
+                        <label for="fileDownloadName"></label>
+                        <input id="fileDownloadName" type="text" placeholder="Project Name" maxlength="32"
+                               value="Tryptor">
+                    </div>
+                </div>
+                <div class="ui fluid description">
                     <form class="ui form">
-                        <div class="ui right floated inverted input" id="projectName" data-inverted=""
-                             data-tooltip="Name for Saved Files" data-position="right center">
-                            <label for="fileDownloadName"></label>
-                            <input id="fileDownloadName" type="text" placeholder="Project Name" maxlength="32"
-                                   value="Tryptor">
-                        </div>
                         <div class="ui fluid left icon input" data-inverted="" data-tooltip="Show Password"
                              data-position="left center">
                             <label for="key"></label>

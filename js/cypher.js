@@ -194,6 +194,9 @@ function togglePassword() {
     }
 }
 
+function showSettings() {
+
+}
 function validateFileName(fileName) {
     fileName.replace(/[<>:"/\|?*]/g, "");
     return fileName;

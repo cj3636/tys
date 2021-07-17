@@ -1,7 +1,7 @@
 <?php require_once 'loginModal.php' ?>
 <?php require_once 'signupModal.php' ?>
 <div class="sixteen wide column">
-    <div class="ui secondary pointing inverted stackable fluid menu">
+    <div class="ui secondary pointing inverted stackable fluid menu ">
         <a id="home" class="item" href="home.php"><i class="large green home icon"></i>
             <div class="ui title">Home</div>
         </a>
