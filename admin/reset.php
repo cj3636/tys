@@ -1,5 +1,5 @@
 <?php
-require_once 'templates/php/header.php';
+require_once ROOT_PATH . 'templates/php/header.php';
 
 $cfg = parse_ini_file('database/database.ini');
 $mysqli = new mysqli($cfg['host'], $cfg['username'], $cfg['passwd'], $cfg['dbname']) or die($mysqli->error);
@@ -38,5 +38,5 @@ if (isset($_GET['email']) && !empty($_GET['email']) and isset($_GET['hash']) && 
     </form>
 </div>
 <?php
-require_once 'templates/php/footer.php';
+require_once ROOT_PATH . 'templates/php/footer.php';
 ?>

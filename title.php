@@ -2,7 +2,7 @@
     <img class="ui medium centered image" src="img/thenewjourney.png" alt="logo">
 </div>
 <div class="ui twelve wide column">
-    <a id="link1"><h1 class="ui title">The Yellow Submarine Servers</h1></a>
+    <a id="link1"><h1 class="ui title">The Yellow Sub Servers</h1></a>
     <h3 class="ui description">Minecraft | Vanilla + Modded</h3>
     <h3 id="desc" class="ui description">
         <script>

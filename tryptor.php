@@ -18,7 +18,8 @@
                 <div class="title">
                     <img alt="tryptor" class="ui small left floated image" src="img/tryptor.png">
                     <div class="ui right floated icon" data-inverted=""
-                         data-tooltip="Text Encyrption/Decryption Program" data-position="top right">
+                         data-tooltip="Text Encyrption/Decryption Program - More File formats coming soon."
+                         data-position="top right">
                         <i class="right floated info circle inverted icon"></i>
                     </div>
                 </div>

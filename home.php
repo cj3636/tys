@@ -1,9 +1,8 @@
 <!doctype html>
 <html lang="en_US">
-<?php require_once 'head.php'; ?>
+<?php require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <div class="sixteen wide column"></div>
     <?php require_once 'title.php'; ?>
     <?php require_once 'menu.php'; ?>
 </div>

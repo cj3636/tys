@@ -1,5 +1,5 @@
 <?php
-require_once 'templates/php/header.php';
+require_once ROOT_PATH . 'templates/php/header.php';
 /* Reset your password form, sends reset.php password link */
 session_start();
 

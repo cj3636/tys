@@ -1,5 +1,5 @@
 <?php
-require_once 'templates/php/header.php';
+require_once ROOT_PATH . 'templates/php/header.php';
 ?>
 <div class="four wide centered column">
     <div class="ui center aligned inverted segment">
@@ -14,5 +14,5 @@ require_once 'templates/php/header.php';
     </div>
 </div>
 <?php
-require_once 'templates/php/footer.php';
+require_once ROOT_PATH . 'templates/php/footer.php';
 ?>
