@@ -4,7 +4,6 @@
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/lukasss93/minecraft-server-status" />
-      <path value="$PROJECT_DIR$/vendor/xpaw/php-minecraft-query" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />

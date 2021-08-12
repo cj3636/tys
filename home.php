@@ -52,7 +52,7 @@
     <footer>&copy; P.o.P Industries 2019</footer>
 </body>
 <script>
-    new ClipboardJS('#copyVanilla');
+    new ClipboardJS('#copyIP');
 </script>
 <script>
     $('.ui.accordion').accordion({exclusive: false});
