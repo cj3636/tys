@@ -13,18 +13,29 @@
 <div class="ui stackable grid">
     <div class="sixteen wide centered column">
         <div class="ui stackable centered center aligned cards">
-            <div class="ui center aligned card dark">
-                <div class="content">
-                    <div id="downloadTitle" class="header"></div>
-                    <div id="downloadMeta" class="meta"></div>
-                    <div id="downloadDescription"
-                    ="description"></div>
-            </div>
-            <div class="extra content">
-                <div class="ui basic green button"><i class="download icon"></i>Download</div>
-            </div>
+            <?php
+            ?>
         </div>
     </div>
-</div>
 </body>
 </html>
+<?php
+function createDownloadCard($logo, $title, $meta, $desc, $color, $file)
+{
+    return '<div class="ui center aligned card dark">
+                <div class="content">
+                    <img id="downloadLogo" alt="TYS LOGO" class="right floated small ui image"
+                         src="/img/' . $logo . '">
+                    <div id="downloadTitle" class="header">' . $title . '</div>
+                    <div id="downloadMeta" class="meta">' . $meta . '</div>
+                    <div id="downloadDescription" class="description">' . $desc . '</div>
+                    <div class="ui divider"></div>
+                    <div class="extra content">
+                        <a href="' . $file . '">
+                            <div class="ui basic' . $color . 'button"><i class="download icon"></i>Download</div>
+                        </a>
+                    </div>
+                </div>
+            </div>';
+}
+?>

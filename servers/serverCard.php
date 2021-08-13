@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $dom = new DOMDocument('1.0');
 
 function createElement($dom, $tag, $class, $id = null, $text = null, $extraAttirubutes = [], $attributeValues = [])
@@ -143,7 +146,8 @@ foreach ($filejson as $jc) {
     $dom->appendChild($card);
 }
 echo $dom->saveHTML();
-$dir = 'C:\wamp64\www\servers';
+//TODO fix dir; can html be variable
+$dir = '/servers';
 $files = glob($dir . '/*.txt');
 $lines = array();
 foreach ($files as $file) {
@@ -154,7 +158,12 @@ foreach ($files as $file) {
         }
         fclose($handle);
     }
-    echo '<div class="card">
+    echo getCard($lines);
+}
+
+function getCard($lines): string
+{
+    return '<div class="card">
     <div class="content">
         <img id="logo" alt="TYS LOGO" class="right floated small ui image" src="/img/' . $lines[0] . '">
         <div id="header" class="header">' . $lines[1] . '</div>
