@@ -1,26 +1,7 @@
-<!--Vanilla Card-->
-<!--<div class="card">-->
-<!--    <div class="content">-->
-<!--        <img class="right floated small ui image" alt="TYS VANILLA LOGO" src="/img/TYS_VANILLA.png">-->
-<!--        <div class="header">Vanilla</div>-->
-<!--        <div class="meta">Vanilla Minecraft with Plugins</div>-->
-<!--        <div class="description">An experience you can't miss! Factions, Minigames, Creative plots. You-->
-<!--            name it, we've-->
-<!--            got it.-->
-<!--        </div>-->
-<!--        <div class="ui divider"></div>-->
-<!--        <div class="extra content">-->
-<!--            <button class="ui huge green button" id="copyIP" data-clipboard-text="theyellowsub.us"-->
-<!--                    data-tooltip="Copy Vanilla IP Address"-->
-<!--                    data-inverted=""><i class="copy outline left icon"></i>Vanilla IP-->
-<!--            </button>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 <?php
 $dom = new DOMDocument('1.0');
 
-function createElement($dom, $tag, $class, $id, $text = '', $extraAttirubutes = [], $attributeValues = [])
+function createElement($dom, $tag, $class, $id = null, $text = null, $extraAttirubutes = [], $attributeValues = [])
 {
     $element = $dom->createElement($tag, $text);
     $element->setAttribute('class', $class);
@@ -33,50 +14,158 @@ function createElement($dom, $tag, $class, $id, $text = '', $extraAttirubutes = 
     $valueLength = sizeof($attributeValues);
     if ($attLength > 0 && $valueLength > 0 && ($attLength == $valueLength)) {
         for ($i = 0; $i < $attLength; $i++) {
-            $element->setAttribute($extraAttirubutes[$i]);
-            $element->setAttribute($attributeValues[$i]);
+            $element->setAttribute($extraAttirubutes[$i], $attributeValues[$i]);
         }
     }
-    //$dom->appendChild($element);
     return $element;
 }
 
-function createImageElement($dom, $class, $alt, $src)
+function createImg($dom, $class, $src)
 {
     $img = $dom->createElement('img');
     $img->setAttribute('class', $class);
-    $img->setAttribute('alt', $alt);
     $img->setAttribute('src', $src);
 
-    //$dom->appendChild($img);
     return $img;
 }
 
-$card = $dom->createElement('div');
-$card->setAttribute('class', 'card');
+function createDiv($dom, $class, $text = '')
+{
+    $div = $dom->createElement('div', $text);
+    $div->setAttribute('class', $class);
 
-$content = $dom->createElement('div');
-$content->setAttribute('class', 'content');
+    return $div;
+}
 
-//$content->appendChild();
+function createa($dom, $href, $target)
+{
+    $a = $dom->createElement('a');
+    $a->setAttribute('href', $href);
+    $a->setAttribute('target', $target);
 
-$dir = '../servers';
+    return $a;
+}
+
+function createIcon($dom, $class)
+{
+    return createElement($dom, 'i', $class, null);
+}
+
+function createCopyButton($dom, $class, $id, $icon, $text, $clipboard, $tooltip)
+{
+    $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'], [$clipboard, $tooltip, '']);
+    $btn->appendChild(createIcon($dom, $icon));
+    return $btn;
+}
+
+function createLinkButton($dom, $class, $id, $icon, $href, $target, $text, $clipboard, $tooltip)
+{
+    $a = createa($dom, $href, $target);
+    $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'], [$clipboard, $tooltip, '']);
+    $btn->appendChild(createIcon($dom, $icon));
+    $a->appendChild($btn);
+    return $a;
+}
+
+$dir = 'C:\wamp64\www\servers';
 $files = glob($dir . '/*.json');
-$jsonContents = array();
+$filejson = array();
 
 foreach ($files as $file) {
     $json = file_get_contents($file);
     $jsonObj = json_decode($json, true);
-    array_push($jsonContents, $jsonObj);
-    $img = $jsonObj["img"];
-    $class = "class";
-
-    echo $img[$class];
+    array_push($filejson, $jsonObj);
 }
 
-//createImageElement($dom, "right floated small ui image", "TYS VANILLA LOGO", "/img/TYS_VANILLA.png");
-$card->appendChild($content);
-$dom->appendChild($card);
+foreach ($filejson as $jc) {
+    $imgclass = $jc['img']['class'];
+    $imgsrc = $jc['img']['src'];
 
+    $hclass = $jc['header']['class'];
+    $htext = $jc['header']['text'];
+
+    $mclass = $jc['meta']['class'];
+    $mtext = $jc['meta']['text'];
+
+    $dclass = $jc['description']['class'];
+    $dtext = $jc['description']['text'];
+
+    $dividerClass = $jc['divider']['class'];
+
+    $eclass = $jc['extra']['class'];
+
+    $card = $dom->createElement('div');
+    $card->setAttribute('class', 'card');
+
+    $img = createImg($dom, $imgclass, $imgsrc);
+    $header = createDiv($dom, $hclass, $htext);
+    $meta = createDiv($dom, $mclass, $mtext);
+    $description = createDiv($dom, $dclass, $dtext);
+    $divider = createDiv($dom, $dividerClass);
+    $extra = createDiv($dom, $eclass);
+
+    foreach ($jc['extra']['buttons'] as $btn) {
+        $btnclass = $btn['class'];
+        $btnid = $btn['id'];
+        $btnclipboard = $btn['data-clipboard-text'];
+        $btntooltip = $btn['data-tooltip'];
+        $btnicon = $btn['icon'];
+        $btntext = $btn['text'];
+        $btnislink = $btn['islink'];
+        $btnhref = $btn['href'];
+        $btntarget = $btn['target'];
+
+        if ($btnislink) {
+            $button = createLinkButton($dom, $btnclass, $btnid, $btnicon, $btnhref, $btntarget, $btntext, $btnclipboard, $btntooltip);
+        } else {
+            $button = createCopyButton($dom, $btnclass, $btnid, $btnicon, $btntext, $btnclipboard, $btntooltip);
+        }
+        $extra->appendChild($button);
+    }
+
+    $cards = $dom->createElement('div');
+    $cards->setAttribute('class', 'ui centered center aligned stackable cards');
+
+    $card = $dom->createElement('div');
+    $card->setAttribute('class', 'card');
+
+    $content = $dom->createElement('div');
+    $content->setAttribute('class', 'content');
+
+    $content->appendChild($img);
+    $content->appendChild($header);
+    $content->appendChild($meta);
+    $content->appendChild($description);
+    $content->appendChild($divider);
+    $content->appendChild($extra);
+
+    $card->appendChild($content);
+    $dom->appendChild($card);
+}
 echo $dom->saveHTML();
-?>
+$dir = 'C:\wamp64\www\servers';
+$files = glob($dir . '/*.txt');
+$lines = array();
+foreach ($files as $file) {
+    $handle = fopen($file, "r");
+    if ($handle) {
+        while (($line = fgets($handle)) !== false) {
+            array_push($lines, $line);
+        }
+        fclose($handle);
+    }
+    echo '<div class="card">
+    <div class="content">
+        <img id="logo" alt="TYS LOGO" class="right floated small ui image" src="/img/' . $lines[0] . '">
+        <div id="header" class="header">' . $lines[1] . '</div>
+        <div id="meta" class="meta">' . $lines[2] . '</div>
+        <div id="description" class="description">' . $lines[3] . '</div>
+        <div class="ui divider"></div>
+        <div class="extra content">
+            <button id="copyIP" data-clipboard-text="' . $lines[4] . '" data-tooltip="' . $lines[5] . '"
+                    data-inverted="" class="ui huge green button"><i class="copy outline left icon"></i>' . $lines[6] . '
+            </button>
+        </div>
+    </div>
+</div>';
+}

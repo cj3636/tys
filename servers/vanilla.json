@@ -1,0 +1,37 @@
+{
+  "img": {
+    "class": "right floated small ui image",
+    "src": "/img/TYS_VANILLA.png"
+  },
+  "header": {
+    "class": "header",
+    "text": "Vanilla"
+  },
+  "meta": {
+    "class": "meta",
+    "text": "Vanilla Minecraft with Plugins"
+  },
+  "description": {
+    "class": "description",
+    "text": "An experience you can't miss! Factions, Survival Games, Bed Wars, Creative. You name it, we've got it."
+  },
+  "divider": {
+    "class": "ui divider"
+  },
+  "extra": {
+    "class": "extra content",
+    "buttons": {
+      "copy": {
+        "class": "ui huge green center aligned button",
+        "id": "copyIP",
+        "data-clipboard-text": "theyellowsub.us",
+        "data-tooltip": "Copy Vanilla IP Address",
+        "icon": "copy outline left floated icon",
+        "text": "Vanilla IP",
+        "islink": false,
+        "href": "",
+        "target": ""
+      }
+    }
+  }
+}

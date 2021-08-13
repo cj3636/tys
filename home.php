@@ -39,14 +39,8 @@
                 </div>
             </div>
         </div>
-        <div class="ui centered stackable cards">
-            <?php
-            $dir = 'servers';
-            $files = glob($dir . '/*.php');
-            foreach ($files as $file) {
-                require($file);
-            }
-            ?>
+        <div class="ui centered stackable cards" id="cards">
+            <?php require_once "servers/serverCard.php" ?>
         </div>
     </div>
     <footer>&copy; P.o.P Industries 2019</footer>

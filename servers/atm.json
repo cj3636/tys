@@ -1,0 +1,37 @@
+{
+  "img": {
+    "class": "right floated small ui image",
+    "src": "/img/TYS_ATM5.png"
+  },
+  "header": {
+    "class": "header",
+    "text": "ATM5"
+  },
+  "meta": {
+    "class": "meta",
+    "text": "All The Mods 3 + Extras"
+  },
+  "description": {
+    "class": "description",
+    "text": "An All The Mods 5 Pack with extra mods and spices. No banned items and an awesome community."
+  },
+  "divider": {
+    "class": "ui divider"
+  },
+  "extra": {
+    "class": "extra content",
+    "buttons": {
+      "download": {
+        "class": "ui huge purple button",
+        "id": "",
+        "data-clipboard-text": "",
+        "data-tooltip": "Download the Modpack",
+        "icon": "white external left floated icon",
+        "text": "Download",
+        "islink": true,
+        "href": "download.php",
+        "target": ""
+      }
+    }
+  }
+}
