@@ -15,7 +15,7 @@ if (!defined('ROOT_PATH')) {
     <meta name="description"
           content="The Yellow Sub Ltd. Server Hosting and Much More!"/>
     <meta name="keywords" content="video, game, server, yellowsub, minecraft"/>
-    <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.css">
     <script src="/js/jquery-3.1.1.min.js"></script>
     <script src="/semantic/dist/semantic.min.js"></script>
     <script src="/semantic/dist/clipboard.min.js"></script>

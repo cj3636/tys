@@ -2,13 +2,12 @@
 
 namespace TYS;
 
-use DOMDocument;
-
 class TXT2HTML
 {
     public function serverCardTXT($dir)
     {
-        $files = glob($dir . '/*.txt');
+        $root = $_SERVER['DOCUMENT_ROOT'];
+        $files = glob($root . $dir . '/*.txt');
         $lines = array();
         foreach ($files as $file) {
             $handle = fopen($file, "r");
@@ -34,24 +33,12 @@ class TXT2HTML
 </div>';
         }
     }
-
-    public function serverCardJSON()
-    {
-
-    }
 }
 
 class JSON2HTML
 {
-    protected DOMDocument $domDoc;
-    protected String $dir;
-
-    public function __construct($dom, $dir) {
-        $this->domDoc = $dom;
-        $this->dir = $dom;
-    }
     public function serverCardJSON($dom, $dir)
     {
-        $dom = $this->domDoc;
+
     }
 }

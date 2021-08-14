@@ -1,0 +1,93 @@
+<div id="tryptor" class="ui fluid stackable card">
+    <div class="ui fluid header" id="title-bar">
+        <div class="title">
+            <img alt="Tryptor" class="ui small left floated image" src="/img/tryptor.png">
+            <div class="ui right floated icon" data-inverted=""
+                 data-tooltip="Text Encryption/Decryption Program - More File formats coming soon."
+                 data-position="top right">
+                <i class="right floated info circle inverted icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="ui fluid header">
+            <div class="ui stackable fluid secondary menu">
+                <button data-inverted="" data-tooltip="Create New Key"
+                        class="ui center aligned teal icon button"
+                        onclick="createKey()"
+                        id="genKey" name="genKey"><i class="yellow key icon"></i>
+                </button>
+                <button data-inverted="" data-tooltip="Encode Text"
+                        class="ui center aligned primary button icon"
+                        onclick="encode()"
+                        id="encode" name="encode"><i
+                        class="lock icon"></i>
+                </button>
+                <button data-inverted="" data-tooltip="Decode Text" class="ui center aligned blue button icon"
+                        onclick="decode()" id="decode"
+                        name="decode"><i
+                        class="unlock alternate icon"></i>
+                </button>
+                <button data-inverted="" data-tooltip="Reset Text" class="ui center aligned red button icon"
+                        onclick="reset()"
+                        id="reset" name="reset"><i class="undo alternate icon"></i>
+                </button>
+                <button data-inverted="" data-tooltip="Save Output"
+                        class="ui center aligned green button icon"
+                        onclick="saveFile()" value="save" id="save"><i class="download icon"></i>
+                </button>
+                <div data-inverted="" data-tooltip="Upload Input">
+                    <label for="fileUpload" class="ui icon grey item button">
+                        <i class="green upload icon"></i>
+                    </label>
+                    <input onchange="loadFile()" type="file" id="fileUpload" style="display: none;">
+                </div>
+                <div data-inverted="" data-tooltip="Upload Key">
+                    <label for="keyUpload" class="ui icon grey item button">
+                        <i class="teal upload icon"></i> <i class="teal key icon"></i>
+                    </label>
+                    <input onchange="loadKey()" type="file" id="keyUpload" style="display: none;">
+                </div>
+                <div data-inverted="" data-tooltip="Download Key">
+                    <label for="keyDownload" class="ui icon grey item button">
+                        <i class="orange download icon"></i> <i class="orange key icon"></i>
+                    </label>
+                    <button class="ui button"
+                            onclick="saveKeyAsFile()" value="save" id="keyDownload" style="display: none;">
+                    </button>
+                </div>
+                <div class="ui input" data-inverted="" data-tooltip="Key Size (1-256)">
+                    <label for="keyLength"></label>
+                    <input id="keyLength" type="number" min="1" max="256" value="16">
+                </div>
+                <div onclick="showSettings()" class="ui icon top left pointing dropdown right floated button">
+                    <i class="wrench icon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="ui fluid description" style="display: none;">
+            <div class="ui right floated inverted input" id="projectName" data-inverted=""
+                 data-tooltip="Name for Saved Files" data-position="right center">
+                <label for="fileDownloadName"></label>
+                <input id="fileDownloadName" type="text" placeholder="Project Name" maxlength="32"
+                       value="Tryptor">
+            </div>
+        </div>
+        <div class="ui fluid description">
+            <form class="ui form">
+                <div class="ui fluid left icon input" data-inverted="" data-tooltip="Show Password"
+                     data-position="left center">
+                    <label for="key"></label>
+                    <i id="passwordToggleIcon" class="toggle link icon off" onclick="togglePassword()"></i>
+                    <input id="key" name="key" class="key" type="password" placeholder="Key">
+                </div>
+                <label for="input"></label>
+                <textarea id="input" name="input" class="input" placeholder="Input"></textarea>
+            </form>
+            <form class="ui form">
+                <label for="output"></label>
+                <textarea readonly id="output" name="output" class="output" placeholder="Output"></textarea>
+            </form>
+        </div>
+    </div>
+</div>

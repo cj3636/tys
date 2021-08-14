@@ -1,3 +1,8 @@
+// let script = document.createElement('script');
+// script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+// script.type = 'text/javascript';
+// document.getElementsByTagName('head')[0].appendChild(script);
+
 function SaveAsFile(t, f, m) {
     try {
         let b = new Blob([t], {type: m});
@@ -7,78 +12,66 @@ function SaveAsFile(t, f, m) {
     }
 }
 
-function encode() {
+/**
+ * Gets the user text inputs from Tryptor and creates arrayBuffers with them
+ * @return {String} finalText = Computed text
+ * @param {boolean} encode = true - encode, false - decode
+ */
+const setup = function (encode) {
     let key = document.getElementById("key").value;
-    let text = document.getElementById("crypt").value;
-    let compute = [];
-    compute.length = text.length;
-    //Text array
-    let keyStore = [];
-    keyStore.length = key.length;
-    //Key array
-    let textStore = [];
-    textStore.length = text.length;
-    //create ints for key
+    let text = document.getElementById("input").value;
+    let keyStore = [key.length];
+    let textStore = [text.length];
+    let compute = [text.length];
     let bufferText = "";
     let finalText = "";
+
     for (let i = 0; i < key.length; i++) {
         keyStore[i] = key.charCodeAt(i);
     }
-    //create ints for text
     for (let i = 0; i < text.length; i++) {
         textStore[i] = text.charCodeAt(i);
     }
-    for (let i = 0; i < textStore.length; i++) {
-        for (let j = 0; j < key.length; j++) {
-            compute[i] = textStore[i] + keyStore[j] + j * i;
+    if (encode) {
+        for (let i = 0; i < textStore.length; i++) {
+            for (let j = 0; j < key.length; j++) {
+                compute[i] = textStore[i] + keyStore[j] + j * i;
+            }
+        }
+    } else {
+        for (let i = 0; i < textStore.length; i++) {
+            for (let j = 0; j < key.length; j++) {
+                compute[i] = textStore[i] - keyStore[j] - j * i;
+            }
         }
     }
     for (let i = 0; i < compute.length; i++) {
         bufferText = String.fromCharCode(compute[i]);
         finalText += bufferText;
     }
+    return finalText;
+}
+
+function canRun() {
+    const key = $('#key').val().length;
+    const input = $('#input').val().length;
+    return (key > 0) && (input > 0);
+
+}
+
+function encode() {
+    if (!canRun()) {
+
+    }
     let fillText = document.getElementById('output');
-    fillText.value = finalText;
+    fillText.value = setup(true);
     fillText.select();
     document.execCommand("copy");
 }
 
 function decode() {
-    let key = document.getElementById("key").value;
-    if (key === "") {
-        key = " ";
-    }
-    let text = document.getElementById("crypt").value;
-    let compute = [];
-    compute.length = text.length;
-    //Text array
-    let keyStore = [];
-    keyStore.length = key.length;
-    //Key array
-    let textStore = [];
-    textStore.length = text.length;
-    //create ints for key
-    let bufferText = "";
-    let finalText = "";
-    for (let i = 0; i < key.length; i++) {
-        keyStore[i] = key.charCodeAt(i);
-    }
-    //create ints for text
-    for (let i = 0; i < text.length; i++) {
-        textStore[i] = text.charCodeAt(i);
-    }
-
-    for (let i = 0; i < textStore.length; i++) {
-        for (let j = 0; j < key.length; j++) {
-            compute[i] = textStore[i] - keyStore[j] - j * i;
-        }
-    }
-    for (let i = 0; i < compute.length; i++) {
-        bufferText = String.fromCharCode(compute[i]);
-        finalText += bufferText;
-    }
     let fillText = document.getElementById('output');
-    fillText.value = finalText;
+    fillText.value = setup(false);
     fillText.select();
     document.execCommand("copy");
 }
@@ -149,9 +142,11 @@ function createKey() {
 
 function reset() {
     document.getElementById('key').value = "";
-    document.getElementById('crypt').value = "";
+    document.getElementById('input').value = "";
     document.getElementById('output').value = "";
-    document.getElementById('passwordToggleIcon').classList.replace("on", "off")
+    document.getElementById('key').type = "password"
+    document.getElementById('passwordToggleIcon').classList.replace("on", "off");
+
 }
 
 function saveKeyAsFile() {
@@ -159,7 +154,7 @@ function saveKeyAsFile() {
     let textFileAsBlob = new Blob([textToWrite], {type: 'text/plain'});
 
     let fileName = prompt("Key File Name?")
-    let fileExtension = ".txt";
+    let fileExtension = ".key";
     const fileNameToSaveAs = fileName + fileExtension;
 
     let downloadLink = document.createElement("a");
@@ -179,7 +174,7 @@ function saveKeyAsFile() {
 }
 
 function togglePassword() {
-    let icon = document.getElementById('passwordToggleIcon').classList;
+    let icon = document.getElementById('keyToggle').classList;
     let keyInput = document.getElementById('key').type;
 
     if (icon.contains("off")) {
@@ -194,10 +189,15 @@ function togglePassword() {
     }
 }
 
+function showInfo() {
+
+}
+
 function showSettings() {
 
 }
+
 function validateFileName(fileName) {
-    fileName.replace(/[<>:"/\|?*]/g, "");
+    fileName.replace(/[<>:"/|?*]/g, "");
     return fileName;
 }

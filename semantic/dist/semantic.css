@@ -7504,11 +7504,35 @@ a.ui.teal.header:hover {
 /* Inverted */
 
 .ui.inverted.teal.header {
-    color: #6DFFFF !important;
+    color: #00a3a3 !important;
 }
 
 a.ui.inverted.teal.header:hover {
     color: #54ffff !important;
+}
+
+/*--- CYAN ---*/
+
+.ui.cyan.header {
+    color: #00FFFF !important;
+}
+
+a.ui.cyan.header:hover {
+    color: #00D1D1 !important;
+}
+
+.ui.cyan.dividing.header {
+    border-bottom: 2px solid #00FFFF;
+}
+
+/* Inverted */
+
+.ui.inverted.cyan.header {
+    color: #00D1D1 !important;
+}
+
+a.ui.inverted.cyan.header:hover {
+    color: #00A3A3 !important;
 }
 
 /*--- Blue ---*/
@@ -10083,6 +10107,16 @@ i.icon.indent:before {
 
 i.icon.industry:before {
     content: "\f275";
+}
+
+i.cyan.icon.info:before {
+    color: #00FFFF;
+    content: "\f129";
+}
+
+i.cyan.icon.info.circle:before {
+    color: #00FFFF;
+    content: "\f05a";
 }
 
 i.icon.info:before {

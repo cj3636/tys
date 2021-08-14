@@ -1,11 +1,3 @@
-<?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-if (!defined('ROOT_PATH')) {
-    define('ROOT_PATH', '/admin' . DIRECTORY_SEPARATOR);
-}
-?>
 <head>
     <title></title>
     <meta charset="utf-8">
