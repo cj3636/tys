@@ -18,24 +18,24 @@
             <div class="header" id="title-bar">
                 <img id="img" alt="Tryptor" class="ui small left floated image" src="/img/tryptor.png">
                 <button id="infobtn" class="ui right floated icon secondary button" onclick="showInfo()"
-                        data-inverted=""
+                        data-inverted="" data-position="top left"
                         data-tooltip="Text Encryption/Decryption Program - More Info"
                         data-position="top right">
                     <i class="right floated info circle cyan icon"></i>
                 </button>
             </div>
-            <div id="content" class="ui content">
-                <div id="meta" class="meta">
+            <div id="content" class="content">
+                <div class="meta" id="meta" >
                     <div class="ui stackable compact icon menu">
                         <nav class="item" id="navMenuItem">
-                            <button data-inverted="" data-tooltip="Create New Key"
+                            <button data-inverted="" data-position="top left" data-tooltip="Create New Key"
                                     class="ui center aligned teal icon button"
                                     onclick="createKey()"
                                     id="genKey" name="genKey"><i class="yellow key icon"></i>
                             </button>
                         </nav>
                         <nav class="item" id="navMenuItem">
-                            <button data-inverted="" data-tooltip="Encode Text"
+                            <button data-inverted="" data-position="top left" data-tooltip="Encode Text"
                                     class="ui center aligned primary button icon"
                                     onclick="encode()"
                                     id="encode" name="encode"><i
@@ -43,7 +43,7 @@
                             </button>
                         </nav>
                         <nav class="item" id="navMenuItem">
-                            <button data-inverted="" data-tooltip="Decode Text"
+                            <button data-inverted="" data-position="top left" data-tooltip="Decode Text"
                                     class="ui center aligned blue button icon"
                                     onclick="decode()" id="decode"
                                     name="decode"><i
@@ -51,21 +51,20 @@
                             </button>
                         </nav>
                         <nav class="item" id="navMenuItem">
-                            <button data-inverted="" data-tooltip="Upload Input"
+                            <button data-inverted="" data-position="top left" data-tooltip="Upload Input"
                                     class="ui center aligned green button icon"
                                     onclick="loadFile()" id="buttonUpload"><i class="upload icon"></i>
                             </button>
                             <input type="file" id="inputUpload" hidden>
                         </nav>
-                        <div class="inverted divider"></div>
                         <nav class="item" id="navMenuItem">
-                            <button data-inverted="" data-tooltip="Downlaod Output"
+                            <button data-inverted="" data-position="top left" data-tooltip="Downlaod Output"
                                     class="ui center aligned green button icon"
                                     onclick="saveFile()" value="save" id="save"><i class="download icon"></i>
                             </button>
                         </nav>
                         <nav class="item" id="navMenuItem">
-                            <button data-inverted="" data-tooltip="Upload Key"
+                            <button data-inverted="" data-position="top left" data-tooltip="Upload Key"
                                     class="ui center aligned black button icon">
                                 <i class="icons">
                                     <i class="green upload icon"></i>
@@ -74,9 +73,8 @@
                                 <input onchange="loadKey()" type="file" id="keyUpload" style="display: none;">
                             </button>
                         </nav>
-
                         <nav class="item" id="navMenuItem">
-                            <button class="ui center aligned black button icon" id="keyDownload" data-inverted=""
+                            <button class="ui center aligned black button icon" id="keyDownload" data-inverted="" data-position="top left"
                                     data-tooltip="Download Key"
                                     onclick="saveKeyAsFile()">
                                 <i class="icons">
@@ -87,22 +85,27 @@
                             </button>
                         </nav>
                         <nav class="item" id="navMenuItem">
-                            <button data-inverted="" data-tooltip="Reset Text" class="ui center aligned red button icon"
+                            <button class="ui center aligned red button icon" data-inverted="" data-position="top left" data-tooltip="Reset Text"
                                     onclick="reset()"
                                     id="reset" name="reset"><i class="undo alternate icon"></i>
                             </button>
                         </nav>
-                        <div id="keyLengthDiv" class="ui input">
-                            <input id="keyLength" type="number" min="1" max="256" step="1" value="16">
-                            <div id="keyLengthPopup" class="ui inverted popup hidden">Key Size (1-256)<br>Scroll
-                                to Change
+                        <nav class="item" id="navMenuItem">
+                            <div id="keyLengthDiv" class="ui input">
+                                <input class="prompt" id="keyLength" type="number" min="1" max="256" step="1"
+                                       value="16">
+                                <div id="keyLengthPopup" class="ui inverted popup hidden" style="width: 10rem;">Key Size (1-256)<br>Scroll
+                                    to Change
+                                </div>
                             </div>
-                        </div>
-                        <div class="ui right floated inverted input" id="projectName" data-inverted=""
-                             data-tooltip="Project Name (1-32 Characters)">
-                            <input id="fileDownloadName" type="text" placeholder="Project Name" maxlength="32"
-                                   value="Tryptor">
-                        </div>
+                        </nav>
+                        <nav class="item" id="navMenuItem">
+                            <div class="ui input" data-inverted="" data-position="top left"
+                                 data-tooltip="Project Name">
+                                <input class="prompt" id="fileDownloadName" type="text" placeholder="Project Name" maxlength="32"
+                                       value="Tryptor">
+                            </div>
+                        </nav>
                         <nav class="ui right floated item" id="navMenuItem">
                             <div onclick="showSettings()" class="ui icon black button">
                                 <i class="cog icon"></i>
@@ -110,7 +113,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="ui fluid stackable description">
+                <div class="ui description" id="description">
                     <form class="ui form">
                         <div class="ui fluid left icon input">
                             <label for="key"></label>
@@ -143,7 +146,7 @@
                     <input type="password" required name="password" placeholder="Password"/>
                 </label>
             </div>
-            <a href="" title="" class="ui orange basic inverted left floated button icon" data-inverted=""
+            <a href="" title="" class="ui orange basic inverted left floated button icon" data-inverted="" data-position="top left"
                data-tooltip="Forgot your password?" data-position="rig ht center">
                 <i class="question icon"></i>
             </a>
