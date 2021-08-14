@@ -1,11 +1,4 @@
-<?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-if (!defined('ROOT_PATH')) {
-    define('ROOT_PATH', __DIR__ . DIRECTORY_SEPARATOR);
-}
-?>
+<?php require_once "init.php"; ?>
 <head>
     <title>The Yellow Sub Servers</title>
     <link rel="icon" href="/favicon.png" type="image/x-icon">

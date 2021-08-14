@@ -1,9 +1,7 @@
 <?php
 $dom = new DOMDocument('1.0');
-$root = $_SERVER['DOCUMENT_ROOT'];
 
-function createElement($dom, $tag, $class, $id = null, $text = null, $extraAttirubutes = [], $attributeValues = [])
-{
+function createElement($dom, $tag, $class, $id = null, $text = null, $extraAttirubutes = [], $attributeValues = []) {
     $element = $dom->createElement($tag, $text);
     $element->setAttribute('class', $class);
 
@@ -21,8 +19,7 @@ function createElement($dom, $tag, $class, $id = null, $text = null, $extraAttir
     return $element;
 }
 
-function createImg($dom, $class, $src)
-{
+function createImg($dom, $class, $src) {
     $img = $dom->createElement('img');
     $img->setAttribute('class', $class);
     $img->setAttribute('src', $src);
@@ -30,16 +27,14 @@ function createImg($dom, $class, $src)
     return $img;
 }
 
-function createDiv($dom, $class, $text = '')
-{
+function createDiv($dom, $class, $text = '') {
     $div = $dom->createElement('div', $text);
     $div->setAttribute('class', $class);
 
     return $div;
 }
 
-function createa($dom, $href, $target)
-{
+function createa($dom, $href, $target) {
     $a = $dom->createElement('a');
     $a->setAttribute('href', $href);
     $a->setAttribute('target', $target);
@@ -47,20 +42,17 @@ function createa($dom, $href, $target)
     return $a;
 }
 
-function createIcon($dom, $class)
-{
+function createIcon($dom, $class) {
     return createElement($dom, 'i', $class, null);
 }
 
-function createCopyButton($dom, $class, $id, $icon, $text, $clipboard, $tooltip)
-{
+function createCopyButton($dom, $class, $id, $icon, $text, $clipboard, $tooltip) {
     $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'], [$clipboard, $tooltip, '']);
     $btn->appendChild(createIcon($dom, $icon));
     return $btn;
 }
 
-function createLinkButton($dom, $class, $id, $icon, $href, $target, $text, $clipboard, $tooltip)
-{
+function createLinkButton($dom, $class, $id, $icon, $href, $target, $text, $clipboard, $tooltip) {
     $a = createa($dom, $href, $target);
     $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'], [$clipboard, $tooltip, '']);
     $btn->appendChild(createIcon($dom, $icon));
@@ -68,7 +60,7 @@ function createLinkButton($dom, $class, $id, $icon, $href, $target, $text, $clip
     return $a;
 }
 
-$dir = 'C:\wamp64\www\servers';
+$dir = ROOT_PATH . 'servers/json';
 $files = glob($dir . '/*.json');
 $filejson = array();
 
@@ -144,8 +136,8 @@ foreach ($filejson as $jc) {
     $dom->appendChild($card);
 }
 echo $dom->saveHTML();
-//TODO fix dir; can html be variable
-$dir = '/servers';
+
+$dir = ROOT_PATH . 'servers/txt';
 $files = glob($dir . '/*.txt');
 $lines = array();
 foreach ($files as $file) {
@@ -157,10 +149,10 @@ foreach ($files as $file) {
         fclose($handle);
     }
     echo getCard($lines);
+    $lines = [];
 }
 
-function getCard($lines): string
-{
+function getCard($lines): string {
     return '<div class="card">
     <div class="content">
         <img id="logo" alt="TYS LOGO" class="right floated small ui image" src="/img/' . $lines[0] . '">

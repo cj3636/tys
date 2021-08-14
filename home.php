@@ -39,8 +39,8 @@
                 </div>
             </div>
         </div>
-        <div class="ui centered stackable cards" id="cards">
-            <?php require_once "servers/serverCard.php" ?>
+        <div class="ui centered stackable cards">
+            <?php require_once "servers/servers.php"; ?>
         </div>
     </div>
     <footer>&copy; P.o.P Industries 2019</footer>

@@ -1,0 +1,8 @@
+fileName
+imagename.png
+Title
+A short description.
+Detailed description with features and stuff. Do not go to the next line, but sentances are fine.
+server.ip.or.fqdn
+Copy Servername IP Address - Popup info for "Copy" Button
+Servername IP - Actual text on button

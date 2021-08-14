@@ -33,5 +33,7 @@
         "target": ""
       }
     }
-  }
+  },
+  "ip": "theyellowsub.us",
+  "port": "25565"
 }
