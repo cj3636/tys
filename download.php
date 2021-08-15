@@ -13,8 +13,7 @@
 <div class="ui stackable grid">
     <div class="sixteen wide centered column">
         <div class="ui stackable centered center aligned cards">
-            <?php
-            ?>
+            <?php ?>
         </div>
     </div>
 </body>

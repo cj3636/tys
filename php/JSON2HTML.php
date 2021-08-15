@@ -1,24 +1,23 @@
 <?php
 
 namespace TYS;
+require_once 'PHP2HTML.php';
 
+use ArrayObject;
 use DOMDocument;
+use TYS\PHP2HTML;
 
 class JSON2HTML {
-    private $dom;
-    private $p2h;
+    private DOMDocument $dom;
+    private PHP2HTML $p2h;
 
     public function __construct() {
         $this->dom = new DOMDocument();
         $this->p2h = new PHP2HTML();
     }
 
-    public function echoCard($dir) {
 
-    }
-
-    public function parseCards($dir): array {
-        $dom = $this->dom;
+    public function getFilesAsJSON($dir): array {
         $files = glob($dir . '/*.json');
         $filejson = array();
         foreach ($files as $file) {
@@ -26,10 +25,20 @@ class JSON2HTML {
             $jsonObj = json_decode($json, true);
             array_push($filejson, $jsonObj);
         }
+        return $filejson;
+    }
 
+    public function echoCard($dir) {
+        $cards = $this->parseCards($dir);
+        foreach ($cards as $card) {
+            echo $card;
+        }
+    }
+
+    public function parseCards($dir): array {
+        $dom = $this->dom;
+        $filejson = $this->getFilesAsJSON($dir);
         foreach ($filejson as $jc) {
-            $cards = array();
-
             $imgclass = $jc['img']['class'];
             $imgsrc = $jc['img']['src'];
 
@@ -49,7 +58,7 @@ class JSON2HTML {
             $card = $dom->createElement('div');
             $card->setAttribute('class', 'card');
 
-            $img = createImg($dom, $imgclass, $imgsrc);
+            $img =$this->p2h->createImg($dom, $imgclass, $imgsrc);
             $header = createDiv($dom, $hclass, $htext);
             $meta = createDiv($dom, $mclass, $mtext);
             $description = createDiv($dom, $dclass, $dtext);
@@ -103,5 +112,23 @@ class JSON2HTML {
 
     protected function getHTML($dir) {
 
+    }
+
+    public function createHTML($dir) {
+        $filejson = $this->getFilesAsJSON($dir);
+        foreach ($filejson as $jc) {
+            foreach($jc as $row) {
+                foreach($row as $key => $val) {
+                    if ($key instanceof ArrayObject) {
+                        foreach ($key as $subKey => $subVal) {
+                            echo $subKey . ': ' . $subVal;
+                            echo '<br>';
+                        }
+                    }
+                    echo $key . ': ' . $val;
+                    echo '<br>';
+                }
+            }
+        }
     }
 }

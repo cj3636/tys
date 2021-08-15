@@ -3,5 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/.gitsecret/keys/pubring.kbx" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/.gitsecret/keys/trustdb.gpg" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/servers/json/template" charset="UTF-8" />
   </component>
 </project>
