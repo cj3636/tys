@@ -334,9 +334,27 @@ input:checked + .slider:before {
     #h1 {
         font-size: 4.5rem;
     }
-    .ui.popup.inverted.top.left.transition.visible {
-        visibility: hidden  !important;
-        display: none  !important;
+
+    .ui.secondary.inverted.pointing.menu .item {
+        color: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        min-width: 2.5vw;
+    }
+
+    .ui.dropdown .menu > .header {
+        color: #ffffff;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ui.menu .ui.dropdown .menu > .item .icon:not(.dropdown) {
+        margin: 0 !important;
+    }
+
+    #toolsNav, #accountNav {
+        display: inherit;
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -473,12 +491,6 @@ svg {
     background-color: #23272a;
 }
 
-.ui.secondary.inverted.pointing.menu .item {
-    color: #ffffff !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    min-width: 2.5vw;
-}
 
 .ui.secondary.pointing.menu .active.item {
     font-weight: normal;
@@ -488,12 +500,13 @@ svg {
     display: none;
 }
 
+
 .ui.dropdown .menu > .header {
     color: #ffffff;
-
     margin-left: auto;
     margin-right: auto;
 }
+
 .ui.menu .ui.dropdown .menu > .item .icon:not(.dropdown) {
     margin: 0 !important;
 }
@@ -502,4 +515,10 @@ svg {
     display: inherit;
     margin: 0;
     padding: 0;
+}
+
+.ui.bottom.left.popup {
+    margin: 0 !important;
+    right: 10rem;
+    padding: 1rem !important;
 }

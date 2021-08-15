@@ -4,8 +4,7 @@
 <body>
 <div id="page" class="ui stackable fluid grid">
     <?php require_once 'title.php'; ?>
-    <?php require_once 'menu.php'; ?>
-    <div class="center aligned fifteen wide column">
+    <div class="center aligned sixteen wide column">
         <div class="ui items">
             <div class="item">
                 <div class="content">

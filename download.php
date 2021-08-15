@@ -3,14 +3,7 @@
 <?php require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <div class="sixteen wide column"></div>
-    <?php require 'title.php'; ?>
-    <div class="sixteen wide column">
-        <?php require 'menu.php'; ?>
-    </div>
-</div>
-<br>
-<div class="ui stackable grid">
+    <?php require_once 'title.php'; ?>
     <div class="sixteen wide centered column">
         <div class="ui stackable centered center aligned cards">
             <?php ?>
@@ -19,8 +12,7 @@
 </body>
 </html>
 <?php
-function createDownloadCard($logo, $title, $meta, $desc, $color, $file)
-{
+function createDownloadCard($logo, $title, $meta, $desc, $color, $file) {
     return '<div class="ui center aligned card dark">
                 <div class="content">
                     <img id="downloadLogo" alt="TYS LOGO" class="right floated small ui image"
@@ -37,4 +29,5 @@ function createDownloadCard($logo, $title, $meta, $desc, $color, $file)
                 </div>
             </div>';
 }
+
 ?>

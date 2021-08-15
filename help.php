@@ -3,11 +3,7 @@
 <?php require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <div class="sixteen wide column"></div>
     <?php require 'title.php' ?>
-    <div class="sixteen wide column">
-        <?php require 'menu.php'; ?>
-    </div>
 </div>
 <div id="page" class="ui stackable grid">
     <div class="centered eight wide column">

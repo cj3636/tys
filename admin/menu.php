@@ -17,7 +17,7 @@
         }
         ?>
     </div>
-    <script src="../js/menu.js"></script>
+    <script src="../js/title.js"></script>
 </div>
 <script>
     function showLogin() {

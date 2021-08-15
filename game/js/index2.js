@@ -170,9 +170,14 @@
             vertexColors: THREE.VertexColors
         });
         var bufferMesh;
-        var boxGeometry = new THREE.BoxGeometry(16, 16, 16);
-        var boxGeometry = new THREE.SphereGeometry(12, 8, 8);
-        var boxGeometry = new THREE.CylinderGeometry(0, 6, 300, 3);
+        //TODO SHAPE
+        let i = get.randomInt(0, 360);
+        let j = get.randomInt(0, 360);
+        let k = get.randomInt(0, 360);
+        console.log(i + ' ' + j + ' ' + k);
+        var boxGeometry = new THREE.SphereGeometry(i, j, k);
+        //var boxGeometry = new THREE.SphereGeometry(12, 8, 8);
+        //var boxGeometry = new THREE.CylinderGeometry(0, 6, 300, 3);
 //boxGeometry.applyMatrix(new THREE.Matrix4().makeRotationFromEuler(new THREE.Euler(Math.PI / 2, Math.PI, 0)));
 //var boxGeometry = new THREE.Geometry();
 //boxGeometry.vertices.push(

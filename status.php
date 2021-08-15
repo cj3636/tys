@@ -4,9 +4,6 @@
 <body>
 <div id="page" class="ui stackable grid">
     <?php require_once 'title.php'; ?>
-    <div class="sixteen wide column">
-        <?php require_once 'menu.php'; ?>
-    </div>
 </div>
 <div id="page" class="ui stackable grid">
     <div class="center aligned sixteen wide column">

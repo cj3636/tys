@@ -8,9 +8,6 @@
 <body>
 <div id="page" class="ui stackable grid">
     <?php require_once 'title.php' ?>
-    <div class="sixteen wide column">
-        <?php require_once 'menu.php'; ?>
-    </div>
     <div class="ten wide centered column">
         <div id="tryptor" class="ui fluid stackable card">
             <div class="header" id="title-bar">

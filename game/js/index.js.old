@@ -170,9 +170,9 @@
             vertexColors: THREE.VertexColors
         });
         var bufferMesh;
-        //var boxGeometry = new THREE.BoxGeometry(16, 16, 16);
+        var boxGeometry = new THREE.BoxGeometry(16, 16, 16);
         var boxGeometry = new THREE.SphereGeometry(12, 8, 8);
-        //var boxGeometry = new THREE.CylinderGeometry(0, 6, 300, 3);
+        var boxGeometry = new THREE.CylinderGeometry(0, 6, 300, 3);
 //boxGeometry.applyMatrix(new THREE.Matrix4().makeRotationFromEuler(new THREE.Euler(Math.PI / 2, Math.PI, 0)));
 //var boxGeometry = new THREE.Geometry();
 //boxGeometry.vertices.push(
@@ -184,8 +184,7 @@
         var boxMesh = new THREE.Mesh(boxGeometry);
 
         var boxArr = [];
-        //TODO number of shapes
-        var boxNum = 1255;
+        var boxNum = 8000;
         var boxVertices = boxMesh.geometry.vertices;
         var boxFaces = boxMesh.geometry.faces;
 
@@ -241,7 +240,6 @@
 
             // 頂点とindexを更新 ここから
             for (var i = 0; i < boxArr.length; i++) {
-                //TODO set colors
                 var r = get.randomInt(0, 128);
                 var g = get.randomInt(64, 255);
                 var b = get.randomInt(64, 255);
@@ -249,10 +247,9 @@
                 var facesLength = boxFaces.length;
 
                 for (var index = 0; index < boxFaces.length; index++) {
-                    //TODO ALSO SOMETHING WITH SHAPE
-                    indicesArr[facesLength * 11 * i + index * 3 + 0] = boxFaces[index].a + i * verticesLength;
-                    indicesArr[facesLength * 7 * i + index * 3 + 1] = boxFaces[index].b + i * verticesLength;
-                    indicesArr[facesLength * 13 * i + index * 3 + 2] = boxFaces[index].c + i * verticesLength;
+                    indicesArr[facesLength * 3 * i + index * 3 + 0] = boxFaces[index].a + i * verticesLength;
+                    indicesArr[facesLength * 3 * i + index * 3 + 1] = boxFaces[index].b + i * verticesLength;
+                    indicesArr[facesLength * 3 * i + index * 3 + 2] = boxFaces[index].c + i * verticesLength;
                 }
                 for (var index = 0; index < boxVertices.length; index++) {
                     verticesArr[verticesLength * 3 * i + index * 3 + 0] = boxVertices[index].x + boxArr[i].position.x;
@@ -289,12 +286,12 @@
 
             for (var i = 0; i < boxArr.length; i++) {
                 boxArr[i].move(velocity);
-                //TODO SHAPE OF ARTIFACTS
+
                 for (var index = 0; index < boxVertices.length; index++) {
                     var vector = boxVertices[index].clone().applyQuaternion(boxArr[i].q);
-                    verticesArr[verticesLength * 11 * i + index * 3 + 0] = vector.x + boxArr[i].position.x;
-                    verticesArr[verticesLength * 13 * i + index * 3 + 1] = vector.y + boxArr[i].position.y;
-                    verticesArr[verticesLength * 7 * i + index * 3 + 2] = vector.z + boxArr[i].position.z;
+                    verticesArr[verticesLength * 3 * i + index * 3 + 0] = vector.x + boxArr[i].position.x;
+                    verticesArr[verticesLength * 3 * i + index * 3 + 1] = vector.y + boxArr[i].position.y;
+                    verticesArr[verticesLength * 3 * i + index * 3 + 2] = vector.z + boxArr[i].position.z;
                 }
             }
 

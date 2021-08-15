@@ -1,7 +1,8 @@
 const page = window.location.pathname.split('/').pop().split('.').shift();
 const title = page.charAt(0).toUpperCase() + page.slice(1);
-const tl = 'top left';
+const tl = 'top center';
 const cr = 'right center';
+const cl = 'left center';
 const pages = {
     home: {id: '#home', target: '#home', name: 'Home', pos: tl},
     discord: {id: '#discord', target: '#discord', name: 'Discord', pos: tl},
@@ -23,7 +24,8 @@ const pages = {
     render2: {id: '#render2', target: '#render2', name: 'JS Render 2', pos: cr},
     account: {id: '#account', target: '#accountNav', name: 'Account', pos: tl},
     login: {id: '#login', target: '#login', name: 'Login', pos: cr},
-    signup: {id: '#signup', target: '#signup', name: 'Sign Up', pos: cr}
+    signup: {id: '#signup', target: '#signup', name: 'Sign Up', pos: cr},
+    paypal: {id: '#paypal', target: '#paypal', name: 'Donate', pos: tl}
 }
 
 const id = pages[page].id;
@@ -49,9 +51,9 @@ function createPopup(p) {
         jitter: 5,
         preserve: true,
         hoverable: true,
-        variation: 'inverted flowing',
-        transition: 'swing up',
-        duration: 242,
+        variation: 'basic inverted',
+        transition: 'fly down',
+        duration: 400,
         delay: {
             show: 242,
             hide: 242
@@ -60,10 +62,6 @@ function createPopup(p) {
             return screen.availWidth >= 600;
         }
     });
-}
-
-function isMobile() {
-
 }
 
 function disableStatus() {
@@ -78,13 +76,3 @@ function showLogin() {
 function showSignup() {
     $('#signupModal').modal('toggle');
 }
-
-// class pageInfo {
-//     constructor(key, id, name, pos) {
-//         this.key = key;
-//         this.id = id;
-//         this.name = name;
-//         this.pos = pos;
-//         console.log(this.key + " :{id: " + this.id + ", name: " + this.name + ", pos: " + this.pos + "},");
-//     }
-// }
