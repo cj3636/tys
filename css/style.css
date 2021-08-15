@@ -334,6 +334,10 @@ input:checked + .slider:before {
     #h1 {
         font-size: 4.5rem;
     }
+    .ui.popup.inverted.top.left.transition.visible {
+        visibility: hidden  !important;
+        display: none  !important;
+    }
 }
 
 #h11 {

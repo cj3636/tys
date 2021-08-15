@@ -7,3 +7,8 @@ https://theyellowsub.us
 `git secret reveal`
 
 `git secret hide -d`
+
+`id\: \'\#(.*?)\'\, `
+`(.*?) selects any character, any () sets var`
+`id: '#$1', target: '#$1', `
+`$1 is the var selected by .*?`

@@ -3,22 +3,29 @@ const title = page.charAt(0).toUpperCase() + page.slice(1);
 const tl = 'top left';
 const cr = 'right center';
 const pages = {
-    home: {id: '#home', name: 'Home', pos: tl, target: null},
-    discord: {id: '#discord', name: 'Discord', pos: tl, target: null},
-    videos: {id: '#videos', name: 'Videos', pos: tl, target: null},
-    help: {id: '#help', name: 'FAQ', pos: tl, target: null},
-    about: {id: '#about', name: 'About Us', pos: tl, target: null},
-    download: {id: '#download', name: 'Downloads', pos: tl, target: null},
-    tools: {id: '#tools', name: 'Tools', pos: tl, target: '#toolsNav'},
-    tryptor: {id: '#tryptor', name: 'Tryptor', pos: cr, target: null},
-    status: {id: '#status', name: 'Server Status', pos: cr, target: null},
-    game: {id: '#game', name: 'Game', pos: cr, target: null},
-    render: {id: '#render', name: 'JS Render', pos: cr, target: null},
-    render2: {id: '#render2', name: 'JS Render 2', pos: cr, target: null},
-    account: {id: '#account', name: 'Account', pos: tl, target: '#accountNav'},
-    login: {id: '#login', name: 'Login', pos: cr, target: null},
-    signup: {id: '#signup', name: 'Sign Up', pos: cr, target: null}
+    home: {id: '#home', target: '#home', name: 'Home', pos: tl},
+    discord: {id: '#discord', target: '#discord', name: 'Discord', pos: tl},
+    videos: {id: '#videos', target: '#videos', name: 'Videos', pos: tl},
+    help: {id: '#help', target: '#help', name: 'FAQ', pos: tl},
+    about: {id: '#about', target: '#about', name: 'About Us', pos: tl},
+    download: {id: '#download', target: '#download', name: 'Downloads', pos: tl},
+    tools: {id: '#tools', target: '#toolsNav', name: 'Tools', pos: tl},
+    tryptor: {id: '#tryptor', target: '#tryptor', name: 'Tryptor', pos: cr},
+    status: {id: '#status', target: '#status', name: 'Server Status', pos: cr},
+    game: {
+        id: '#game',
+        target: '#game',
+        name: '<a href="http://box2d-js.sourceforge.net/" target="_blank">Box2dJS</a> | ' +
+            '<a href="https://www.createjs.com/easeljs/" target="_blanks">EaselJS</a> Sandbox',
+        pos: cr
+    },
+    render: {id: '#render', target: '#render', name: 'JS Render', pos: cr},
+    render2: {id: '#render2', target: '#render2', name: 'JS Render 2', pos: cr},
+    account: {id: '#account', target: '#accountNav', name: 'Account', pos: tl},
+    login: {id: '#login', target: '#login', name: 'Login', pos: cr},
+    signup: {id: '#signup', target: '#signup', name: 'Sign Up', pos: cr}
 }
+
 const id = pages[page].id;
 const name = pages[page].name;
 const pos = pages[page].pos;
@@ -36,18 +43,27 @@ function createPopup(p) {
     let target = p.target != null ? p.target : p.id;
     console.log(target);
     $(target).popup({
-        content: name,
+        html: name,
         position: pos,
         target: target,
-        jitter: 100,
+        jitter: 5,
         preserve: true,
-        variation: 'inverted',
+        hoverable: true,
+        variation: 'inverted flowing',
         transition: 'swing up',
+        duration: 242,
         delay: {
-            show: 0,
-            hide: 0
+            show: 242,
+            hide: 242
+        },
+        onShow: function () {
+            return screen.availWidth >= 600;
         }
     });
+}
+
+function isMobile() {
+
 }
 
 function disableStatus() {
@@ -63,12 +79,12 @@ function showSignup() {
     $('#signupModal').modal('toggle');
 }
 
-class pageInfo {
-    constructor(key, id, name, pos) {
-        this.key = key;
-        this.id = id;
-        this.name = name;
-        this.pos = pos;
-        console.log(this.key + " :{id: " + this.id + ", name: " + this.name + ", pos: " + this.pos + "},");
-    }
-}
+// class pageInfo {
+//     constructor(key, id, name, pos) {
+//         this.key = key;
+//         this.id = id;
+//         this.name = name;
+//         this.pos = pos;
+//         console.log(this.key + " :{id: " + this.id + ", name: " + this.name + ", pos: " + this.pos + "},");
+//     }
+// }

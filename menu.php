@@ -7,7 +7,7 @@
         <a id="help" class="icon item" href="help.php"><i class="big yellow question icon"></i></a>
         <a id="videos" class="icon item" href="videos.php"><i class="big red youtube icon"></i></a>
         <a id="about" class="icon item" href="about.php"><i class="big blue users icon"></i></a>
-        <nav id="toolsNav" class="toolsNav">
+        <nav id="toolsNav">
             <div id="tools" class="ui dropdown item">
                 <i class="big purple cogs icon"></i>
                 <div class="menu">
