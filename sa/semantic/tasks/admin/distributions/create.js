@@ -115,7 +115,7 @@ module.exports = function(callback) {
         return files;
       };
 
-      // spaces out list correctly
+      // spaces out pages correctly
       createList = function(files) {
         var filenames = '';
         for(var file in files) {

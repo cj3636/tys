@@ -2,8 +2,8 @@
     <div class="ui stackable secondary pointing menu">
         <?php
         if (!isset($_SESSION['logged_in'])) {
-            require_once 'C:\wamp64\www\signupModal.php';
-            require_once 'C:\wamp64\www\loginModal.php';
+            require_once 'C:\wamp64\www\signup.html';
+            require_once 'C:\wamp64\www\login.html';
             echo '<a id="signup" class="right floated item" onclick="showSignup()"><i class="large blue user plus icon"></i>
             <div class="ui title">Sign Up</div>
         </a>

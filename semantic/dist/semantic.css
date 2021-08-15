@@ -10119,6 +10119,16 @@ i.cyan.icon.info.circle:before {
     content: "\f05a";
 }
 
+i.cyan.icon.key:before {
+    color: #00FFFF;
+    content: "\f084";
+}
+
+i.large.cyan.icon.key:before {
+    color: #00FFFF;
+    content: "\f084";
+}
+
 i.icon.info:before {
     content: "\f129";
 }

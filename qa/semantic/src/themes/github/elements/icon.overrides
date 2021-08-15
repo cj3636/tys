@@ -103,8 +103,8 @@
 .icon.light.bulb:before { content: '\f000'} /*  */
 .icon.linkify:before { content: '\f05c'} /*  */
 .icon.linkify.external:before { content: '\f07f'} /*  */
-.icon.list.ordered:before { content: '\f062'} /*  */
-.icon.list.unordered:before { content: '\f061'} /*  */
+.icon.pages.ordered:before { content: '\f062'} /*  */
+.icon.pages.unordered:before { content: '\f061'} /*  */
 .icon.location:before { content: '\f060'} /*  */
 .icon.gist.private:before,
 .icon.mirror.private:before,

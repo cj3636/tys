@@ -14,6 +14,7 @@ html {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    overflow: hidden;
 }
 
 body {
@@ -39,10 +40,6 @@ h3 {
     position: absolute;
     top: 0;
     width: 50%;
-}
-
-.ui.stackable.tabular.menu .active.item {
-    background: none;
 }
 
 /* 4x3 Aspect Ratio */
@@ -462,10 +459,36 @@ svg {
     }
 }
 
-.ui.stackable.tabular.menu .item :hover {
-    color: linen;
+.ui.menu .dropdown.item .menu {
+    background-color: #23272a;
 }
 
-.ui.inverted.menu {
-    background-color: black;
+.ui.secondary.inverted.pointing.menu .item {
+    color: #ffffff !important;
+}
+
+.ui.secondary.pointing.menu .active.item {
+    font-weight: normal;
+}
+
+#statusLoading {
+    display: none;
+}
+
+.ui.dropdown .menu > .header {
+    color: #ffffff;
+    padding: 0;
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
+.ui.dropdown .menu {
+    padding: 0;
+    margin: 0;
+    right: 0;
+}
+
+.ui.secondary.menu .dropdown.item > .menu, .ui.text.menu .dropdown.item > .menu {
+    padding: .1rem 0 0 0;
+    margin: .1rem 0 0 0;
 }

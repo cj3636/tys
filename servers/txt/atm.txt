@@ -1,8 +1,0 @@
-file
-thenewjourney.png
-Title
-Meta
-Description.
-ip
-Hover
-Button

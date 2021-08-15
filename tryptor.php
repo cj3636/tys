@@ -7,25 +7,22 @@
 </head>
 <body>
 <div id="page" class="ui stackable grid">
-    <div class="sixteen wide column"></div>
-    <?php require_once ROOT_PATH . 'title.php'; ?>
+    <?php require_once 'title.php' ?>
     <div class="sixteen wide column">
-        <?php require_once ROOT_PATH . 'menu.php'; ?>
+        <?php require_once 'menu.php'; ?>
     </div>
     <div class="ten wide centered column">
-        <?php //require_once ROOT_PATH . 'html/tryptor.html'; ?>
         <div id="tryptor" class="ui fluid stackable card">
             <div class="header" id="title-bar">
                 <img id="img" alt="Tryptor" class="ui small left floated image" src="/img/tryptor.png">
                 <button id="infobtn" class="ui right floated icon secondary button" onclick="showInfo()"
-                        data-inverted="" data-position="top left"
-                        data-tooltip="Text Encryption/Decryption Program - More Info"
-                        data-position="top right">
+                        data-inverted="" data-position="top right"
+                        data-tooltip="Text Encryption/Decryption Program - More Info">
                     <i class="right floated info circle cyan icon"></i>
                 </button>
             </div>
             <div id="content" class="content">
-                <div class="meta" id="meta" >
+                <div class="meta" id="meta">
                     <div class="ui stackable compact icon menu">
                         <nav class="item" id="navMenuItem">
                             <button data-inverted="" data-position="top left" data-tooltip="Create New Key"
@@ -74,7 +71,8 @@
                             </button>
                         </nav>
                         <nav class="item" id="navMenuItem">
-                            <button class="ui center aligned black button icon" id="keyDownload" data-inverted="" data-position="top left"
+                            <button class="ui center aligned black button icon" id="keyDownload" data-inverted=""
+                                    data-position="top left"
                                     data-tooltip="Download Key"
                                     onclick="saveKeyAsFile()">
                                 <i class="icons">
@@ -85,7 +83,8 @@
                             </button>
                         </nav>
                         <nav class="item" id="navMenuItem">
-                            <button class="ui center aligned red button icon" data-inverted="" data-position="top left" data-tooltip="Reset Text"
+                            <button class="ui center aligned red button icon" data-inverted="" data-position="top left"
+                                    data-tooltip="Reset Text"
                                     onclick="reset()"
                                     id="reset" name="reset"><i class="undo alternate icon"></i>
                             </button>
@@ -94,7 +93,8 @@
                             <div id="keyLengthDiv" class="ui input">
                                 <input class="prompt" id="keyLength" type="number" min="1" max="256" step="1"
                                        value="16">
-                                <div id="keyLengthPopup" class="ui inverted popup hidden" style="width: 10rem;">Key Size (1-256)<br>Scroll
+                                <div id="keyLengthPopup" class="ui inverted popup hidden" style="width: 10rem;">Key Size
+                                    (1-256)<br>Scroll
                                     to Change
                                 </div>
                             </div>
@@ -102,12 +102,14 @@
                         <nav class="item" id="navMenuItem">
                             <div class="ui input" data-inverted="" data-position="top left"
                                  data-tooltip="Project Name">
-                                <input class="prompt" id="fileDownloadName" type="text" placeholder="Project Name" maxlength="32"
+                                <input class="prompt" id="fileDownloadName" type="text" placeholder="Project Name"
+                                       maxlength="32"
                                        value="Tryptor">
                             </div>
                         </nav>
                         <nav class="ui right floated item" id="navMenuItem">
-                            <div onclick="showSettings()" class="ui icon black button">
+                            <div onclick="showSettings()" class="ui icon black button" data-tooltip="Additional Settings"
+                                 data-inverted="" data-position="top left">
                                 <i class="cog icon"></i>
                             </div>
                         </nav>
@@ -132,30 +134,31 @@
             </div>
         </div>
     </div>
-    <!--    TODO Add modals for text areas-->
-    <div class="ui basic mini modal login">
-        <h1>Welcome Back!</h1>
-        <form class="ui inverted form" action="" method="post" autocomplete="on">
-            <div class="required field">
-                <label>
-                    <input type="text" required name="email" placeholder="Username or Email"/>
-                </label>
-            </div>
-            <div class="required field">
-                <label>
-                    <input type="password" required name="password" placeholder="Password"/>
-                </label>
-            </div>
-            <a href="" title="" class="ui orange basic inverted left floated button icon" data-inverted="" data-position="top left"
-               data-tooltip="Forgot your password?" data-position="rig ht center">
-                <i class="question icon"></i>
-            </a>
-            <button class="ui blue basic ok inverted right floated button item" name="login">
-                <i class="sign-in icon"></i>
-                Login
-            </button>
-        </form>
-    </div>
+    <!--    TODO Add modals/popups for text areas-->
+    <!--    <div class="ui basic mini modal login">-->
+    <!--        <h1>Welcome Back!</h1>-->
+    <!--        <form class="ui inverted form" action="" method="post" autocomplete="on">-->
+    <!--            <div class="required field">-->
+    <!--                <label>-->
+    <!--                    <input type="text" required name="email" placeholder="Username or Email"/>-->
+    <!--                </label>-->
+    <!--            </div>-->
+    <!--            <div class="required field">-->
+    <!--                <label>-->
+    <!--                    <input type="password" required name="password" placeholder="Password"/>-->
+    <!--                </label>-->
+    <!--            </div>-->
+    <!--            <a href="" title="" class="ui orange basic inverted left floated button icon" data-inverted=""-->
+    <!--               data-position="top left"-->
+    <!--               data-tooltip="Forgot your password?" data-position="rig ht center">-->
+    <!--                <i class="question icon"></i>-->
+    <!--            </a>-->
+    <!--            <button class="ui blue basic ok inverted right floated button item" name="login">-->
+    <!--                <i class="sign-in icon"></i>-->
+    <!--                Login-->
+    <!--            </button>-->
+    <!--        </form>-->
+    <!--    </div>-->
 </body>
 <script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
 <script src="js/cypher.js"></script>

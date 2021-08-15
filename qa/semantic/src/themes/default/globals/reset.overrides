@@ -413,7 +413,7 @@ menu {
  */
 
 summary {
-  display: list-item;
+  display: pages-item;
 }
 
 /* Scripting

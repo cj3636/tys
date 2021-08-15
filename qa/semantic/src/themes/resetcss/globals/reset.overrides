@@ -36,7 +36,7 @@ body {
   line-height: 1;
 }
 ol, ul {
-  list-style: none;
+  pages-style: none;
 }
 blockquote, q {
   quotes: none;

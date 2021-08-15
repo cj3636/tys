@@ -1,118 +1,53 @@
-<?php require_once 'loginModal.php' ?>
-<?php require_once 'signupModal.php' ?>
+<?php require_once LOGIN_HTML ?>
+<?php require_once SIGNUP_HTML ?>
 <div class="sixteen wide column">
-    <div class="ui secondary pointing inverted stackable fluid menu ">
-        <a id="home" class="item" href="home.php"><i class="large green home icon"></i>
-            <div class="ui title">Home</div>
+    <div id="menu" class="ui secondary pointing inverted stackable icon menu" style="padding: 0; margin: 0;">
+        <a id="home" name="Home" class="icon item" href="home.php"><i class="large green home icon"></i></a>
+        <a id="discord" class="icon item" href="discord.php"><i class="large blue discord icon"></i></a>
+        <a id="help" class="icon item" href="help.php"><i class="large yellow question icon"></i></a>
+        <a id="videos" class="icon item" href="videos.php"><i class="large red youtube icon"></i></a>
+        <a id="about" class="icon item" href="about.php"><i class="large blue users icon"></i></a>
+        <a id="status" class="icon item" href="status.php" onclick="disableStatus()">
+            <i class="large icons">
+                <i class="orange server icon"></i>
+                <i class="corner green rss icon"></i>
+            </i>
         </a>
-        <a id="status" class="item" href="status.php" onclick="disableStatus()"><i
-                    class="large orange info circle icon"></i>
-            <div class="ui title">Server Status</div>
-        </a>
-        <nav id="statusLoading" hidden="hidden">
-            <a class="item">
-                <div class="ui active inline loader"></div>
-                <div class="ui title">Server Status</div>
-            </a>
-        </nav>
-        <a id="discord" class="item" href="discord.php"><i class="large blue discord icon"></i>
-            <div class="ui title">Discord</div>
-        </a>
-        <a id="help" class="item" href="help.php"><i class="large yellow question icon"></i>
-            <div class="ui title">Help</div>
-        </a>
-        <a id="about" class="item" href="about.php"><i class="large blue users icon"></i>
-            <div class="ui title">About Us</div>
-        </a>
-        <!--        TODO re implement tryptor and old sites-->
-        <!--                        <div id="dropdown" class="ui pointing dropdown item"-->
-        <!--                             data-tooltip="Legacy Server's & Interesting Developer API's"-->
-        <!--                             data-inverted="">-->
-        <!--                            <i class="large purple plus circle icon"></i>-->
-        <!--                            <div class="ui title">Legacy</div>-->
-        <!--                            <div class="ui inverted menu">-->
-        <!--                                <a id="tryptor" href="tryptor.php" class="item">Tryptor</a>-->
-        <!--                                <a id="game" href="game.php" class="item">Game</a>-->
-        <!--                                <a id="render" href="render.php" class="item">Render 1</a>-->
-        <!--                                <a id="render2" href="render2.php" class="item">Render 2</a>-->
-        <!--                                <a class="item" href="sa/index.php"><i class="large purple info icon"></i>Second Aether</a>-->
-        <!--                                <a class="item" href="qa/index.php"><i class="large pink info icon"></i>Quantum Aether</a>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <div id="account" class="ui pointing dropdown item"
-             data-tooltip="Legacy Server's & Interesting Developer API's"
-             data-inverted="">
-            <i class="large green user circle icon"></i>
-            <div class="ui title">Account</div>
+        <div id="statusLoading" class="item">
+            <div class="ui inline loader active"></div>
+        </div>
+        <div id="tools" class="ui dropdown item">
+            <i class="large purple cogs icon"></i>
             <div class="menu">
-                <a class="item" onclick="showLogin()"><i class="large blue sign-in icon"></i>Login</a>
-                <a class="item" onclick="showSignup()"><i class="large blue signup icon"></i>Sign Up</a>
+                <div class="ui center aligned centered white header">Tools</div>
+                <a id="tryptor" class="icon item" href="tryptor.php"><i class="large key cyan icon"></i></a>
+                <a id="game" href="game/game.html" class="icon item"><i class="large orange game icon"></i></a>
+                <a id="render" href="render.php" class="icon item"><i class="large green js icon"></i></a>
+                <a id="render2" href="render2.php" class="icon item"><i class="large pink js icon"></i></a>
+                <!--                <a class="icon item" href="sa/index.php"><i class="large purple info icon"></i>Second Aether</a>-->
+                <!--                <a class="icon item" href="qa/index.php"><i class="large pink info icon"></i>Quantum Aether</a>-->
             </div>
         </div>
-        <a id="tryptor" class="item" href="tryptor.php"><i class="large teal key icon"></i>
-            <div class="ui title">Tryptor</div>
-        </a>
-        <a id="download" class="ui right floated item" href="download.php"><i
-                    class="large inverted purple download icon"></i>
-            <div class="ui title">Downloads</div>
-        </a>
+        <div id="account" class="ui dropdown item">
+            <i class="large green user circle icon"></i>
+            <div class="ui menu">
+                <div class="ui center aligned centered white header">Account</div>
+                <div id="login" class="icon item" onclick="showLogin()"><i class="large blue sign-in circle icon"></i></div>
+                <div id="signup" class="icon item" onclick="showSignup()"><i class="large blue signup icon"></i></div>
+            </div>
+        </div>
+        <!--        <div id="account" class="ui dropdown item"-->
+        <!--             data-tooltip="Legacy Server's & Interesting Developer API's"-->
+        <!--             data-inverted="">-->
+        <!--            <i class="large green user circle icon"></i>-->
+        <!--            <div class="ui title">Account</div>-->
+        <!--            <div class="ui labeled icon menu">-->
+        <!--                <div class="item" onclick="showLogin()"><i class="large blue sign-in circle icon"></i>Login</div>-->
+        <!--                <div class="item" onclick="showSignup()"><i class="large blue signup icon"></i>Sign Up</div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <a id="download" class="icon item" href="download.php"><i
+                    class="large inverted purple download icon"></i></a>
     </div>
 </div>
-<script>
-    function disableStatus() {
-        $('#status').hide();
-        $('#statusLoading').show();
-    }
-
-    setMenuActive();
-
-    function setMenuActive() {
-        switch (page) {
-            case index:
-                document.getElementById("home").className += " active";
-                break;
-            case discord:
-                document.getElementById("discord").className += " active";
-                break;
-            case videos:
-                document.getElementById("videos").className += " active";
-                break;
-            case help:
-                document.getElementById("help").className += " active";
-                break;
-            case about:
-                document.getElementById("about").className += " active";
-                break;
-            case status:
-                document.getElementById("status").className += " active";
-                break;
-            case download:
-                document.getElementById("download").className += " active";
-                break;
-            case tryptor:
-                document.getElementById("tryptor").className += " active";
-                break;
-            case game:
-                document.getElementById("game").className += " active";
-                break;
-            case render:
-                document.getElementById("render").className += " active";
-                break;
-            case render2:
-                document.getElementById("render2").className += " active";
-                break;
-            default:
-                return "";
-        }
-    }
-
-    $('.ui.dropdown').dropdown();
-
-    function showLogin() {
-        $('.ui.basic.modal.login').modal('show');
-    }
-
-    function showSignup() {
-        $('.ui.basic.modal.signup').modal('show');
-    }
-</script>
+<script src="js/menu.js"></script>

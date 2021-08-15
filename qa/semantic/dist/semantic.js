@@ -1811,7 +1811,7 @@ $.fn.form.settings = {
     // template that produces error message
     error: function(errors) {
       var
-        html = '<ul class="list">'
+        html = '<ul class="pages">'
       ;
       $.each(errors, function(index, value) {
         html += '<li>' + value + '</li>';

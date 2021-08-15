@@ -286,7 +286,7 @@ i.icon.fast.forward:before { content: '\e01f'}
 i.icon.fast.rewind:before { content: '\e020'}
 i.icon.favorite:before { content: '\e87d'}
 i.icon.favorite.border:before { content: '\e87e'}
-i.icon.featured.play.list:before { content: '\e06d'}
+i.icon.featured.play.pages:before { content: '\e06d'}
 i.icon.featured.video:before { content: '\e06e'}
 i.icon.feedback:before { content: '\e87f'}
 i.icon.fiber.dvr:before { content: '\e05d'}
@@ -312,7 +312,7 @@ i.icon.filter.center.focus:before { content: '\e3dc'}
 i.icon.filter.drama:before { content: '\e3dd'}
 i.icon.filter.frames:before { content: '\e3de'}
 i.icon.filter.hdr:before { content: '\e3df'}
-i.icon.filter.list:before { content: '\e152'}
+i.icon.filter.pages:before { content: '\e152'}
 i.icon.filter.none:before { content: '\e3e0'}
 i.icon.filter.tilt.shift:before { content: '\e3e2'}
 i.icon.filter.vintage:before { content: '\e3e3'}
@@ -350,8 +350,8 @@ i.icon.format.indent.decrease:before { content: '\e23d'}
 i.icon.format.indent.increase:before { content: '\e23e'}
 i.icon.format.italic:before { content: '\e23f'}
 i.icon.format.line.spacing:before { content: '\e240'}
-i.icon.format.list.bulleted:before { content: '\e241'}
-i.icon.format.list.numbered:before { content: '\e242'}
+i.icon.format.pages.bulleted:before { content: '\e241'}
+i.icon.format.pages.numbered:before { content: '\e242'}
 i.icon.format.paint:before { content: '\e243'}
 i.icon.format.quote:before { content: '\e244'}
 i.icon.format.shapes:before { content: '\e25e'}
@@ -467,7 +467,7 @@ i.icon.line.weight:before { content: '\e91a'}
 i.icon.linear.scale:before { content: '\e260'}
 i.icon.link:before { content: '\e157'}
 i.icon.linked.camera:before { content: '\e438'}
-i.icon.list:before { content: '\e896'}
+i.icon.pages:before { content: '\e896'}
 i.icon.live.help:before { content: '\e0c6'}
 i.icon.live.tv:before { content: '\e639'}
 i.icon.local.activity:before { content: '\e53f'}
@@ -892,7 +892,7 @@ i.icon.view.comfy:before { content: '\e42a'}
 i.icon.view.compact:before { content: '\e42b'}
 i.icon.view.day:before { content: '\e8ed'}
 i.icon.view.headline:before { content: '\e8ee'}
-i.icon.view.list:before { content: '\e8ef'}
+i.icon.view.pages:before { content: '\e8ef'}
 i.icon.view.module:before { content: '\e8f0'}
 i.icon.view.quilt:before { content: '\e8f1'}
 i.icon.view.stream:before { content: '\e8f2'}

@@ -1,8 +1,8 @@
-fileName
-imagename.png
-Title
-A short description.
-Detailed description with features and stuff. Do not go to the next line, but sentances are fine.
-server.ip.or.fqdn
-Copy Servername IP Address - Popup info for "Copy" Button
-Servername IP - Actual text on button
+vanilla
+TYS_VANILLA.png
+Vanilla
+<a class="ui link" href="https://purpur.pl3x.net/" target="_blank">Purpur 1.17.x</a>
+<strong>Insane Custom World Gen!</strong><br>Factions, Survival Games, MiniGames, Anarchy, Creative, Plots, and more!
+theyellowsub.us
+Copy Vanilla IP Address
+Vanilla IP

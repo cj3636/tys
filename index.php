@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en_US">
 <?php require_once 'head.php'; ?>
-<body>
+<body id="body">
 <div id="page" class="ui stackable grid">
     <div class="sixteen wide center aligned column">
 
@@ -27,6 +27,27 @@
         </a>
     </div>
 </div>
+<div id="login" class="ui basic mini modal login">
+    <form class="ui inverted form" action="loginAction.php" method="post" autocomplete="on">
+        <div class="required field">
+            <input type="text" required name="email" placeholder="Username or Email"/>
+        </div>
+        <div class="required field">
+            <input type="password" required name="password" placeholder="Password"/>
+        </div>
+        <button class="ui blue basic ok inverted right floated button item" name="login">
+            <i class="sign-in icon"></i>
+            Login
+        </button>
+    </form>
+</div>
 <footer>&copy;P.o.P Industries 2021</footer>
+<script>
+    document.getElementById('body').addEventListener('keypress', function (e) {
+        if (e.code.toString() === 'KeyE') {
+            $('#login').modal('toggle');
+        }
+    });
+</script>
 </body>
 </html>

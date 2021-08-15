@@ -218,7 +218,7 @@ i.icon.circle:before { content: "\f111"; }
 i.icon.circle.notch:before { content: "\f1ce"; }
 i.icon.clipboard:before { content: "\f328"; }
 i.icon.clipboard.check:before { content: "\f46c"; }
-i.icon.clipboard.list:before { content: "\f46d"; }
+i.icon.clipboard.pages:before { content: "\f46d"; }
 i.icon.clock:before { content: "\f017"; }
 i.icon.clone:before { content: "\f24d"; }
 i.icon.closed.captioning:before { content: "\f20a"; }
@@ -486,10 +486,10 @@ i.icon.linkedin.alt:before { content: "\f0e1"; }
 i.icon.linode:before { content: "\f2b8"; }
 i.icon.linux:before { content: "\f17c"; }
 i.icon.lira.sign:before { content: "\f195"; }
-i.icon.list:before { content: "\f03a"; }
-i.icon.list.alternate:before { content: "\f022"; }
-i.icon.list.ol:before { content: "\f0cb"; }
-i.icon.list.ul:before { content: "\f0ca"; }
+i.icon.pages:before { content: "\f03a"; }
+i.icon.pages.alternate:before { content: "\f022"; }
+i.icon.pages.ol:before { content: "\f0cb"; }
+i.icon.pages.ul:before { content: "\f0ca"; }
 i.icon.location.arrow:before { content: "\f124"; }
 i.icon.lock:before { content: "\f023"; }
 i.icon.lock.open:before { content: "\f3c1"; }
@@ -752,7 +752,7 @@ i.icon.text.height:before { content: "\f034"; }
 i.icon.text.width:before { content: "\f035"; }
 i.icon.th:before { content: "\f00a"; }
 i.icon.th.large:before { content: "\f009"; }
-i.icon.th.list:before { content: "\f00b"; }
+i.icon.th.pages:before { content: "\f00b"; }
 i.icon.themeisle:before { content: "\f2b2"; }
 i.icon.thermometer:before { content: "\f491"; }
 i.icon.thermometer.empty:before { content: "\f2cb"; }
@@ -870,8 +870,8 @@ i.icon.youtube.square:before { content: "\f431"; }
 
 /* Aliases */
 i.icon.chess.rock:before { content: "\f447"; }
-i.icon.ordered.list:before { content: "\f0cb"; }
-i.icon.unordered.list:before { content: "\f0ca"; }
+i.icon.ordered.pages:before { content: "\f0cb"; }
+i.icon.unordered.pages:before { content: "\f0ca"; }
 i.icon.user.doctor:before { content: "\f0f0"; }
 i.icon.shield:before { content: "\f3ed"; }
 i.icon.puzzle:before { content: "\f12e"; }
@@ -1018,7 +1018,7 @@ i.icon.line.graph:before { content: "\f201"; }
 i.icon.linkedin.square:before { content: "\f08c"; }
 i.icon.linkify:before { content: "\f0c1"; }
 i.icon.lira:before { content: "\f195"; }
-i.icon.list.layout:before { content: "\f00b"; }
+i.icon.pages.layout:before { content: "\f00b"; }
 i.icon.magnify:before { content: "\f00e"; }
 i.icon.mail.forward:before { content: "\f064"; }
 i.icon.mail.square:before { content: "\f199"; }
@@ -1037,7 +1037,7 @@ i.icon.ms.edge:before { content: "\f282"; }
 i.icon.mute:before { content: "\f131"; }
 i.icon.new.pied.piper:before { content: "\f2ae"; }
 i.icon.non.binary.transgender:before { content: "\f223"; }
-i.icon.numbered.list:before { content: "\f0cb"; }
+i.icon.numbered.pages:before { content: "\f0cb"; }
 i.icon.optinmonster:before { content: "\f23c"; }
 i.icon.options:before { content: "\f1de"; }
 i.icon.other.gender.horizontal:before { content: "\f22b"; }
@@ -1311,7 +1311,7 @@ i.icon.youtube.play:before { content: "\f167"; }
   i.icon.lemon.outline:before { content: "\f094"; }
   i.icon.life.ring.outline:before { content: "\f1cd"; }
   i.icon.lightbulb.outline:before { content: "\f0eb"; }
-  i.icon.list.alternate.outline:before { content: "\f022"; }
+  i.icon.pages.alternate.outline:before { content: "\f022"; }
   i.icon.map.outline:before { content: "\f279"; }
   i.icon.meh.outline:before { content: "\f11a"; }
   i.icon.minus.square.outline:before { content: "\f146"; }
