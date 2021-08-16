@@ -1,14 +1,15 @@
 (function (window) {
     function Square(xP, yP) {
         this.view = new createjs.Bitmap("img/cube.png");
-        this.view.regX = this.view.regY = 50;
+        this.view.regX = 50;
+        this.view.regY = 50;
 
         let fixDef = new box2d.b2FixtureDef();
         fixDef.density = 1;
-        fixDef.friction = 0.5;
-        fixDef.restitution = 0.9;
+        fixDef.friction = 0.1;
+        fixDef.restitution = 1;
         let bodyDef = new box2d.b2BodyDef();
-        bodyDef.type = box2d.b2Body.b2_staticBody;
+        bodyDef.type = box2d.b2Body.b2_dynamicBody;
         bodyDef.position.x = xP / SCALE;
         bodyDef.position.y = yP / SCALE;
         fixDef.shape = new box2d.b2PolygonShape();

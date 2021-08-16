@@ -21,16 +21,15 @@ function init() {
     world = new box2d.b2World(new box2d.b2Vec2(xGravity, yGravity), true);
     stage = new createjs.Stage(document.getElementById('canvas'));
     debug = document.getElementById('debug');
-    debug.addEventListener("contextmenu", getPositionR, false);
-    debug.addEventListener("click", getPosition, false);
+    debug.addEventListener("contextmenu", getPositionR);
+    debug.addEventListener("click", getPosition);
 
     //Create walls/ground
-    let c = new setupPhysics();
+    let c = new SetupPhysics();
     stage.addChild(c.view);
     stage.addChild(c.view1);
     stage.addChild(c.view2);
     stage.addChild(c.view3);
-    setupPhysics();
 
     //easel stuff
     createjs.Ticker.addListener(this);
@@ -39,17 +38,17 @@ function init() {
 
 // When called generates ball under cursor
     function genBall(xP, yP) {
-        var b = new Ball(xP, yP);
+        let b = new Ball(xP, yP);
         stage.addChild(b.view);
     }
 
 //When called generates static square
     function genSquare(xP, yP) {
-        var b = new Square(xP, yP);
-        stage.addChild(b.view);
+        let s = new Square(xP, yP);
+        stage.addChild(s.view);
     }
 
-//Obtains cursor position for left click, then runs genBall		
+//Obtains cursor position for left click, then runs genBall
     function getPosition() {
         var xP;
         var yP;
@@ -65,13 +64,13 @@ function init() {
         }
         xP -= canvas.offsetLeft;
         yP -= canvas.offsetTop;
-        genBall(xP, yP)
+        genBall(xP, yP);
     }
 
-//Obtains cursor position for right click, then runs genSquare		
+//Obtains cursor position for right click, then runs genSquare
     function getPositionR() {
-        var xP = new Number();
-        var yP = new Number();
+        let xP;
+        let yP;
         var canvas = document.getElementById("canvas");
 
         if (event.x !== undefined && event.y !== undefined) {
@@ -90,7 +89,7 @@ function init() {
 //causes world update
 function tick() {
     stage.update();
-    //world.DrawDebugData();
+    world.DrawDebugData();
     world.Step(1 / 60, 10, 10);
     world.ClearForces();
 }

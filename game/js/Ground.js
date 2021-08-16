@@ -1,4 +1,4 @@
-function setupPhysics() {
+function SetupPhysics() {
     function tick(e) {
         this.x = this.body.GetPosition().x * SCALE;
         this.y = this.body.GetPosition().y * SCALE;
@@ -85,7 +85,7 @@ function setupPhysics() {
     this.view3.onTick = tick;
 
     //debug draw
-    var debugDraw = new box2d.b2DebugDraw();
+    let debugDraw = new box2d.b2DebugDraw();
     debugDraw.SetSprite(debug.getContext('2d'));
     debugDraw.SetDrawScale(SCALE);
     debugDraw.SetFillAlpha(0)
