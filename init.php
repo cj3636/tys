@@ -6,6 +6,7 @@ const ROOT_PATH = __DIR__ . DIRECTORY_SEPARATOR;
 
 const HEAD = ROOT_PATH . 'head.php';
 const TITLE = ROOT_PATH . 'title.php';
+const HOME = ROOT_PATH . 'home.php';
 
 
 const CARD_HTML = ROOT_PATH . 'html/card.html';

@@ -25,17 +25,12 @@ const pages = {
     account: {id: '#account', target: '#accountNav', name: 'Account', pos: tl},
     login: {id: '#login', target: '#login', name: 'Login', pos: cr},
     signup: {id: '#signup', target: '#signup', name: 'Sign Up', pos: cr},
+    error: {id: '#error', target: '#error', name: 'Error', pos: tl},
     paypal: {id: '#paypal', target: '#paypal', name: 'Donate', pos: tl}
 }
 
-const id = pages[page].id;
-const name = pages[page].name;
-const pos = pages[page].pos;
-
-$('#desc').text(pages[page].name);
-$(pages[page].id).addClass('active');
+setActivePage();
 Object.keys(pages).forEach(page => createPopup(pages[page]));
-
 $('#tools').dropdown({transition: 'drop', on: 'hover'});
 $('#account').dropdown({transition: 'drop', on: 'hover'});
 
@@ -43,7 +38,6 @@ function createPopup(p) {
     let name = p.name
     let pos = p.pos;
     let target = p.target != null ? p.target : p.id;
-    console.log(target);
     $(target).popup({
         html: name,
         position: pos,
@@ -59,7 +53,7 @@ function createPopup(p) {
             hide: 242
         },
         onShow: function () {
-            return screen.availWidth >= 600;
+            return screen.availWidth >= 100;
         }
     });
 }
@@ -75,4 +69,13 @@ function showLogin() {
 
 function showSignup() {
     $('#signupModal').modal('toggle');
+}
+
+function setActivePage() {
+    if (page in pages) {
+        $('#desc').text(pages[page].name);
+        $(pages[page].id).addClass('active');
+    } else {
+        $('#desc').text('Error').css('color', 'red');
+    }
 }

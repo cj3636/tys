@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <title>Physics Engine(BETA)</title>
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/threejs.js"></script>
     <script src="js/EaselJS.js"></script>
-    <script src="js/Box2D_v2.2.1_min.js"></script>
-    <script src="js/embox2d-helpers.js"></script>
+    <script src="js/box2dweb.js"></script>
+    <!--    <script src="js/embox2d-helpers.js"></script>-->
     <link rel="stylesheet" type="text/css" href="css/game.css">
 </head>
 <body id="body" onload="onload();" oncontextmenu="return false;">
@@ -26,22 +25,6 @@
     <canvas id="debug" width="1000" height="800"></canvas>
 </div>
 <script>
-    var Box2D;
-    if (!Box2D) Box2D = (typeof Box2D !== 'undefined' ? Box2D : null) || Module;
-    Box2D().then(function(r){
-        Box2D = r;
-        Module = Box2D;
-        if(document.readyState === "complete"){
-            afterDocumentLoaded()
-        } else {
-            window.onload = afterDocumentLoaded
-        }
-    });
-
-    const afterDocumentLoaded = function(){
-        using(Box2D, "b2.+");
-        init();
-    };
     //Ball Variables
     let ballImage = "img/n64.png";
     let ballDensity = 1;
@@ -80,6 +63,9 @@
         }
         if (e.key === 'Enter') {
             test();
+        }
+        if (e.key === 'x') {
+            clear();
         }
     });
 </script>

@@ -100,7 +100,7 @@
                             <div class="ui input" data-inverted="" data-position="top left"
                                  data-tooltip="Project Name">
                                 <input class="prompt" id="fileDownloadName" type="text" placeholder="Project Name"
-                                       maxlength="32"
+                                       maxlength="16"
                                        value="Tryptor">
                             </div>
                         </nav>

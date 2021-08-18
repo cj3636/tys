@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="CJSERVER4" uploadOnCheckin="bee16c2f-5865-4c73-87ea-91e89d963ae9" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" uploadOnCheckin="bee16c2f-5865-4c73-87ea-91e89d963ae9" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="CJSERVER4">
         <serverdata>
           <mappings>
-            <mapping deploy="www" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/www" local="$PROJECT_DIR$" web="/" />
             <mapping local="" />
           </mappings>
         </serverdata>

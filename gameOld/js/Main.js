@@ -1,16 +1,16 @@
-// let Box2D =
-//     {
-//         b2Vec2: Box2D.Common.Math.b2Vec2,
-//         b2BodyDef: Box2D.Dynamics.b2BodyDef,
-//         b2Body: Box2D.Dynamics.b2Body,
-//         b2FixtureDef: Box2D.Dynamics.b2FixtureDef,
-//         b2Fixture: Box2D.Dynamics.b2Fixture,
-//         b2World: Box2D.Dynamics.b2World,
-//         b2MassData: Box2D.Collision.Shapes.b2MassData,
-//         b2PolygonShape: Box2D.Collision.Shapes.b2PolygonShape,
-//         b2CircleShape: Box2D.Collision.Shapes.b2CircleShape,
-//         b2DebugDraw: Box2D.Dynamics.b2DebugDraw
-//     };
+let box2d =
+    {
+        b2Vec2: Box2D.Common.Math.b2Vec2,
+        b2BodyDef: Box2D.Dynamics.b2BodyDef,
+        b2Body: Box2D.Dynamics.b2Body,
+        b2FixtureDef: Box2D.Dynamics.b2FixtureDef,
+        b2Fixture: Box2D.Dynamics.b2Fixture,
+        b2World: Box2D.Dynamics.b2World,
+        b2MassData: Box2D.Collision.Shapes.b2MassData,
+        b2PolygonShape: Box2D.Collision.Shapes.b2PolygonShape,
+        b2CircleShape: Box2D.Collision.Shapes.b2CircleShape,
+        b2DebugDraw: Box2D.Dynamics.b2DebugDraw
+    };
 
 //Divide by scale to convert pixels into meters, creates entire world stage
 let SCALE = 30;
@@ -18,7 +18,7 @@ let stage, world, debug;
 
 //calls canvas, adds timer to 'tick'
 function init() {
-    world = new Box2D.b2World(new Box2D.b2Vec2(xGravity, yGravity), true);
+    world = new box2d.b2World(new box2d.b2Vec2(xGravity, yGravity), true);
     stage = new createjs.Stage(document.getElementById('canvas'));
     debug = document.getElementById('debug');
     debug.addEventListener("contextmenu", getPositionR);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="10.0.0.36" id="3d0d1dd7-11a4-42c8-8ee8-f281e2a8cc8f" keyPath="C:\Users\cgilmartin\Documents\gitp.ppk" port="22" nameFormat="DESCRIPTIVE" username="cjserver" />
+      <sshConfig host="10.0.0.5" id="c08e4d70-1f85-4d8f-93e0-ed59bcfd6c9f" keyPath="C:\Users\cgilmartin\Documents\gitp.ppk" port="22" nameFormat="DESCRIPTIVE" username="cjserver" />
+      <sshConfig host="10.0.0.6" id="ab136a62-aa98-41da-9100-22367b9f31e2" keyPath="C:\Users\cgilmartin\Documents\gitp.ppk" port="22" nameFormat="DESCRIPTIVE" username="cjserver" />
+      <sshConfig host="10.0.0.7" id="2c157570-b1c2-41d6-a344-4a1e254384c2" keyPath="C:\Users\cgilmartin\Documents\gitp.ppk" port="22" nameFormat="DESCRIPTIVE" username="cjserver" />
+    </configs>
+  </component>
+</project>

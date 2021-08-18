@@ -11,7 +11,7 @@
 
 <div class="ui two wide right floated column">
     <div data-tooltip="" id="paypal">
-        <a class="ui massive blue right corner icon label" id="paypal"
+        <a class="ui massive blue right corner icon label"
            href="https://www.paypal.com/donate?hosted_button_id=REUAFVC9PPVBC"
            target="_blank">
             <i class="white paypal icon"></i>
@@ -63,9 +63,7 @@
                 </div>
             </div>
         </nav>
-        <a id="download" class="icon item" href="download.php">
-            <i class="big inverted purple download icon"></i>
-        </a>
+        <a id="download" class="icon item" href="download.php"><i class="big inverted purple download icon"></i></a>
     </div>
 </div>
 <script src="js/title.js"></script>
