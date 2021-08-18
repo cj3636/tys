@@ -26,10 +26,10 @@ function init() {
 
     //Create walls/ground
     let c = new CreateBorders();
-    stage.addChild(c.view);
-    stage.addChild(c.view1);
-    stage.addChild(c.view2);
-    stage.addChild(c.view3);
+    stage.addChild(c.ground);
+    stage.addChild(c.roof);
+    stage.addChild(c.rightWall);
+    stage.addChild(c.leftWall);
 
     //easel stuff
     createjs.Ticker.addListener(this);
