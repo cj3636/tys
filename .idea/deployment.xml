@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" uploadOnCheckin="e3ae3bf7-e66f-4a13-a3d0-b02c14dc198d" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="cjserver4" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="CJSERVER4">
+      <paths name="cjserver4">
         <serverdata>
           <mappings>
             <mapping deploy="/www" local="$PROJECT_DIR$" web="/" />
-            <mapping local="" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="CJSERVER4" />
   </component>
 </project>

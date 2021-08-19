@@ -8,7 +8,7 @@
       <sshConfig host="10.0.0.5" id="c08e4d70-1f85-4d8f-93e0-ed59bcfd6c9f" keyPath="C:\Users\cgilmartin\Documents\gitp.ppk" port="22" nameFormat="DESCRIPTIVE" username="cjserver" />
       <sshConfig host="10.0.0.6" id="ab136a62-aa98-41da-9100-22367b9f31e2" keyPath="C:\Users\cgilmartin\Documents\gitp.ppk" port="22" nameFormat="DESCRIPTIVE" username="cjserver" />
       <sshConfig host="10.0.0.7" id="2c157570-b1c2-41d6-a344-4a1e254384c2" keyPath="C:\Users\cgilmartin\Documents\gitp.ppk" port="22" nameFormat="DESCRIPTIVE" username="cjserver" />
-      <sshConfig host="10.0.0.36" id="c28f95dd-286a-4a29-a1cc-7ba2a7212196" keyPath="C:\Users\cgilmartin\Documents\gitp.ppk" port="22" customName="cjserver@10.0.0.36:22" nameFormat="CUSTOM" username="cjserver">
+      <sshConfig host="10.0.0.36" id="b26c3ac9-6bb5-4bb7-bb3d-e6e41879e692" keyPath="C:\Users\maxadmin\Documents\gitp.ppk" port="22" customName="cjserver@10.0.0.36:22" nameFormat="CUSTOM" username="cjserver">
         <option name="customName" value="cjserver@10.0.0.36:22" />
       </sshConfig>
     </configs>
