@@ -17,6 +17,20 @@
             } else {
                 echo '<div class="ui red paragraph">Server is DOWN</div>';
             }
+            //           TODO  MODLIST Plugin list?
+            //
+            //        use MCServerStatus\MCPing;
+            //
+            //        require_once('vendor/autoload.php');
+            //        $response = MCPing::check('theyellowsub.us', 25567);
+            //        echo $response->getMotdToHtml();
+            //        echo '<div class="ui divider"></div>';
+            //        $modList = $response->toArray()["mods"];
+            //        for ($i = 0; $i < sizeof($modList["modList"]); $i++) {
+            //            print_r($modList["modList"][$i]["modid"]);
+            //            echo '<div class="ui divider"></div>';
+            //        }
+            //
             ?>
         </div>
         <div class="ui divider"></div>

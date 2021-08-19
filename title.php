@@ -67,3 +67,6 @@
     </div>
 </div>
 <script src="js/title.js"></script>
+<script>
+  $('.ui.dropdown.item').transition('scale');
+</script>
