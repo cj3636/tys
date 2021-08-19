@@ -17,8 +17,14 @@
     <button id="reset" onclick="reset()">Reset All</button>
 </div>
 <div id="game">
-    <canvas id="canvas"></canvas>
-    <canvas id="debug"></canvas>
+    <canvas id="platform"></canvas>
+    <div id="clouds">
+        <div class="cloud x1"></div>
+        <div class="cloud x2"></div>
+        <div class="cloud x3"></div>
+        <div class="cloud x4"></div>
+        <div class="cloud x5"></div>
+    </div>
     <div class="night" id="stars">
         <div class="shooting_star"></div>
         <div class="shooting_star"></div>
@@ -41,9 +47,12 @@
         <div class="shooting_star"></div>
         <div class="shooting_star"></div>
     </div>
+    <canvas id="canvas"></canvas>
+    <canvas id="debug"></canvas>
 </div>
+
 <script>
-    const canvasScale = 0.8;
+    const canvasScale = 1;
     //Ball Variables
     let ballImage = "img/n64.png";
     let ballDensity = 1;
@@ -54,7 +63,7 @@
     let squareImage = "img/cube.png";
     let squareDensity = 1;
     let squareFriction = 0.5;
-    let squareBounce = 0.6;
+    let squareBounce = 0.8;
     let squareSpin = 0;
     //Ground Variables
     let xGravity = 0;
@@ -82,10 +91,10 @@
         canvas.width = w * canvasScale;
         canvas.height = h * canvasScale;
         debug.width = canvas.width;
-        debug.height = canvas.height;
-        const stars = document.getElementById('stars');
-        stars.width = canvas.width;
-        stars.height = canvas.height;
+        debug.height = canvas.height       ;
+        platform.width = canvas.width;
+        platform.height = canvas.height;
+
     }
 
     canvasSize = function () {

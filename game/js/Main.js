@@ -15,6 +15,7 @@ let box2d =
 //Divide by scale to convert pixels into meters, creates entire world stage
 let SCALE = 10;
 let world, stage;
+const platform = document.getElementById('platform');
 const canvas = document.getElementById('canvas');
 const canvasCTX = document.getElementById('debug').getContext('2d')
 const debug = document.getElementById('debug');
@@ -26,13 +27,9 @@ function init() {
 
     //Create walls/ground
     let border = new SetupBorder();
-    stage.addChild(border.groundView);
     views.forEach(function (view) {
         stage.addChild(view);
     })
-    stage.addChild(border.roofView);
-    stage.addChild(border.rightView);
-    stage.addChild(border.leftView);
     // new Body(world, { type: "static", x: 0, y: 0, height: 50,  width: 0.5 });
 
     //easel stuff

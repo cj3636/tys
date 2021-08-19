@@ -6,8 +6,8 @@
         this.view.regY = 50;
 
         let fixDef = new box2d.b2FixtureDef();
-        fixDef.density = 1;
-        fixDef.friction = 1;
+        fixDef.density = 100;
+        fixDef.friction = 0.1;
         fixDef.restitution = squareBounce;
         let bodyDef = new box2d.b2BodyDef();
         bodyDef.type = box2d.b2Body.b2_dynamicBody;
