@@ -1,4 +1,4 @@
-# The Yellow Submarine Servers Official Website
+# The Yellow Sub Servers Official Website
 
 https://theyellowsub.us
 
