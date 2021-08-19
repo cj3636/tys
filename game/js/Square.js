@@ -1,6 +1,7 @@
 (function (window) {
     function Square(xP, yP) {
         this.view = new createjs.Bitmap("img/cube.png");
+        this.view.width = 64;
         this.view.regX = 50;
         this.view.regY = 50;
 
@@ -12,6 +13,7 @@
         bodyDef.type = box2d.b2Body.b2_dynamicBody;
         bodyDef.position.x = xP / SCALE;
         bodyDef.position.y = yP / SCALE;
+        bodyDef.angularVelocity = squareSpin * (180 / Math.PI);
         fixDef.shape = new box2d.b2PolygonShape();
         fixDef.shape.SetAsBox(50 / SCALE, 50 / SCALE);
         this.view.body = world.CreateBody(bodyDef);

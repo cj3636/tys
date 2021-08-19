@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" uploadOnCheckin="e3ae3bf7-e66f-4a13-a3d0-b02c14dc198d" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="CJSERVER4">
         <serverdata>
@@ -11,5 +11,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="CJSERVER4" />
   </component>
 </project>

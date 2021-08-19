@@ -12,6 +12,7 @@
         fixDef.restitution = ballBounce;
 
         let bodyDef = new box2d.b2BodyDef();
+        bodyDef.angularVelocity = ballSpin  * (180 / Math.PI);
         bodyDef.type = box2d.b2Body.b2_dynamicBody;
         bodyDef.position.x = xP / SCALE;
         bodyDef.position.y = yP / SCALE;

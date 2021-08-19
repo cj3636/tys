@@ -1320,18 +1320,18 @@ $.fn.search.settings = {
 
   // maps api response attributes to internal representation
   fields: {
-    categories      : 'results',     // array of categories (category view)
-    categoryName    : 'name',        // name of category (category view)
-    categoryResults : 'results',     // array of results (category view)
+    categories      : 'results',     // array of categories (category groundView)
+    categoryName    : 'name',        // name of category (category groundView)
+    categoryResults : 'results',     // array of results (category groundView)
     description     : 'description', // result description
     image           : 'image',       // result image
     price           : 'price',       // result price
     results         : 'results',     // array of results (standard)
     title           : 'title',       // result title
     url             : 'url',         // result url
-    action          : 'action',      // "view more" object name
-    actionText      : 'text',        // "view more" text
-    actionURL       : 'url'          // "view more" url
+    action          : 'action',      // "groundView more" object name
+    actionText      : 'text',        // "groundView more" text
+    actionURL       : 'url'          // "groundView more" url
   },
 
   selector : {

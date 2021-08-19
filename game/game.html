@@ -4,74 +4,101 @@
     <meta charset="UTF-8">
     <title>Physics Engine(BETA)</title>
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/threejs.js"></script>
-    <script src="js/EaselJS.js"></script>
-    <script src="js/Box2D_v2.2.1_min.js"></script>
-    <script src="js/embox2d-helpers.js"></script>
     <link rel="stylesheet" type="text/css" href="css/game.css">
 </head>
-<body id="body" onload="onload();" oncontextmenu="return false;">
-<div id="loginModal" class="ui basic mini modal login">
+<body id="body" onload="resize()" oncontextmenu="return false;">
+<div id="settings" hidden>
     <input type="number" step=".1" id="ballBounce" value="0.7">Ball Bounce<br>
     <input type="number" step=".1" id="squareBounce" value="0.7">Square Bounce<br>
     <input type="number" id="xGravity" value="0">Right-Left Gravity<br>
     <input type="number" id="yGravity" value="7">Down-Up Gravity<br>
-    <input type="text" id="ballImage" value="img/n64.png">Ball Image(Direct URL)<br><br>
+    <input type="text" id="ballImage" value="img/n64.png">Ball Image (Direct URL)<br><br>
     <button onclick="test();">Submit</button>
-    <button id="default" onclick="init()">Default Settings</button>
-    <button id="reset" onclick="location.reload(true)">Reset All</button>
+    <button id="reset" onclick="reset()">Reset All</button>
 </div>
 <div id="game">
-    <canvas id="canvas" width="1000" height="800"></canvas>
-    <canvas id="debug" width="1000" height="800"></canvas>
+    <canvas id="canvas"></canvas>
+    <canvas id="debug"></canvas>
+    <div class="night" id="stars">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+    </div>
 </div>
 <script>
-    var Box2D;
-    if (!Box2D) Box2D = (typeof Box2D !== 'undefined' ? Box2D : null) || Module;
-    Box2D().then(function(r){
-        Box2D = r;
-        Module = Box2D;
-        if(document.readyState === "complete"){
-            afterDocumentLoaded()
-        } else {
-            window.onload = afterDocumentLoaded
-        }
-    });
-
-    const afterDocumentLoaded = function(){
-        using(Box2D, "b2.+");
-        init();
-    };
+    const canvasScale = 0.8;
     //Ball Variables
     let ballImage = "img/n64.png";
     let ballDensity = 1;
     let ballFriction = 1;
     let ballBounce = 0.7;
+    let ballSpin = 0;
     //Square Variables
+    let squareImage = "img/cube.png";
     let squareDensity = 1;
     let squareFriction = 0.5;
     let squareBounce = 0.6;
+    let squareSpin = 0;
     //Ground Variables
     let xGravity = 0;
     let yGravity = 7;
+    //Debug
+    let doDebug = false;
 
     function test() {
-        document.getElementById('default').innerHTML = 'Initialize';
         ballBounce = $('#ballBounce').val();
         xGravity = $('#xGravity').val();
         yGravity = $('#yGravity').val();
         ballImage = $('#ballImage').val();
+        $('#settings').hide();
+        $('#game').show();
         init();
     }
 
     function onload() {
-        let c = document.getElementById("canvas");
-        let ctx = c.getContext("2d");
+    }
+
+
+    function resize() {
+        const w = $(window).outerWidth();
+        const h = $(window).outerHeight();
+        canvas.width = w * canvasScale;
+        canvas.height = h * canvasScale;
+        debug.width = canvas.width;
+        debug.height = canvas.height;
+        const stars = document.getElementById('stars');
+        stars.width = canvas.width;
+        stars.height = canvas.height;
+    }
+
+    canvasSize = function () {
+        return [canvas.width, canvas.height];
     }
 
     function toggleSettings() {
         $('#settings').toggle();
-        $('#gameModal').toggle();
+        $('#game').toggle();
+    }
+
+    function toggleDebug() {
+        doDebug = !doDebug;
     }
 
     $('body').on('keypress', function (e) {
@@ -79,13 +106,24 @@
             toggleSettings();
         }
         if (e.key === 'Enter') {
-            test();
+            init();
+        }
+        if (e.key === 'b') {
+            console.log('ra')
+            toggleDebug();
+        }
+        if (e.key === 'r') {
+            reset();
         }
     });
 </script>
+</body>
+<script src="js/EaselJS.js"></script>
+<script src="js/box2dweb.js"></script>
 <script src="js/Main.js"></script>
+<script src="js/Body.js"></script>
+<script src="js/Ground.js"></script>
 <script src="js/Ball.js"></script>
 <script src="js/Square.js"></script>
-<script src="js/Ground.js"></script>
-</body>
+<script src="js/Event.js"></script>
 </html>
