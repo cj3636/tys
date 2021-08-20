@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en_US">
-<?php require_once 'head.php'; ?>
+<?php
+require_once 'head.php'; ?>
 <body id="body">
 <div id="page" class="ui stackable grid">
     <div class="sixteen wide center aligned column">
@@ -43,11 +44,11 @@
 </div>
 <footer>&copy;P.o.P Industries 2021</footer>
 <script>
-    document.getElementById('body').addEventListener('keypress', function (e) {
-        if (e.code.toString() === 'KeyE') {
-            $('#login').modal('toggle');
-        }
-    });
+  document.getElementById('body').addEventListener('keypress', function(e) {
+    if (e.code.toString() === 'KeyE') {
+      $('#login').modal('toggle');
+    }
+  });
 </script>
 </body>
 </html>

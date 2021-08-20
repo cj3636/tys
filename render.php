@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en_US">
-<?php require 'head.php'; ?>
+<?php
+require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <?php require_once TITLE; ?>
+    <?php
+    require_once TITLE; ?>
     <div class="ui sixteen wide center aligned column">
         <?php
         if (isset($_GET['r'])) {

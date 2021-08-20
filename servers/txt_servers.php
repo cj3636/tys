@@ -1,4 +1,5 @@
 <?php
+
 $dir = ROOT_PATH . 'servers/txt';
 $files = glob($dir . '/*.txt');
 $lines = array();

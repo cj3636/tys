@@ -347,6 +347,7 @@ input:checked + .slider:before {
         margin-left: auto;
         margin-right: auto;
     }
+
     .ui.menu .ui.dropdown .menu > .item .icon:not(.dropdown) {
         margin: 0 !important;
     }

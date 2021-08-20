@@ -1,8 +1,0 @@
-{
-    "require": {
-        "lukasss93/minecraft-server-status": "^2.0",
-      "ext-dom": "*",
-      "ext-mysqli": "*",
-      "ext-json": "*"
-    }
-}

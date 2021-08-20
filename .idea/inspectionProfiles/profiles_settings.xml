@@ -1,13 +1,13 @@
 <component name="InspectionProjectProfileManager">
   <settings>
-    <info color="83be5c">
-      <option name="BACKGROUND" value="f9fcff" />
-      <option name="ERROR_STRIPE_COLOR" value="83be5c" />
+    <info color="a2a5a8">
+      <option name="FOREGROUND" value="74777a" />
+      <option name="ERROR_STRIPE_COLOR" value="a2a5a8" />
       <option name="myName" value="No Impact" />
       <option name="myVal" value="50" />
       <option name="myExternalName" value="No Impact" />
       <option name="myDefaultAttributes">
-        <option name="ERROR_STRIPE_COLOR" value="83be5c" />
+        <option name="ERROR_STRIPE_COLOR" value="a2a5a8" />
       </option>
     </info>
     <list size="8">

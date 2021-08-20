@@ -1,4 +1,5 @@
 <?php
+
 require_once ROOT_PATH . 'templates/php/header.php';
 ?>
 <div class="four wide centered column">

@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en_US">
-<?php require 'head.php' ?>
+<?php
+require 'head.php' ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <?php require 'title.php' ?>
+    <?php
+    require 'title.php' ?>
     <div class="sixteen wide centered column">
         <div class="ui stackable centered center aligned cards">
             <div class="ui center aligned card dark dark">

@@ -1,4 +1,5 @@
 <?php
+
 $dom = new DOMDocument('1.0');
 
 function createElement($dom, $tag, $class, $id = null, $text = null, $extraAttirubutes = [], $attributeValues = []) {
@@ -47,14 +48,16 @@ function createIcon($dom, $class) {
 }
 
 function createCopyButton($dom, $class, $id, $icon, $text, $clipboard, $tooltip) {
-    $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'], [$clipboard, $tooltip, '']);
+    $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'],
+        [$clipboard, $tooltip, '']);
     $btn->appendChild(createIcon($dom, $icon));
     return $btn;
 }
 
 function createLinkButton($dom, $class, $id, $icon, $href, $target, $text, $clipboard, $tooltip) {
     $a = createa($dom, $href, $target);
-    $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'], [$clipboard, $tooltip, '']);
+    $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'],
+        [$clipboard, $tooltip, '']);
     $btn->appendChild(createIcon($dom, $icon));
     $a->appendChild($btn);
     return $a;
@@ -109,7 +112,8 @@ foreach ($filejson as $jc) {
         $btntarget = $btn['target'];
 
         if ($btnislink) {
-            $button = createLinkButton($dom, $btnclass, $btnid, $btnicon, $btnhref, $btntarget, $btntext, $btnclipboard, $btntooltip);
+            $button = createLinkButton($dom, $btnclass, $btnid, $btnicon, $btnhref, $btntarget, $btntext, $btnclipboard,
+                $btntooltip);
         } else {
             $button = createCopyButton($dom, $btnclass, $btnid, $btnicon, $btntext, $btnclipboard, $btntooltip);
         }

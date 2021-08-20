@@ -1,11 +1,11 @@
 <?php
 
 namespace TYS;
+
 require_once 'PHP2HTML.php';
 
 use ArrayObject;
 use DOMDocument;
-use TYS\PHP2HTML;
 
 class JSON2HTML {
     private DOMDocument $dom;
@@ -58,7 +58,7 @@ class JSON2HTML {
             $card = $dom->createElement('div');
             $card->setAttribute('class', 'card');
 
-            $img =$this->p2h->createImg($dom, $imgclass, $imgsrc);
+            $img = $this->p2h->createImg($dom, $imgclass, $imgsrc);
             $header = createDiv($dom, $hclass, $htext);
             $meta = createDiv($dom, $mclass, $mtext);
             $description = createDiv($dom, $dclass, $dtext);
@@ -77,7 +77,17 @@ class JSON2HTML {
                 $btntarget = $btn['target'];
 
                 if ($btnislink) {
-                    $button = createLinkButton($dom, $btnclass, $btnid, $btnicon, $btnhref, $btntarget, $btntext, $btnclipboard, $btntooltip);
+                    $button = createLinkButton(
+                        $dom,
+                        $btnclass,
+                        $btnid,
+                        $btnicon,
+                        $btnhref,
+                        $btntarget,
+                        $btntext,
+                        $btnclipboard,
+                        $btntooltip
+                    );
                 } else {
                     $button = createCopyButton($dom, $btnclass, $btnid, $btnicon, $btntext, $btnclipboard, $btntooltip);
                 }
@@ -111,14 +121,13 @@ class JSON2HTML {
     }
 
     protected function getHTML($dir) {
-
     }
 
     public function createHTML($dir) {
         $filejson = $this->getFilesAsJSON($dir);
         foreach ($filejson as $jc) {
-            foreach($jc as $row) {
-                foreach($row as $key => $val) {
+            foreach ($jc as $row) {
+                foreach ($row as $key => $val) {
                     if ($key instanceof ArrayObject) {
                         foreach ($key as $subKey => $subVal) {
                             echo $subKey . ': ' . $subVal;

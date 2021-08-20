@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en_US">
-<?php require 'head.php'; ?>
+<?php
+require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable fluid grid">
-    <?php require_once 'title.php'; ?>
+    <?php
+    require_once 'title.php'; ?>
     <div class="center aligned sixteen wide column">
         <div class="ui items">
             <div class="item">
@@ -37,12 +39,13 @@
             </div>
         </div>
         <div class="ui centered stackable cards" id="cards">
-            <?php require_once TXT_SERVERS ?>
+            <?php
+            require_once TXT_SERVERS ?>
         </div>
     </div>
     <footer>&copy; P.o.P Industries 2019</footer>
 </body>
 <script>
-    new ClipboardJS('#copyIP');
+  new ClipboardJS('#copyIP');
 </script>
 </html>

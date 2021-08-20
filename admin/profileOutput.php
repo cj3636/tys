@@ -9,7 +9,8 @@
                 echo $username ?>
             </div>
             <div class="meta">
-                <?php echo $email ?>
+                <?php
+                echo $email ?>
             </div>
             <div class="description">
                 <?php

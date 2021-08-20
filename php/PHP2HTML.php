@@ -3,9 +3,19 @@
 namespace TYS;
 
 use DOMDocument;
+
 require_once 'CreateHTML.php';
+
 class PHP2HTML implements CreateHTML {
-    public function createElement($dom, $tag, $class, $id = null, $text = null, $extraAttirubutes = [], $attributeValues = []): DOMDocument {
+    public function createElement(
+        $dom,
+        $tag,
+        $class,
+        $id = null,
+        $text = null,
+        $extraAttirubutes = [],
+        $attributeValues = []
+    ): DOMDocument {
         $element = $dom->createElement($tag, $text);
         $element->setAttribute('class', $class);
         if (isset($id)) {
@@ -46,14 +56,26 @@ class PHP2HTML implements CreateHTML {
     }
 
     public function createCopyButton($dom, $class, $id, $text, $clipboard, $tooltip, $icon = null): DOMDocument {
-        $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'], [$clipboard, $tooltip, '']);
+        $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'],
+            [$clipboard, $tooltip, '']);
         $btn->appendChild(createIcon($dom, $icon));
         return $btn;
     }
 
-    public function createLinkButton($dom, $class, $id, $href, $target, $text, $clipboard, $tooltip, $icon = null): DOMDocument {
+    public function createLinkButton(
+        $dom,
+        $class,
+        $id,
+        $href,
+        $target,
+        $text,
+        $clipboard,
+        $tooltip,
+        $icon = null
+    ): DOMDocument {
         $a = createa($dom, $href, $target);
-        $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'], [$clipboard, $tooltip, '']);
+        $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'],
+            [$clipboard, $tooltip, '']);
         $btn->appendChild(createIcon($dom, $icon));
         $a->appendChild($btn);
         return $a;

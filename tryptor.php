@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en_US">
-<?php require 'head.php'; ?>
+<?php
+require 'head.php'; ?>
 <head>
     <title>Tryptor</title>
     <link rel="stylesheet" type="text/css" href="css/tryptor.css">
 </head>
 <body>
 <div id="page" class="ui stackable grid">
-    <?php require_once 'title.php' ?>
+    <?php
+    require_once 'title.php' ?>
     <div class="ten wide centered column">
         <div id="tryptor" class="ui fluid stackable card">
             <div class="header" id="title-bar">
@@ -105,7 +107,8 @@
                             </div>
                         </nav>
                         <nav class="ui right floated item" id="navMenuItem">
-                            <div onclick="showSettings()" class="ui icon black button" data-tooltip="Additional Settings"
+                            <div onclick="showSettings()" class="ui icon black button"
+                                 data-tooltip="Additional Settings"
                                  data-inverted="" data-position="top left">
                                 <i class="cog icon"></i>
                             </div>
@@ -160,22 +163,22 @@
 <script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
 <script src="js/cypher.js"></script>
 <script>
-    $('.ui.dropdown').dropdown();
-    $('#keyLengthDiv').popup({
-        popup: $('#keyLengthPopup'),
-        position: 'top center',
-        on: 'hover'
-    });
-    $('#keyToggle').popup({
-        popup: $('#keyTogglePopup'),
-        position: 'left center',
-        on: 'hover'
-    });
+  $('.ui.dropdown').dropdown();
+  $('#keyLengthDiv').popup({
+    popup: $('#keyLengthPopup'),
+    position: 'top center',
+    on: 'hover',
+  });
+  $('#keyToggle').popup({
+    popup: $('#keyTogglePopup'),
+    position: 'left center',
+    on: 'hover',
+  });
 
-    document.getElementById('keyLength').addEventListener("wheel", function (e) {
-    });
-    document.getElementById('keyLength').addEventListener("mouseenter", function (e) {
-        this.focus()
-    });
+  document.getElementById('keyLength').addEventListener('wheel', function(e) {
+  });
+  document.getElementById('keyLength').addEventListener('mouseenter', function(e) {
+    this.focus();
+  });
 </script>
 </html>

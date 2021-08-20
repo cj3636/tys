@@ -52,79 +52,78 @@
 </div>
 
 <script>
-    const canvasScale = 1;
-    //Ball Variables
-    let ballImage = "img/n64.png";
-    let ballDensity = 1;
-    let ballFriction = 1;
-    let ballBounce = 0.7;
-    let ballSpin = 0;
-    //Square Variables
-    let squareImage = "img/cube.png";
-    let squareDensity = 1;
-    let squareFriction = 0.5;
-    let squareBounce = 0.8;
-    let squareSpin = 0;
-    //Ground Variables
-    let xGravity = 0;
-    let yGravity = 7;
-    //Debug
-    let doDebug = false;
+  const canvasScale = 1;
+  //Ball Variables
+  let ballImage = 'img/n64.png';
+  let ballDensity = 1;
+  let ballFriction = 1;
+  let ballBounce = 0.7;
+  let ballSpin = 0;
+  //Square Variables
+  let squareImage = 'img/cube.png';
+  let squareDensity = 1;
+  let squareFriction = 0.5;
+  let squareBounce = 0.8;
+  let squareSpin = 0;
+  //Ground Variables
+  let xGravity = 0;
+  let yGravity = 7;
+  //Debug
+  let doDebug = false;
 
-    function test() {
-        ballBounce = $('#ballBounce').val();
-        xGravity = $('#xGravity').val();
-        yGravity = $('#yGravity').val();
-        ballImage = $('#ballImage').val();
-        $('#settings').hide();
-        $('#game').show();
-        init();
+  function test() {
+    ballBounce = $('#ballBounce').val();
+    xGravity = $('#xGravity').val();
+    yGravity = $('#yGravity').val();
+    ballImage = $('#ballImage').val();
+    $('#settings').hide();
+    $('#game').show();
+    init();
+  }
+
+  function onload() {
+  }
+
+  function resize() {
+    const w = $(window).outerWidth();
+    const h = $(window).outerHeight();
+    canvas.width = w * canvasScale;
+    canvas.height = h * canvasScale;
+    debug.width = canvas.width;
+    debug.height = canvas.height;
+    platform.width = canvas.width;
+    platform.height = canvas.height;
+
+  }
+
+  canvasSize = function() {
+    return [canvas.width, canvas.height];
+  };
+
+  function toggleSettings() {
+    $('#settings').toggle();
+    $('#game').toggle();
+  }
+
+  function toggleDebug() {
+    doDebug = !doDebug;
+  }
+
+  $('body').on('keypress', function(e) {
+    if (e.key === '`') {
+      toggleSettings();
     }
-
-    function onload() {
+    if (e.key === 'Enter') {
+      init();
     }
-
-
-    function resize() {
-        const w = $(window).outerWidth();
-        const h = $(window).outerHeight();
-        canvas.width = w * canvasScale;
-        canvas.height = h * canvasScale;
-        debug.width = canvas.width;
-        debug.height = canvas.height       ;
-        platform.width = canvas.width;
-        platform.height = canvas.height;
-
+    if (e.key === 'b') {
+      console.log('ra');
+      toggleDebug();
     }
-
-    canvasSize = function () {
-        return [canvas.width, canvas.height];
+    if (e.key === 'r') {
+      reset();
     }
-
-    function toggleSettings() {
-        $('#settings').toggle();
-        $('#game').toggle();
-    }
-
-    function toggleDebug() {
-        doDebug = !doDebug;
-    }
-
-    $('body').on('keypress', function (e) {
-        if (e.key === '`') {
-            toggleSettings();
-        }
-        if (e.key === 'Enter') {
-            init();
-        }
-        if (e.key === 'b') {
-            console.log('ra')
-            toggleDebug();
-        }
-        if (e.key === 'r') {
-            reset();
-        }
-    });
+  });
 </script>
 </body>
 <script src="js/EaselJS.js"></script>

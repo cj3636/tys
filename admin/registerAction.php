@@ -1,4 +1,5 @@
 <?php
+
 $cfg = parse_ini_file('database/config.ini');
 $mysqli = new mysqli($cfg['host'], $cfg['username'], $cfg['passwd'], $cfg['dbname']) or die($mysqli->error);
 
@@ -16,7 +17,6 @@ $tokenCheck = $mysqli->query("SELECT * FROM tokens WHERE token='$token' AND user
 if ($resultEmail->num_rows > 0) {
     $_SESSION['message'] = 'User with that email already exists!';
     header("location: error.php");
-
 } elseif ($resultUsername->num_rows > 0) {
     $_SESSION['message'] = 'Username: ' . $username . ' taken!';
     header("location: error.php");
@@ -34,14 +34,12 @@ if ($resultEmail->num_rows > 0) {
 $mysqli->query("UPDATE tokens SET available='0' WHERE username='$username'") or die($mysqli->error);
 $mysqli->query("UPDATE tokens SET email='$email' WHERE username='$username'") or die($mysqli->error);
 
-function createAccount($mysqli, $username, $email, $password, $hash, $token = null, $admin = 0)
-{
+function createAccount($mysqli, $username, $email, $password, $hash, $token = null, $admin = 0) {
     $sql = "INSERT INTO users (username, email, password, hash, token, admin) "
         . "VALUES ('$username','$email','$password', '$hash', '$token', '$admin')";
 
     // Add user to the database
     if ($mysqli->query($sql)) {
-
 //        $_SESSION['active'] = 0; //0 until user activates their account with verify.php
 //        $_SESSION['logged_in'] = true; // So we know the user has logged in
 //        $_SESSION['message'] =
@@ -64,15 +62,14 @@ function createAccount($mysqli, $username, $email, $password, $hash, $token = nu
 //        mail($to, $subject, $message_body);
         ?>
         <script>
-            console.log("email");
+          console.log('email');
         </script>
         <?php
         header("Location: profile.php");
-
     } else {
         ?>
         <script>
-            console.log("error");
+          console.log('error');
         </script>
         <?php
         $_SESSION['message'] = 'Registration failed!';

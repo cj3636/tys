@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en_US">
-<?php require 'head.php'; ?>
+<?php
+require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <?php require 'title.php'; ?>
+    <?php
+    require 'title.php'; ?>
     <div class="six wide centered column">
         <div class="row">
             <div id='ui-embed' class="ui embed" data-source="youtube" data-id="XHW5Y4eY-yA"
@@ -42,6 +44,6 @@
 </div>
 </body>
 <script>
-    $('.ui.embed').embed();
+  $('.ui.embed').embed();
 </script>
 </html>

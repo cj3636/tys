@@ -1,0 +1,111 @@
+Index: .idea/runConfigurations/Show_Secret.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/runConfigurations/Show_Secret.xml b/.idea/runConfigurations/Show_Secret.xml
+new file mode 100644
+--- /dev/null	(date 1629415350346)
++++ b/.idea/runConfigurations/Show_Secret.xml	(date 1629415350346)
+@@ -0,0 +1,17 @@
++<component name="ProjectRunConfigurationManager">
++  <configuration default="false" name="Show Secret" type="ShConfigurationType">
++    <option name="SCRIPT_TEXT" value="git secret reveal" />
++    <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
++    <option name="SCRIPT_PATH" value="" />
++    <option name="SCRIPT_OPTIONS" value="" />
++    <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
++    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++    <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
++    <option name="INTERPRETER_PATH" value="" />
++    <option name="INTERPRETER_OPTIONS" value="" />
++    <option name="EXECUTE_IN_TERMINAL" value="true" />
++    <option name="EXECUTE_SCRIPT_FILE" value="false" />
++    <envs />
++    <method v="2" />
++  </configuration>
++</component>
+\ No newline at end of file
+Index: .idea/runConfigurations/Hide_Secret.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/runConfigurations/Hide_Secret.xml b/.idea/runConfigurations/Hide_Secret.xml
+new file mode 100644
+--- /dev/null	(date 1629415350351)
++++ b/.idea/runConfigurations/Hide_Secret.xml	(date 1629415350351)
+@@ -0,0 +1,17 @@
++<component name="ProjectRunConfigurationManager">
++  <configuration default="false" name="Hide Secret" type="ShConfigurationType">
++    <option name="SCRIPT_TEXT" value="git secret hide -d" />
++    <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
++    <option name="SCRIPT_PATH" value="" />
++    <option name="SCRIPT_OPTIONS" value="" />
++    <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
++    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++    <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
++    <option name="INTERPRETER_PATH" value="" />
++    <option name="INTERPRETER_OPTIONS" value="" />
++    <option name="EXECUTE_IN_TERMINAL" value="true" />
++    <option name="EXECUTE_SCRIPT_FILE" value="false" />
++    <envs />
++    <method v="2" />
++  </configuration>
++</component>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"InspectionProjectProfileManager\">\r\n  <settings>\r\n    <info color=\"83be5c\">\r\n      <option name=\"BACKGROUND\" value=\"f9fcff\" />\r\n      <option name=\"ERROR_STRIPE_COLOR\" value=\"83be5c\" />\r\n      <option name=\"myName\" value=\"No Impact\" />\r\n      <option name=\"myVal\" value=\"50\" />\r\n      <option name=\"myExternalName\" value=\"No Impact\" />\r\n      <option name=\"myDefaultAttributes\">\r\n        <option name=\"ERROR_STRIPE_COLOR\" value=\"83be5c\" />\r\n      </option>\r\n    </info>\r\n    <list size=\"8\">\r\n      <item index=\"0\" class=\"java.lang.String\" itemvalue=\"INFORMATION\" />\r\n      <item index=\"1\" class=\"java.lang.String\" itemvalue=\"TYPO\" />\r\n      <item index=\"2\" class=\"java.lang.String\" itemvalue=\"No Impact\" />\r\n      <item index=\"3\" class=\"java.lang.String\" itemvalue=\"SERVER PROBLEM\" />\r\n      <item index=\"4\" class=\"java.lang.String\" itemvalue=\"WEAK WARNING\" />\r\n      <item index=\"5\" class=\"java.lang.String\" itemvalue=\"INFO\" />\r\n      <item index=\"6\" class=\"java.lang.String\" itemvalue=\"WARNING\" />\r\n      <item index=\"7\" class=\"java.lang.String\" itemvalue=\"ERROR\" />\r\n    </list>\r\n  </settings>\r\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+--- a/.idea/inspectionProfiles/profiles_settings.xml	(revision 95cd70647283b1fcb1836003ecbb87e351fa6f38)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(date 1629413634264)
+@@ -1,13 +1,12 @@
+ <component name="InspectionProjectProfileManager">
+   <settings>
+-    <info color="83be5c">
+-      <option name="BACKGROUND" value="f9fcff" />
+-      <option name="ERROR_STRIPE_COLOR" value="83be5c" />
++    <info color="b0b3b6">
++      <option name="ERROR_STRIPE_COLOR" value="b0b3b6" />
+       <option name="myName" value="No Impact" />
+       <option name="myVal" value="50" />
+       <option name="myExternalName" value="No Impact" />
+       <option name="myDefaultAttributes">
+-        <option name="ERROR_STRIPE_COLOR" value="83be5c" />
++        <option name="ERROR_STRIPE_COLOR" value="b0b3b6" />
+       </option>
+     </info>
+     <list size="8">
+Index: .idea/runConfigurations/_template__of_ShConfigurationType.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/runConfigurations/_template__of_ShConfigurationType.xml b/.idea/runConfigurations/_template__of_ShConfigurationType.xml
+new file mode 100644
+--- /dev/null	(date 1629415350340)
++++ b/.idea/runConfigurations/_template__of_ShConfigurationType.xml	(date 1629415350340)
+@@ -0,0 +1,17 @@
++<component name="ProjectRunConfigurationManager">
++  <configuration default="true" type="ShConfigurationType">
++    <option name="SCRIPT_TEXT" value="git secret hide -d" />
++    <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
++    <option name="SCRIPT_PATH" value="" />
++    <option name="SCRIPT_OPTIONS" value="" />
++    <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
++    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++    <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
++    <option name="INTERPRETER_PATH" value="" />
++    <option name="INTERPRETER_OPTIONS" value="" />
++    <option name="EXECUTE_IN_TERMINAL" value="true" />
++    <option name="EXECUTE_SCRIPT_FILE" value="false" />
++    <envs />
++    <method v="2" />
++  </configuration>
++</component>
+\ No newline at end of file

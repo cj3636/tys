@@ -1,10 +1,13 @@
 <!doctype html>
 <html lang="en_US">
-<?php require_once 'templates/php/head.php'; ?>
+<?php
+require_once 'templates/php/head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <?php require_once 'templates/php/title.php'; ?>
-    <?php require_once 'templates/php/menu.php'; ?>
+    <?php
+    require_once 'templates/php/title.php'; ?>
+    <?php
+    require_once 'templates/php/menu.php'; ?>
 </div>
 <div id="page" class="ui stackable fluid grid">
     <div class="center aligned sixteen wide column">
@@ -34,12 +37,10 @@
     <footer>&copy; P.o.P Industries 2019</footer>
 </body>
 <script>
-    $('.ui.accordion').accordion({exclusive: false});
-    $('.ui.buttons .button').on('click', function () {
-        $(this).addClass('positive')
-            .siblings()
-            .removeClass('positive');
-        $('.treemenu').toggleClass('boxed');
-    });
+  $('.ui.accordion').accordion({exclusive: false});
+  $('.ui.buttons .button').on('click', function() {
+    $(this).addClass('positive').siblings().removeClass('positive');
+    $('.treemenu').toggleClass('boxed');
+  });
 </script>
 </html>

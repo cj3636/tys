@@ -20,11 +20,11 @@
     <script src="../js/title.js"></script>
 </div>
 <script>
-    function showLogin() {
-        $('.ui.basic.modal.login').modal('show');
-    }
+  function showLogin() {
+    $('.ui.basic.modal.login').modal('show');
+  }
 
-    function showSignup() {
-        $('.ui.basic.modal.signup').modal('show');
-    }
+  function showSignup() {
+    $('.ui.basic.modal.signup').modal('show');
+  }
 </script>

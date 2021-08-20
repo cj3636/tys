@@ -1,9 +1,9 @@
 function createHTML() {
-    $.ajax({
-        url: '/servers/txt/atm.txt',
-        success: function (data) {
-            let d = data.split('\n');
-            let html = `
+  $.ajax({
+    url: '/servers/txt/atm.txt',
+    success: function(data) {
+      let d = data.split('\n');
+      let html = `
             <div class="card">
         <div class="content">
             <img id="logo" alt="TYS LOGO" class="right floated small ui image" src="/img/${d[1]}">
@@ -18,8 +18,8 @@ function createHTML() {
         </div>
         </div>
         </div>`;
-            const htmlObj = $(html);
-            $('#cards').prepend(htmlObj);
-        }
-    });
+      const htmlObj = $(html);
+      $('#cards').prepend(htmlObj);
+    },
+  });
 }

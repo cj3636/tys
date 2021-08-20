@@ -1,5 +1,7 @@
-<?php require_once LOGIN_HTML ?>
-<?php require_once SIGNUP_HTML ?>
+<?php
+require_once LOGIN_HTML ?>
+<?php
+require_once SIGNUP_HTML ?>
 <div class="ui two wide column">
     <img class="ui small image" src="img/thenewjourney.png" alt="logo">
 </div>
@@ -68,5 +70,5 @@
 </div>
 <script src="js/title.js"></script>
 <script>
-  $('.ui.dropdown.item').transition('scale');
+  // $('.ui.dropdown.item').transition('scale');
 </script>

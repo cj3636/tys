@@ -3,10 +3,12 @@
 <?php require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <?php require_once 'title.php'; ?>
+    <?php
+    require_once 'title.php'; ?>
     <div class="sixteen wide centered column">
         <div class="ui stackable centered center aligned cards">
-            <?php ?>
+            <?php
+            ?>
         </div>
     </div>
 </body>
@@ -29,5 +31,4 @@ function createDownloadCard($logo, $title, $meta, $desc, $color, $file) {
                 </div>
             </div>';
 }
-
 ?>

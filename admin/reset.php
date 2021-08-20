@@ -1,4 +1,5 @@
 <?php
+
 require_once ROOT_PATH . 'templates/php/header.php';
 
 $cfg = parse_ini_file('database/database.ini');

@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en_US">
-<?php require 'head.php'; ?>
+<?php
+require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <?php require 'title.php' ?>
+    <?php
+    require 'title.php' ?>
 </div>
 <div id="page" class="ui stackable grid">
     <div class="centered eight wide column">
@@ -163,15 +165,13 @@
 <footer>&copy; P.o.P Industries 2019</footer>
 </body>
 <script>
-    new ClipboardJS('#copyVanilla');
+  new ClipboardJS('#copyVanilla');
 </script>
 <script>
-    $('.ui.accordion').accordion({exclusive: false});
-    $('.ui.buttons .button').on('click', function () {
-        $(this).addClass('positive')
-            .siblings()
-            .removeClass('positive');
-        $('.treemenu').toggleClass('boxed');
-    });
+  $('.ui.accordion').accordion({exclusive: false});
+  $('.ui.buttons .button').on('click', function() {
+    $(this).addClass('positive').siblings().removeClass('positive');
+    $('.treemenu').toggleClass('boxed');
+  });
 </script>
 </html>

@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="11822690-4587-4a4f-a1bc-5642fb5cf035" name="cjserver4">
-        <fileTransfer rootFolder="/store/storage" accessType="SFTP" sshConfigId="b26c3ac9-6bb5-4bb7-bb3d-e6e41879e692" sshConfig="cjserver@10.0.0.36:22">
+        <fileTransfer rootFolder="/store/storage" accessType="SFTP" host="10.0.0.36" port="22" sshConfigId="a891a6da-2352-4a39-946d-f4a88a160f5c" sshConfig="cjserver@10.0.0.36:22 key" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

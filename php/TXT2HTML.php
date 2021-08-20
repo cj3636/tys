@@ -26,7 +26,8 @@ class TXT2HTML {
                 while (($line = fgets($handle)) !== false) {
                     array_push($lines, $line);
                 }
-                array_push($cards, $this->getHTML($lines[1], $lines[2], $lines[3], $lines[4], $lines[5], $lines[6], $lines[7]));
+                array_push($cards,
+                    $this->getHTML($lines[1], $lines[2], $lines[3], $lines[4], $lines[5], $lines[6], $lines[7]));
                 fclose($handle);
             }
             $lines = [];

@@ -1,4 +1,5 @@
 <?php
+
 /* Password reset process, updates database with new user password */
 $cfg = parse_ini_file('database/database.ini');
 $mysqli = new mysqli($cfg['host'], $cfg['username'], $cfg['passwd'], $cfg['dbname']) or die($mysqli->error);
@@ -6,10 +7,8 @@ session_start();
 
 // Make sure the form is being submitted with method="post"
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     // Make sure the two passwords match
-    if ( $_POST['newpassword'] == $_POST['confirmpassword'] ) {
-
+    if ($_POST['newpassword'] == $_POST['confirmpassword']) {
         $new_password = password_hash($_POST['newpassword'], PASSWORD_BCRYPT);
 
         // We get $_POST['email'] and $_POST['hash'] from the hidden input field of reset.php form
@@ -18,17 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $sql = "UPDATE users SET password='$new_password', hash='$hash' WHERE email='$email'";
 
-        if ( $mysqli->query($sql) ) {
-
-        $_SESSION['message'] = "Your password has been reset successfully!";
-        header("location: success.php");
-
+        if ($mysqli->query($sql)) {
+            $_SESSION['message'] = "Your password has been reset successfully!";
+            header("location: success.php");
         }
-
-    }
-    else {
+    } else {
         $_SESSION['message'] = "Two passwords you entered don't match, try again!";
         header("location: error.php");
     }
-
 }

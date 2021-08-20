@@ -1,2 +1,2 @@
 window.onresize = resize;
-window.addEventListener("load", test);
+window.addEventListener('load', test);

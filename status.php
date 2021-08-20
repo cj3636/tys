@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en_US">
-<?php require 'head.php'; ?>
+<?php
+require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <?php require_once 'title.php'; ?>
+    <?php
+    require_once 'title.php'; ?>
 </div>
 <div id="page" class="ui stackable grid">
     <div class="center aligned sixteen wide column">
@@ -17,11 +19,11 @@
         <div class="ui centered stackable cards">
             <?php
             //TODO async load
-//            $dir = 'serverstatus';
-//            $files = glob($dir . '/*.php');
-//            foreach ($files as $file) {
-//                require($file);
-//            }
+            //            $dir = 'serverstatus';
+            //            $files = glob($dir . '/*.php');
+            //            foreach ($files as $file) {
+            //                require($file);
+            //            }
             ?>
         </div>
     </div>

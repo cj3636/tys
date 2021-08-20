@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Update_at_8_19_2021_4_36_PM_[Changes]" date="1629416180149" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_19_2021_4_36_PM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 8/19/2021 4:36 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="admin/database/config.ini.secret" />
+    <option name="AFTER_PATH" value="admin/database/config.ini.secret" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_19_2021_4_36_PM_[Changes]/config.ini.secret" />
+  </binary>
+</changelist>

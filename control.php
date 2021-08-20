@@ -1,10 +1,13 @@
 <!doctype html>
 <html lang="en_US">
-<?php require 'head.php'; ?>
+<?php
+require 'head.php'; ?>
 <body>
 <div id="page" class="ui stackable grid">
-    <?php require_once 'title.php'; ?>
-    <?php require_once 'menu.php'; ?>
+    <?php
+    require_once 'title.php'; ?>
+    <?php
+    require_once 'menu.php'; ?>
 </div>
 <?php
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != 1) {
@@ -75,22 +78,22 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != 1) {
 <footer>&copy; P.o.P Industries 2019</footer>
 </body>
 <script>
-    getTxt = function (fileName) {
-        $.ajax({
-            url: 'text/' + fileName + '.txt',
-            success: function (data) {
-                document.getElementById('input').innerText = data;
-            }
-        });
-    };
+  getTxt = function(fileName) {
+    $.ajax({
+      url: 'text/' + fileName + '.txt',
+      success: function(data) {
+        document.getElementById('input').innerText = data;
+      },
+    });
+  };
 
-    function setValue(newValue) {
-        document.getElementById("textID").value = newValue;
-    }
+  function setValue(newValue) {
+    document.getElementById('textID').value = newValue;
+  }
 
-    function runOut() {
-        alert(document.getElementById("textID").value);
-    }
+  function runOut() {
+    alert(document.getElementById('textID').value);
+  }
 </script>
 </html>
 <?php
