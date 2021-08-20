@@ -1,11 +1,8 @@
 <?php
-
 $dom = new DOMDocument('1.0');
-
 function createElement($dom, $tag, $class, $id = null, $text = null, $extraAttirubutes = [], $attributeValues = []) {
     $element = $dom->createElement($tag, $text);
     $element->setAttribute('class', $class);
-
     if (isset($id)) {
         $element->setAttribute('id', $id);
     }

@@ -1,9 +1,6 @@
 <?php
-
 namespace TYS;
-
 require_once 'PHP2HTML.php';
-
 use ArrayObject;
 use DOMDocument;
 

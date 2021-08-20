@@ -1,14 +1,11 @@
 <?php
-
 require_once ROOT_PATH . 'templates/php/header.php';
-
 $cfg = parse_ini_file('database/database.ini');
 $mysqli = new mysqli($cfg['host'], $cfg['username'], $cfg['passwd'], $cfg['dbname']) or die($mysqli->error);
 // Make sure email and hash variables aren't empty
 if (isset($_GET['email']) && !empty($_GET['email']) and isset($_GET['hash']) && !empty($_GET['hash'])) {
     $email = $mysqli->escape_string($_GET['email']);
     $hash = $mysqli->escape_string($_GET['hash']);
-
     // Make sure user email with matching hash exist
     $result = $mysqli->query("SELECT * FROM users WHERE email='$email' AND hash='$hash'");
 
@@ -38,6 +35,5 @@ if (isset($_GET['email']) && !empty($_GET['email']) and isset($_GET['hash']) && 
         </button>
     </form>
 </div>
-<?php
-require_once ROOT_PATH . 'templates/php/footer.php';
+<?php require_once ROOT_PATH . 'templates/php/footer.php';
 ?>

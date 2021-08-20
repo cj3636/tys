@@ -1,12 +1,10 @@
 <?php
-
 /* Verifies registered user email, the link to this page
    is included in the register.php email message
 */
 $cfg = parse_ini_file('database/database.ini');
 $mysqli = new mysqli($cfg['host'], $cfg['username'], $cfg['passwd'], $cfg['dbname']) or die($mysqli->error);
 session_start();
-
 // Make sure email and hash variables aren't empty
 if (isset($_GET['email']) && !empty($_GET['email']) and isset($_GET['hash']) && !empty($_GET['hash'])) {
     $email = $mysqli->escape_string($_GET['email']);

@@ -1,28 +1,16 @@
-#element::-webkit-scrollbar {
-    display: none;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-.ui.form textarea {
-    background-color: #99AAB5;
-}
-
-.ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
-    background-color: #99AAB5;
+#key, #input, #output {
+  background-color: #99aab5;
 }
 
 #title-bar {
-    background-image: url('../img/bar.png');
-    height: 2.5rem;
-    margin: 0;
-    padding: 0;
+  background-image: url("../img/bar.png");
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
-.ui.stackable.compact.icon.menu {
-    background: none;
+#tryptorMenu {
+  background: none;
 }
 
 #navMenuItem {
@@ -52,7 +40,8 @@ body::-webkit-scrollbar {
 
 #keyLength::-webkit-inner-spin-button,
 #keyLength::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 #content {

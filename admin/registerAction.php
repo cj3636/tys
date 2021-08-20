@@ -1,14 +1,11 @@
 <?php
-
 $cfg = parse_ini_file('database/config.ini');
 $mysqli = new mysqli($cfg['host'], $cfg['username'], $cfg['passwd'], $cfg['dbname']) or die($mysqli->error);
-
 $username = $mysqli->escape_string($_POST['username']);
 $email = $mysqli->escape_string($_POST['email']);
 $token = $mysqli->escape_string($_POST['token']);
 $password = $mysqli->escape_string(password_hash($_POST['password'], PASSWORD_BCRYPT));
 $hash = $mysqli->escape_string(md5(rand(0, 1000)));
-
 $resultEmail = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mysqli->error());
 $resultUsername = $mysqli->query("SELECT * FROM users WHERE username='$username'") or die($mysqli->error);
 $tokenCheck = $mysqli->query("SELECT * FROM tokens WHERE token='$token' AND username='$username' AND available='1'") or die($mysqli->error());
@@ -64,15 +61,13 @@ function createAccount($mysqli, $username, $email, $password, $hash, $token = nu
         <script>
           console.log('email');
         </script>
-        <?php
-        header("Location: profile.php");
+        <?php header("Location: profile.php");
     } else {
         ?>
         <script>
           console.log('error');
         </script>
-        <?php
-        $_SESSION['message'] = 'Registration failed!';
+        <?php $_SESSION['message'] = 'Registration failed!';
         header("Location: error.php");
     }
 }

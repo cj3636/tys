@@ -1,36 +1,32 @@
 <!doctype html>
 <html lang="en_US">
-<?php
-require 'head.php'; ?>
+<?php require 'head.php'; ?>
 <body>
-<div id="page" class="ui stackable grid">
-    <?php
-    require_once 'title.php'; ?>
-    <?php
-    require_once 'menu.php'; ?>
-</div>
-<?php
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != 1) {
-    $_SESSION['message'] = "You must log in to perform this action!";
-    header("location: ../error.php");
-} else {
-?>
-<div id="page" class="ui stackable grid">
-    <div class="center aligned twelve wide column">
-        <div class="ui red header">Warning!</div>
-        <div class="ui blue header">Pressing submit will immediately overwrite the text for that field on its resctive
-            page. Use carefully.
-        </div>
-        <form class="ui form" action="init.php" method="POST">
-            <button type="button" class="ui center aligned button" id="setLatest" name="setLatest" value="latest"
-                    onclick="getTxt('modded_info');setValue(this.value);">
-                Latest
-            </button>
-            <button type="button" class="ui center aligned button" id="setModInfo" name="setModInfo"
-                    value="modded_info"
-                    onclick="getTxt('modded_info');setValue(this.value);">Modded
-                Info
-            </button>
+    <div id="page" class="ui stackable grid">
+        <?php require_once 'title.php'; ?>
+        <?php require_once 'menu.php'; ?>
+    </div>
+    <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != 1) {
+        $_SESSION['message'] = "You must log in to perform this action!";
+        header("location: ../error.php");
+    } else {
+    ?>
+    <div id="page" class="ui stackable grid">
+        <div class="center aligned twelve wide column">
+            <div class="ui red header">Warning!</div>
+            <div class="ui blue header">Pressing submit will immediately overwrite the text for that field on its resctive
+                page. Use carefully.
+            </div>
+            <form class="ui form" action="init.php" method="POST">
+                <button type="button" class="ui center aligned button" id="setLatest" name="setLatest" value="latest"
+                  onclick="getTxt('modded_info');setValue(this.value);">
+                    Latest
+                </button>
+                <button type="button" class="ui center aligned button" id="setModInfo" name="setModInfo"
+                  value="modded_info"
+                  onclick="getTxt('modded_info');setValue(this.value);">Modded
+                    Info
+                </button>
             <button type="button" class="ui center aligned button" id="setModDesc" name="setModDesc"
                     value="modded_desc"
                     onclick="getTxt('modded_desc');setValue(this.value);">Modded
@@ -96,6 +92,5 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != 1) {
   }
 </script>
 </html>
-<?php
-}
+<?php }
 ?>

@@ -68,7 +68,6 @@ var Box2D = {};
 
 })(Box2D);
 
-//#TODO remove assignments from global namespace
 var Vector = Array;
 var Vector_a2j_Number = Box2D.NVector;
 //package structure

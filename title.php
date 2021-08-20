@@ -1,9 +1,7 @@
-<?php
-require_once LOGIN_HTML ?>
-<?php
-require_once SIGNUP_HTML ?>
+<?php require_once LOGIN_HTML ?>
+<?php require_once SIGNUP_HTML ?>
 <div class="ui two wide column">
-    <img class="ui small image" src="img/thenewjourney.png" alt="logo">
+    <img class="ui small image" src="img/tys.png" alt="logo">
 </div>
 <div class="ui four wide column">
     <a id="link1"><h1 class="ui title">The Yellow Sub Servers</h1></a>

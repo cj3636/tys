@@ -1,5 +1,4 @@
-<?php
-require_once "init.php"; ?>
+<?php require_once "init.php"; ?>
 <head>
     <title>The Yellow Sub Servers</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">

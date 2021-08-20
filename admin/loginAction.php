@@ -1,11 +1,9 @@
 <?php
-
 $cfg = parse_ini_file('database/config.ini');
 $mysqli = new mysqli($cfg['host'], $cfg['username'], $cfg['passwd'], $cfg['dbname']) or die($mysqli->error);
 $email = $mysqli->escape_string($_POST['email']);
 $resultEmail = $mysqli->query("SELECT * FROM users WHERE email='$email'");
 $resultUsername = $mysqli->query("SELECT * FROM users WHERE username='$email'");
-
 if ($resultEmail->num_rows == 0 || $resultUsername->num_rows == 0) {
     $_SESSION['message'] = "Username/Email or Password is incorrect.";
     header("location: error.php");

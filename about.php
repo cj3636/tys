@@ -1,31 +1,29 @@
 <!doctype html>
 <html lang="en_US">
-<?php
-require 'head.php' ?>
+<?php require 'head.php' ?>
 <body>
-<div id="page" class="ui stackable grid">
-    <?php
-    require 'title.php' ?>
-    <div class="sixteen wide centered column">
-        <div class="ui stackable centered center aligned cards">
-            <div class="ui center aligned card dark dark">
-                <div class="content">
-                    <img class="ui small centered circular image" src="img/team/cj3636.jpg" alt="cj3636">
-                    <div class="title">cj3636</div>
-                    <div class="ui cyan header">Host</div>
+    <div id="page" class="ui stackable grid">
+        <?php require 'title.php' ?>
+        <div class="sixteen wide centered column">
+            <div class="ui stackable centered center aligned cards">
+                <div class="ui center aligned card dark dark">
+                    <div class="content">
+                        <img class="ui small centered circular image" src="img/team/cj3636.jpg" alt="cj3636">
+                        <div class="title">cj3636</div>
+                        <div class="ui cyan header">Host</div>
+                    </div>
                 </div>
-            </div>
-            <div class="ui center aligned card dark">
-                <div class="content">
-                    <img class="ui small centered circular image" src="img/team/sfven.png" alt="sfven">
-                    <div class="title">Sfven</div>
-                    <div class="ui blue header">Lead Admin</div>
+                <div class="ui center aligned card dark">
+                    <div class="content">
+                        <img class="ui small centered circular image" src="img/team/sfven.png" alt="sfven">
+                        <div class="title">Sfven</div>
+                        <div class="ui blue header">Lead Admin</div>
+                    </div>
                 </div>
-            </div>
-            <div class="ui center aligned card dark">
-                <div class="content">
-                    <img class="ui small centered circular image" src="img/team/pokchop.png" alt="Pокснор">
-                    <div class="title">Pокснор</div>
+                <div class="ui center aligned card dark">
+                    <div class="content">
+                        <img class="ui small centered circular image" src="img/team/pokchop.png" alt="Pокснор">
+                        <div class="title">Pокснор</div>
                     <div class="ui red header">Admin</div>
                 </div>
             </div>

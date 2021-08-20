@@ -3,135 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <title>Physics Engine(BETA)</title>
-    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/game.css">
 </head>
-<body id="body" onload="resize()" oncontextmenu="return false;">
-<div id="settings" hidden>
-    <input type="number" step=".1" id="ballBounce" value="0.7">Ball Bounce<br>
-    <input type="number" step=".1" id="squareBounce" value="0.7">Square Bounce<br>
-    <input type="number" id="xGravity" value="0">Right-Left Gravity<br>
-    <input type="number" id="yGravity" value="7">Down-Up Gravity<br>
-    <input type="text" id="ballImage" value="img/n64.png">Ball Image (Direct URL)<br><br>
-    <button onclick="test();">Submit</button>
-    <button id="reset" onclick="reset()">Reset All</button>
-</div>
-<div id="game">
-    <canvas id="platform"></canvas>
-    <div id="clouds">
-        <div class="cloud x1"></div>
-        <div class="cloud x2"></div>
-        <div class="cloud x3"></div>
-        <div class="cloud x4"></div>
-        <div class="cloud x5"></div>
+<body id="body" onload="resize();" oncontextmenu="return false;">
+    <div id="settings" hidden>
+        <input type="number" step=".1" id="ballBounce" value="0.7">Ball Bounce<br>
+        <input type="number" step=".1" id="squareBounce" value="0.7">Square Bounce<br>
+        <input type="number" id="xGravity" value="0">Right-Left Gravity<br>
+        <input type="number" id="yGravity" value="7">Down-Up Gravity<br>
+        <input type="text" id="ballImage" value="img/n64.png">Ball Image (Direct URL)<br><br>
+        <button onclick="test();">Submit</button>
+        <button id="reset" onclick="reset();">Reset All</button>
     </div>
-    <div class="night" id="stars">
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
+    <div id="game">
+        <canvas id="platform"></canvas>
+        <div id="clouds">
+            <div class="cloud x1"></div>
+            <div class="cloud x2"></div>
+            <div class="cloud x3"></div>
+            <div class="cloud x4"></div>
+            <div class="cloud x5"></div>
+        </div>
+        <div class="night" id="stars">
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+        </div>
+        <canvas id="canvas"></canvas>
+        <canvas id="debug"></canvas>
     </div>
-    <canvas id="canvas"></canvas>
-    <canvas id="debug"></canvas>
-</div>
 
-<script>
-  const canvasScale = 1;
-  //Ball Variables
-  let ballImage = 'img/n64.png';
-  let ballDensity = 1;
-  let ballFriction = 1;
-  let ballBounce = 0.7;
-  let ballSpin = 0;
-  //Square Variables
-  let squareImage = 'img/cube.png';
-  let squareDensity = 1;
-  let squareFriction = 0.5;
-  let squareBounce = 0.8;
-  let squareSpin = 0;
-  //Ground Variables
-  let xGravity = 0;
-  let yGravity = 7;
-  //Debug
-  let doDebug = false;
+    <script>
+      const canvasScale = 1;
+      //Ball Variables
+      let ballImage = 'img/n64.png';
+      let ballDensity = 1;
+      let ballFriction = 1;
+      let ballBounce = 0.7;
+      let ballSpin = 0;
+      //Square Variables
+      let squareImage = 'img/cube.png';
+      let squareDensity = 1;
+      let squareFriction = 0.5;
+      let squareBounce = 0.8;
+      let squareSpin = 0;
+      //Ground Variables
+      let xGravity = 0;
+      let yGravity = 7;
+      //Debug
+      let doDebug = false;
 
-  function test() {
-    ballBounce = $('#ballBounce').val();
-    xGravity = $('#xGravity').val();
-    yGravity = $('#yGravity').val();
-    ballImage = $('#ballImage').val();
-    $('#settings').hide();
-    $('#game').show();
-    init();
-  }
+      function test() {
+        ballBounce = $('#ballBounce').val();
+        xGravity = $('#xGravity').val();
+        yGravity = $('#yGravity').val();
+        ballImage = $('#ballImage').val();
+        $('#settings').hide();
+        $('#game').show();
+        init();
+      }
 
-  function onload() {
-  }
+      function onload() {
+      }
 
-  function resize() {
-    const w = $(window).outerWidth();
-    const h = $(window).outerHeight();
-    canvas.width = w * canvasScale;
-    canvas.height = h * canvasScale;
-    debug.width = canvas.width;
-    debug.height = canvas.height;
-    platform.width = canvas.width;
-    platform.height = canvas.height;
+      function resize() {
+        const w = $(window).outerWidth();
+        const h = $(window).outerHeight();
+        canvas.width = w * canvasScale;
+        canvas.height = h * canvasScale;
+        debug.width = canvas.width;
+        debug.height = canvas.height;
+        platform.width = canvas.width;
+        platform.height = canvas.height;
 
-  }
+      }
 
-  canvasSize = function() {
-    return [canvas.width, canvas.height];
-  };
+      canvasSize = function() {
+        return [canvas.width, canvas.height];
+      };
 
-  function toggleSettings() {
-    $('#settings').toggle();
-    $('#game').toggle();
-  }
+      function toggleSettings() {
+        $('#settings').toggle();
+        $('#game').toggle();
+      }
 
-  function toggleDebug() {
-    doDebug = !doDebug;
-  }
+      function toggleDebug() {
+        doDebug = !doDebug;
+      }
 
-  $('body').on('keypress', function(e) {
-    if (e.key === '`') {
-      toggleSettings();
-    }
-    if (e.key === 'Enter') {
-      init();
-    }
-    if (e.key === 'b') {
-      console.log('ra');
-      toggleDebug();
-    }
-    if (e.key === 'r') {
-      reset();
-    }
-  });
-</script>
+      $('body').on('keypress', function(e) {
+        if (e.key === '`') {
+          toggleSettings();
+        }
+        if (e.key === 'Enter') {
+          init();
+        }
+        if (e.key === 'b') {
+          console.log('ra');
+          toggleDebug();
+        }
+        if (e.key === 'r') {
+          reset();
+        }
+      });
+    </script>
 </body>
-<script src="js/EaselJS.js"></script>
+<script src="js/easeljs.js"></script>
 <script src="js/box2dweb.js"></script>
-<script src="js/Main.js"></script>
-<script src="js/Body.js"></script>
-<script src="js/Ground.js"></script>
-<script src="js/Ball.js"></script>
-<script src="js/Square.js"></script>
-<script src="js/Event.js"></script>
+<script src="js/main.js"></script>
+<script src="js/body.js"></script>
+<script src="js/ground.js"></script>
+<script src="js/ball.js"></script>
+<script src="js/square.js"></script>
+<script src="js/event.js"></script>
 </html>

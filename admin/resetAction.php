@@ -1,10 +1,8 @@
 <?php
-
 /* Password reset process, updates database with new user password */
 $cfg = parse_ini_file('database/database.ini');
 $mysqli = new mysqli($cfg['host'], $cfg['username'], $cfg['passwd'], $cfg['dbname']) or die($mysqli->error);
 session_start();
-
 // Make sure the form is being submitted with method="post"
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Make sure the two passwords match

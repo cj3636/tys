@@ -1,31 +1,29 @@
 <!doctype html>
 <html lang="en_US">
-<?php
-require 'head.php'; ?>
+<?php require 'head.php'; ?>
 <body>
-<div id="page" class="ui stackable grid">
-    <?php
-    require 'title.php' ?>
-</div>
-<div id="page" class="ui stackable grid">
-    <div class="centered eight wide column">
-        <div class="ui items">
-            <div class="item">
-                <div class="content">
-                    <h2 class="ui yellow header">
-                        Frequently Asked Questions
-                    </h2>
-                    <div class="ui divider"></div>
-                    <div class="ui styled fluid accordion">
-                        <div class="title">
-                            <h3 class="ui header"><i class="dropdown icon"></i>
-                                What is "The Yellow Submarine?</h3>
-                        </div>
-                        <div class="content">
-                            <div class="ui relaxed divided list">
-                                <div class="item">
-                                    <h2>A movie made by <a href="https://en.wikipedia.org/wiki/The_Beatles"
-                                                           target="_blank">The Beatles</a></h2>
+    <div id="page" class="ui stackable grid">
+        <?php require 'title.php' ?>
+    </div>
+    <div id="page" class="ui stackable grid">
+        <div class="centered eight wide column">
+            <div class="ui items">
+                <div class="item">
+                    <div class="content">
+                        <h2 class="ui yellow header">
+                            Frequently Asked Questions
+                        </h2>
+                        <div class="ui divider"></div>
+                        <div class="ui styled fluid accordion">
+                            <div class="title">
+                                <h3 class="ui header"><i class="dropdown icon"></i>
+                                    What is "The Yellow Submarine?</h3>
+                            </div>
+                            <div class="content">
+                                <div class="ui relaxed divided list">
+                                    <div class="item">
+                                        <h2>A movie made by <a href="https://en.wikipedia.org/wiki/The_Beatles"
+                                              target="_blank">The Beatles</a></h2>
                                     <h3><a href="https://en.wikipedia.org/wiki/Yellow_Submarine_(film)" target="_blank"><i>Yellow
                                                 Submarine</i></<a></a>. Directed by George Dunning, performances by John
                                         Lennon, Paul McCartney, George Harrison and Ringo Starr, United Artists,

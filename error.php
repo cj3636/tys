@@ -1,14 +1,11 @@
 <!doctype html>
 <html lang="en_US">
-<?php
-require 'head.php'; ?>
+<?php require 'head.php'; ?>
 <body>
-<div id="page" class="ui stackable grid">
-    <?php
-    require 'title.php'; ?>
-    <div class="six wide centered column">
-        <?php
-        $message = '<div class="ui center aligned centered card dark">
+    <div id="page" class="ui stackable grid">
+        <?php require 'title.php'; ?>
+        <div class="six wide centered column">
+            <?php $message = '<div class="ui center aligned centered card dark">
             <div class="content">
                 <h1 id="header" class="ui red header">%s</h1>
                 <div id="meta" class="meta">

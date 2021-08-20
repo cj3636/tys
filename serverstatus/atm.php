@@ -5,7 +5,6 @@
         <div class="ui divider"></div>
         <div class="extra content">
             <?php
-
             use MCServerStatus\MCPing;
 
             require_once('vendor/autoload.php');

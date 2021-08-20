@@ -1,21 +1,17 @@
 <?php
-
 namespace TYS;
-
 use DOMDocument;
 
 require_once 'CreateHTML.php';
 
 class PHP2HTML implements CreateHTML {
-    public function createElement(
-        $dom,
+    public function createElement($dom,
         $tag,
         $class,
         $id = null,
         $text = null,
         $extraAttirubutes = [],
-        $attributeValues = []
-    ): DOMDocument {
+        $attributeValues = []): DOMDocument {
         $element = $dom->createElement($tag, $text);
         $element->setAttribute('class', $class);
         if (isset($id)) {

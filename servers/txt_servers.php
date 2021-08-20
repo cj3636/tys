@@ -1,8 +1,7 @@
 <?php
-
 $dir = ROOT_PATH . 'servers/txt';
 $files = glob($dir . '/*.txt');
-$lines = array();
+$lines = [];
 foreach ($files as $file) {
     $handle = fopen($file, "r");
     if ($handle) {

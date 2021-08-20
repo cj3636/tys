@@ -1,9 +1,6 @@
 <?php
-
 namespace TYS;
-
 class TXT2HTML {
-
     private $serverCard;
 
     public function __construct() {

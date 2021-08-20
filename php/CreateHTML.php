@@ -1,7 +1,4 @@
-<?php
-
-namespace TYS;
-
+<?php namespace TYS;
 use DOMDocument;
 
 interface CreateHTML {
@@ -11,7 +8,7 @@ interface CreateHTML {
 
     public function createDiv($dom, $class, $text = ''): DOMDocument;
 
-    public function createa($dom, $class, $href, $target): DOMDocument;
+    public function createA($dom, $class, $href, $target): DOMDocument;
 
     public function createIcon($dom, $class): DOMDocument;
 
