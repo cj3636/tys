@@ -20,8 +20,8 @@
     <meta name="description" content="The Yellow Sub Ltd. Server Hosting"/>
     <meta name="keywords" content="video, game, server, yellowsub, minecraft"/>
     <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="/js/jquery-3.6.0.js"></script>
     <script src="/semantic/dist/semantic.min.js"></script>
     <script src="/semantic/dist/clipboard.min.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
 </head>

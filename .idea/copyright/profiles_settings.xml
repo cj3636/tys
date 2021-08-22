@@ -1,7 +1,3 @@
 <component name="CopyrightManager">
-  <settings default="The Yellow Sub Ltd">
-    <module2copyright>
-      <element module="github" copyright="The Yellow Sub Ltd" />
-    </module2copyright>
-  </settings>
+  <settings default="The Yellow Sub Ltd" />
 </component>

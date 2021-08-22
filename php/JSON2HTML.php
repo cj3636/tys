@@ -13,10 +13,9 @@ class JSON2HTML {
         $this->p2h = new PHP2HTML();
     }
 
-
     public function getFilesAsJSON($dir): array {
         $files = glob($dir . '/*.json');
-        $filejson = array();
+        $filejson = [];
         foreach ($files as $file) {
             $json = file_get_contents($file);
             $jsonObj = json_decode($json, true);
@@ -38,30 +37,22 @@ class JSON2HTML {
         foreach ($filejson as $jc) {
             $imgclass = $jc['img']['class'];
             $imgsrc = $jc['img']['src'];
-
             $hclass = $jc['header']['class'];
             $htext = $jc['header']['text'];
-
             $mclass = $jc['meta']['class'];
             $mtext = $jc['meta']['text'];
-
             $dclass = $jc['description']['class'];
             $dtext = $jc['description']['text'];
-
             $dividerClass = $jc['divider']['class'];
-
             $eclass = $jc['extra']['class'];
-
             $card = $dom->createElement('div');
             $card->setAttribute('class', 'card');
-
             $img = $this->p2h->createImg($dom, $imgclass, $imgsrc);
             $header = createDiv($dom, $hclass, $htext);
             $meta = createDiv($dom, $mclass, $mtext);
             $description = createDiv($dom, $dclass, $dtext);
             $divider = createDiv($dom, $dividerClass);
             $extra = createDiv($dom, $eclass);
-
             foreach ($jc['extra']['buttons'] as $btn) {
                 $btnclass = $btn['class'];
                 $btnid = $btn['id'];
@@ -72,10 +63,8 @@ class JSON2HTML {
                 $btnislink = $btn['islink'];
                 $btnhref = $btn['href'];
                 $btntarget = $btn['target'];
-
                 if ($btnislink) {
-                    $button = createLinkButton(
-                        $dom,
+                    $button = createLinkButton($dom,
                         $btnclass,
                         $btnid,
                         $btnicon,
@@ -83,8 +72,7 @@ class JSON2HTML {
                         $btntarget,
                         $btntext,
                         $btnclipboard,
-                        $btntooltip
-                    );
+                        $btntooltip);
                 } else {
                     $button = createCopyButton($dom, $btnclass, $btnid, $btnicon, $btntext, $btnclipboard, $btntooltip);
                 }
@@ -92,22 +80,17 @@ class JSON2HTML {
             }
             $card = $dom->createElement('div');
             $card->setAttribute('class', 'card');
-
             $content = $dom->createElement('div');
             $content->setAttribute('class', 'content');
-
             $content->appendChild($img);
             $content->appendChild($header);
             $content->appendChild($meta);
             $content->appendChild($description);
             $content->appendChild($divider);
             $content->appendChild($extra);
-
             $card->appendChild($content);
-
             array_push($cards, $card);
         }
-
         return $cards;
     }
 

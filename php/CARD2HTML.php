@@ -1,22 +1,16 @@
 <?php
 namespace TYS;
-class TXT2HTML {
+class CARD2HTML {
     private $serverCard;
 
     public function __construct() {
         $this->serverCard = file_get_contents(CARD_HTML);
     }
 
-    public function echoCard($dir) {
-        foreach ($this->parseCards($dir) as $card) {
-            echo $card;
-        }
-    }
-
     public function parseCards($dir): array {
         $files = glob(ROOT_PATH . $dir . '/*.txt');
-        $lines = array();
-        $cards = array();
+        $lines = [];
+        $cards = [];
         foreach ($files as $file) {
             $handle = fopen($file, "r");
             if ($handle) {
@@ -34,5 +28,11 @@ class TXT2HTML {
 
     private function getHTML($img, $head, $meta, $desc, $ip, $hover, $btn): string {
         return sprintf($this->serverCard, $img, $head, $meta, $desc, $ip, $hover, $btn);
+    }
+
+    public function echoCard($dir) {
+        foreach ($this->parseCards($dir) as $card) {
+            echo $card;
+        }
     }
 }

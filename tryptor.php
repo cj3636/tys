@@ -10,13 +10,28 @@
         <?php require_once 'title.php' ?>
         <div class="ten wide centered column">
             <div id="tryptor" class="ui fluid stackable card">
+                <!--                <div id="errorPopup" class="ui pointing below basic label"></div>-->
                 <div class="header" id="title-bar">
                     <img id="img" alt="Tryptor" class="ui small left floated image" src="/img/tryptor.png">
-                    <button id="infobtn" class="ui right floated icon secondary button" onclick="showInfo()"
-                      data-inverted="" data-position="top right"
-                      data-tooltip="Text Encryption/Decryption Program - More Info">
-                        <i class="right floated info circle cyan icon"></i>
-                    </button>
+                    <div class="ui right floated buttons">
+                        <nav id="infobtn">
+                            <button
+                              class="ui icon secondary button"
+                              onclick="showInfo()"
+                              data-tooltip="Text Encryption/Decryption Program"
+                              data-inverted=""
+                              data-position="top right">
+                                <i class="info circle cyan icon"></i>
+                            </button>
+                        </nav>
+                        <nav id="errorInfo"
+                          data-tooltip="Dismiss"
+                          data-inverted="" hidden>
+                            <button class="ui red icon button" onclick="hideError();">
+                                <i class="close icon"></i><span id="errorText"></span><span id="errorText"></span>
+                            </button>
+                        </nav>
+                    </div>
                 </div>
                 <div id="content" class="content">
                     <div class="meta" id="meta">
@@ -24,14 +39,14 @@
                             <nav class="item" id="navMenuItem">
                                 <button data-inverted="" data-position="top left" data-tooltip="Create New Key"
                                   class="ui center aligned teal icon button"
-                                  onclick="createKey()"
+                                  onclick="createKey();"
                                   id="genKey" name="genKey"><i class="yellow key icon"></i>
                                 </button>
                             </nav>
                             <nav class="item" id="navMenuItem">
                                 <button data-inverted="" data-position="top left" data-tooltip="Encode Text"
                                   class="ui center aligned primary button icon"
-                                  onclick="encode()"
+                                  onclick="encode();"
                                   id="encode" name="encode"><i
                                       class="lock icon"></i>
                                 </button>
@@ -54,7 +69,7 @@
                             <nav class="item" id="navMenuItem">
                                 <button data-inverted="" data-position="top left" data-tooltip="Downlaod Output"
                                   class="ui center aligned green button icon"
-                                  onclick="saveFile()" value="save" id="save"><i class="download icon"></i>
+                                  onclick="saveFile();" value="save" id="save"><i class="download icon"></i>
                                 </button>
                             </nav>
                             <nav class="item" id="navMenuItem">
@@ -64,19 +79,19 @@
                                         <i class="green upload icon"></i>
                                         <i class="bottom right corner yellow key icon"></i>
                                     </i>
-                                    <input onchange="loadKey()" type="file" id="keyUpload" style="display: none;">
+                                    <input onchange="loadKey();" type="file" id="keyUpload" style="display: none;">
                                 </button>
                             </nav>
                             <nav class="item" id="navMenuItem">
                                 <button class="ui center aligned black button icon" id="keyDownload" data-inverted=""
                                   data-position="top left"
                                   data-tooltip="Download Key"
-                                  onclick="saveKeyAsFile()">
+                                  onclick="saveKeyAsFile();">
                                     <i class="icons">
                                         <i class="orange download icon"></i>
                                         <i class="bottom right corner orange key icon"></i>
                                     </i>
-                                    <input onchange="saveKeyAsFile()" type="file" id="keyDownload" hidden>
+                                    <input onchange="saveKeyAsFile();" type="file" id="keyDownload" hidden>
                                 </button>
                             </nav>
                             <nav class="item" id="navMenuItem">
@@ -89,7 +104,7 @@
                             <nav class="item" id="navMenuItem">
                                 <div id="keyLengthDiv" class="ui input">
                                     <input class="prompt" id="keyLength" type="number" min="1" max="256" step="1"
-                                      value="16">
+                                      value="16" onchange="validateSettings();">
                                     <div id="keyLengthPopup" class="ui inverted popup hidden" style="width: 10rem;">Key Size
                                         (1-256)<br>Scroll
                                         to Change
@@ -99,13 +114,15 @@
                             <nav class="item" id="navMenuItem">
                                 <div class="ui input" data-inverted="" data-position="top left"
                                   data-tooltip="Project Name">
-                                    <input class="prompt" id="fileDownloadName" type="text" placeholder="Project Name"
+                                    <input class="prompt" id="projectName" type="text" placeholder="Project Name"
+                                      required
+                                      minlength="1"
                                       maxlength="16"
                                       value="Tryptor">
                                 </div>
                             </nav>
                             <nav class="ui right floated item" id="navMenuItem">
-                                <div onclick="showSettings()" class="ui icon black button"
+                                <div onclick="showSettings();" class="ui icon black button"
                                   data-tooltip="Additional Settings"
                                   data-inverted="" data-position="top left">
                                     <i class="cog icon"></i>
@@ -117,7 +134,7 @@
                         <form class="ui form">
                             <div class="ui fluid left icon input">
                                 <label for="key"></label>
-                                <i id="keyToggle" class="toggle link icon off" onclick="togglePassword()"></i>
+                                <i id="keyToggle" class="toggle link icon off" onclick="togglePassword();"></i>
                                 <input id="key" name="key" class="key" type="password" placeholder="Key">
                                 <div id="keyTogglePopup" class="ui inverted popup hidden">Show Key</div>
                             </div>
@@ -158,7 +175,7 @@
         <!--        </form>-->
         <!--    </div>-->
 </body>
-<script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
+<script src="js/filesaver.js"></script>
 <script src="js/cypher.js"></script>
 <script>
   $('.ui.dropdown').dropdown();
@@ -172,11 +189,21 @@
     position: 'left center',
     on: 'hover'
   });
-
   document.getElementById('keyLength').addEventListener('wheel', function(e) {
   });
   document.getElementById('keyLength').addEventListener('mouseenter', function(e) {
     this.focus();
   });
+
+  function showError(text) {
+    $('#errorText').text(text);
+    $('#infobtn').hide();
+    $('#errorInfo').show();
+  }
+
+  function hideError() {
+    $('#errorInfo').hide();
+    $('#infobtn').show();
+  }
 </script>
 </html>

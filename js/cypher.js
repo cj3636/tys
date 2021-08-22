@@ -1,18 +1,7 @@
-//copyright
-
 // let script = document.createElement('script');
 // script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
 // script.type = 'text/javascript';
 // document.getElementsByTagName('head')[0].appendChild(script);
-
-function SaveAsFile(t, f, m) {
-  try {
-    let b = new Blob([t], {type: m});
-    saveAs(b, f);
-  } catch (e) {
-    window.open('data:' + m + ',' + encodeURIComponent(t), '_blank', '');
-  }
-}
 
 /**
  * Gets the user text inputs from Tryptor and creates arrayBuffers with them
@@ -78,25 +67,24 @@ function decode() {
   document.execCommand('copy');
 }
 
+function getProjectName() {
+  return $('#projectName').val();
+}
+
+function SaveAsFile(t, f, m) {
+  try {
+    let b = new Blob([t], {type: m});
+    saveAs(b, f);
+  }
+  catch (e) {
+    window.open('data:' + m + ',' + encodeURIComponent(t), '_blank', '');
+  }
+}
+
 function saveFile() {
-  let text = document.getElementById('output').value;
-  SaveAsFile('text', 'tryptor.txt', 'text/plain;charset=utf-16');
+  const text = document.getElementById('output').value;
 
-  // let textFileAsBlob = new Blob([textToWrite], {type: 'text/plain'});
-  // let outputFilename = prompt("Output File Name?");
-  // let downloadLink = document.createElement("a");
-  // downloadLink.download = outputFilename;
-  // downloadLink.innerHTML = "Download File";
-  // if (window.webkitURL != null) {
-  //     downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-  // } else {
-  //     downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-  //     //downloadLink.onclick = destroyClickedElement;
-  //     downloadLink.style.display = "none";
-  //     document.body.appendChild(downloadLink);
-  // }
-
-  //downloadLink.click();
+  SaveAsFile(text, getProjectName(), 'text/plain;charset=utf-16');
 }
 
 function loadFile() {
@@ -131,6 +119,7 @@ function allCharacterKey(keyLength) {
   document.getElementById('key').value = text;
 }
 
+//todo key types
 function createKey() {
   const keyLength = document.getElementById('keyLength').value;
   const keyType = $('#keyType').find(':selected').text();
@@ -147,7 +136,7 @@ function reset() {
   document.getElementById('input').value = '';
   document.getElementById('output').value = '';
   document.getElementById('key').type = 'password';
-  document.getElementById('passwordToggleIcon').classList.replace('on', 'off');
+  document.getElementById('keyToggle').classList.replace('on', 'off');
 
 }
 
@@ -178,7 +167,6 @@ function saveKeyAsFile() {
 function togglePassword() {
   let icon = document.getElementById('keyToggle').classList;
   let keyInput = document.getElementById('key').type;
-
   if (icon.contains('off')) {
     icon.replace('off', 'on');
   } else {
@@ -192,14 +180,21 @@ function togglePassword() {
 }
 
 function showInfo() {
-
 }
 
 function showSettings() {
 
 }
 
+function validateSettings() {
+  if ($('#projectName').val()) {
+
+  }
+}
+
 function validateFileName(fileName) {
   fileName.replace(/[<>:"/|?*]/g, '');
   return fileName;
 }
+
+

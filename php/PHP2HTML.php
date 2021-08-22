@@ -52,14 +52,18 @@ class PHP2HTML implements CreateHTML {
     }
 
     public function createCopyButton($dom, $class, $id, $text, $clipboard, $tooltip, $icon = null): DOMDocument {
-        $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'],
+        $btn = createElement($dom,
+            'div',
+            $class,
+            $id,
+            $text,
+            ['data-clipboard-text', 'data-tooltip', 'data-inverted'],
             [$clipboard, $tooltip, '']);
         $btn->appendChild(createIcon($dom, $icon));
         return $btn;
     }
 
-    public function createLinkButton(
-        $dom,
+    public function createLinkButton($dom,
         $class,
         $id,
         $href,
@@ -67,10 +71,14 @@ class PHP2HTML implements CreateHTML {
         $text,
         $clipboard,
         $tooltip,
-        $icon = null
-    ): DOMDocument {
+        $icon = null): DOMDocument {
         $a = createa($dom, $href, $target);
-        $btn = createElement($dom, 'div', $class, $id, $text, ['data-clipboard-text', 'data-tooltip', 'data-inverted'],
+        $btn = createElement($dom,
+            'div',
+            $class,
+            $id,
+            $text,
+            ['data-clipboard-text', 'data-tooltip', 'data-inverted'],
             [$clipboard, $tooltip, '']);
         $btn->appendChild(createIcon($dom, $icon));
         $a->appendChild($btn);
