@@ -1,4 +1,5 @@
-# The Yellow Sub Servers Official Website
+![alt text](https://repository-images.githubusercontent.com/231686434/8947ce74-ff5d-44a8-b314-7add09d6a68f "TYS LOGO")
+# The Yellow Sub Ltd Official Website
 
 https://theyellowsub.us
 

@@ -27,6 +27,7 @@
                     </div>
                 </div>
             </div>
+            s
         </div>
         <div class="center aligned sixteen wide column">
             <div class="ui items">
@@ -41,8 +42,7 @@
             </div>
         </div>
         <footer>&copy; P.o.P Industries 2019</footer>
+    </div>
 </body>
-<script>
-  new ClipboardJS('#copyIP');
-</script>
+<script>new ClipboardJS('#copyIP');</script>
 </html>
