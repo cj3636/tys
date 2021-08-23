@@ -1,0 +1,13 @@
+folders:
+  root:
+    ATMR:
+      file: ''
+      image: ''
+      color: ''
+      description: ''
+  aether:
+    AetherMP:
+      - file: ''
+      - image: ''
+      - color: ''
+      - description: ''

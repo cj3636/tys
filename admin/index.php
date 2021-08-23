@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en_US">
-<?php require_once 'templates/php/head.php'; ?>
+<?php require_once 'head.php'; ?>
 <body>
     <div id="page" class="ui stackable grid">
-        <?php require_once 'templates/php/title.php'; ?>
-        <?php require_once 'templates/php/menu.php'; ?>
+        <?php require_once 'title.php'; ?>
+        <?php require_once 'menu.php'; ?>
     </div>
     <div id="page" class="ui stackable fluid grid">
         <div class="center aligned sixteen wide column">
@@ -25,13 +25,13 @@
                         </svg>
                         <div class="ui inverted divider"></div>
                         <h1 class="ui header" id="p">
-                        To the Yellow Submarine
-                    </h1>
+                            To the Yellow Submarine
+                        </h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer>&copy; P.o.P Industries 2019</footer>
+        <footer>&copy; P.o.P Industries 2019</footer>
 </body>
 <script>
   $('.ui.accordion').accordion({exclusive: false});

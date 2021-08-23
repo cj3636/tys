@@ -1,10 +1,15 @@
 {
-  "downloads": {
-    "ATMR": {
-      "file": "",
-      "image": "",
-      "color": "",
-      "description": ""
+  "folders": {
+    "root": {
+      "ATMR": {
+        "file": "", "image": "", "color": "", "description": ""
+      }
+    }, "aether": {
+      "AetherMP": {
+        "file": "", "image": "", "color": "", "description": ""
+      }, "AetherSP": {
+        "file": "", "image": "", "color": "", "description": ""
+      }
     }
   }
 }
