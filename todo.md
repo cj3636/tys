@@ -1,5 +1,9 @@
-### Changes
+#### TODO
+- [ ] RSYNC
+
+#### Changes
 - Minify HTML/CSS/JS for production
+- Create Admin Page with OAuth for configuring new servers/downloads/faq's/etc
 - 
 
 #### Organizational Structure
