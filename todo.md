@@ -4,7 +4,7 @@
 #### Changes
 - Minify HTML/CSS/JS for production
 - Create Admin Page with OAuth for configuring new servers/downloads/faq's/etc
-- 
+- https://codeigniter.com/user_guide/outgoing/view_layouts.html
 
 #### Organizational Structure
 
