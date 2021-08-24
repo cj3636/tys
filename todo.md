@@ -1,10 +1,8 @@
-### TYS
-
-#### Changes
+### Changes
+- Minify HTML/CSS/JS for production
+- 
 
 #### Organizational Structure
-
-##### Root
 
 ___
 &nbsp; ___Development___<br>
@@ -46,7 +44,7 @@ ___
         - *faq.php*
         - *videos.php*
         - *about.php*
-        - `tools`
+        - `tools` ?
           - *status.php*
           - *tryptor.php*
           - *game.php*
@@ -56,24 +54,19 @@ ___
           - *login.php*
           - *signup.php*
         - *download.php*
-- [init.php](init.php)
-- [head.php](head.php)
-- [title.php](title.php)
-- [index.php](index.php)
-- [favicon.ico](favicon.ico)
-- [FUNDING.yml](FUNDING.yml)
-- [structure.config](structure.config)
+  - [init.php](init.php)
+  - [head.php](head.php)
+  - [title.php](title.php)
+  - [index.php](index.php)
+  - [favicon.ico](favicon.ico)
+  - [favicon.ico](favicon.png)
+  - [FUNDING.yml](FUNDING.yml)
+  - [.gitignore](.gitignore)
+  - [readme.md](readme.md)
+  - [structure.config](structure.config)
 
 ___
 &nbsp; ___Production___<br>
-
-##### *TODO*
-
-###### Move specific html/css/js to localized app folders
-
-###### Minify css/js/php
-
-###### Remove dev dependencies
 
 - `www`
   - `src`
@@ -122,10 +115,10 @@ ___
           - *login.php*
           - *signup.php*
         - *download.php*
-- [init.php](init.php)
-- [head.php](head.php)
-- [title.php](title.php)
-- [index.php](index.php)
-- [favicon.ico](favicon.ico)
-- [FUNDING.yml](FUNDING.yml)
-- [structure.config](structure.config)
+  - [init.php](init.php)
+  - [head.php](head.php)
+  - [title.php](title.php)
+  - [index.php](index.php)
+  - [favicon.ico](favicon.ico)
+  - [favicon.png](favicon.png)
+  - [structure.config](structure.config)
