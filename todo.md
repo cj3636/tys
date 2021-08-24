@@ -1,10 +1,29 @@
 #### TODO
-- [ ] RSYNC
+- [x] RSYNC
+
+```
+ending / will not inlude dir
+-a Archive Store all data
+-z Compress
+-v Verbose
+-h human readable
+-n DRY RUN
+
+#CJSERVER4
+rsync -azvh --log-file=/var/log/rsync.log /store/storage/ /backup/backup/storage/
+rsync -azvh --log-file=/var/log/rsync_amp.log /home/amp/.ampdata/instances/ /backup/backup/instances/
+rsync -azvh --log-file=/var/log/rsync_cjs.log /backup/CJBackups/ /backup/backup/CJBackups/
+rsync -azvh --log-file=/var/log/rsync_ext1s.log /backup/EXT1Backups/ /backup/backup/EXT1Backups/
+rsync -azvh --log-file=/var/log/rsync_ext2s.log /backup/EXT2Backups/ /backup/backup/EXT2Backups/
+#All other servers
+rsync -azvh --log-file=/var/log/rsync_amp.log /home/amp/.ampdata/instances/ /backup/backup/
+```
 
 #### Changes
 - Minify HTML/CSS/JS for production
 - Create Admin Page with OAuth for configuring new servers/downloads/faq's/etc
 - https://codeigniter.com/user_guide/outgoing/view_layouts.html
+- https://explainshell.com/
 
 #### Organizational Structure
 
