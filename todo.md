@@ -10,13 +10,13 @@ ending / will not inlude dir
 -n DRY RUN
 
 #CJSERVER4
-rsync -azvh --log-file=/var/log/rsync.log /store/storage/ /backup/backup/storage/
-rsync -azvh --log-file=/var/log/rsync_amp.log /home/amp/.ampdata/instances/ /backup/backup/instances/
-rsync -azvh --log-file=/var/log/rsync_cjs.log /backup/CJBackups/ /backup/backup/CJBackups/
-rsync -azvh --log-file=/var/log/rsync_ext1s.log /backup/EXT1Backups/ /backup/backup/EXT1Backups/
-rsync -azvh --log-file=/var/log/rsync_ext2s.log /backup/EXT2Backups/ /backup/backup/EXT2Backups/
+/usr/bin/rsync -azvh --log-file=/var/log/rsync.log /store/storage/ /backup/backup/storage/
+/usr/bin/rsync -azvh --log-file=/var/log/rsync_amp.log /home/amp/.ampdata/instances/ /backup/backup/instances/
+/usr/bin/rsync -azvh --log-file=/var/log/rsync_cjs.log /backup/CJBackups/ /backup/backup/CJBackups/
+/usr/bin/rsync -azvh --log-file=/var/log/rsync_ext1s.log /backup/EXT1Backups/ /backup/backup/EXT1Backups/
+/usr/bin/rsync -azvh --log-file=/var/log/rsync_ext2s.log /backup/EXT2Backups/ /backup/backup/EXT2Backups/
 #All other servers
-rsync -azvh --log-file=/var/log/rsync_amp.log /home/amp/.ampdata/instances/ /backup/backup/
+/usr/bin/rsync -azvh --log-file=/var/log/rsync_amp.log /home/amp/.ampdata/instances/ /backup/backup/
 ```
 
 #### Changes
