@@ -3,13 +3,19 @@
 
 https://theyellowsub.us
 
+```
+eval "$(ssh-agent -s)" && git clone git@10.0.0.36:cj3636/tys.git
+```
+
 `git clone https://github.com/cj3636/www.git`
 
 `git secret reveal`
 
 `git secret hide -d`
 
-`id\: \'\#(.*?)\'\, `
-`(.*?) selects any character, any () sets var`
-`id: '#$1', target: '#$1', `
-`$1 is the var selected by .*?`
+```
+id\: \'\#(.*?)\'\,
+(.*?) selects any character, any () sets var
+id: '#$1', target: '#$1', 
+$1 is the var selected by .*?
+```
