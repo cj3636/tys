@@ -4,7 +4,11 @@
 https://theyellowsub.us
 
 ```
-eval "$(ssh-agent -s)" && git clone git@10.0.0.36:cj3636/tys.git
+eval "$(ssh-agent -s)" && ssh-add Z:/_USB/_VPN/_GIT/git.rsa && git clone git@10.0.0.36:cj3636/tys.git
+```
+
+```
+eval "$(ssh-agent -s)" && ssh-add /store/storage/_USB/_VPN/_GIT/git.rsa && git clone git@10.0.0.36:cj3636/tys.git
 ```
 
 `git clone https://github.com/cj3636/www.git`
